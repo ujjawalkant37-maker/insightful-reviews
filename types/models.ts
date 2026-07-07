@@ -12,6 +12,7 @@ export type Product = {
   categoryId: string;
   price: string;
   rating: number; // 0-5
+  aiScore: number;
   summary: string;
   specs?: Record<string, string>;
   images?: string[];
