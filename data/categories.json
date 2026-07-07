@@ -1,0 +1,26 @@
+[
+  {
+    "id": "smartphones",
+    "name": "Smartphones",
+    "slug": "smartphones",
+    "description": "Handheld devices: cameras, performance and battery comparisons."
+  },
+  {
+    "id": "laptops",
+    "name": "Laptops",
+    "slug": "laptops",
+    "description": "Portable computers: productivity and battery life analysis."
+  },
+  {
+    "id": "tvs",
+    "name": "TVs",
+    "slug": "tvs",
+    "description": "Televisions: picture quality, HDR and smart features."
+  },
+  {
+    "id": "appliances",
+    "name": "Appliances",
+    "slug": "appliances",
+    "description": "Home appliances: efficiency, durability and performance."
+  }
+]

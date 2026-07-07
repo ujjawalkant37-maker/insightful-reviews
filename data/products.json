@@ -1,0 +1,57 @@
+[
+  {
+    "id": "aurora-x2-pro",
+    "slug": "aurora-x2-pro",
+    "name": "Aurora X2 Pro",
+    "categoryId": "smartphones",
+    "price": "$999",
+    "rating": 5,
+    "summary": "Flagship smartphone with advanced night photography, fast chipset, and long battery life.",
+    "specs": { "Display": "6.5-inch AMOLED", "Camera": "108MP triple", "Battery": "4500mAh" },
+    "images": []
+  },
+  {
+    "id": "breeze-14",
+    "slug": "breeze-14",
+    "name": "Breeze 14",
+    "categoryId": "laptops",
+    "price": "$799",
+    "rating": 4,
+    "summary": "Ultra-light 14" laptop focused on portability and all-day battery for professionals.",
+    "specs": { "CPU": "Intel i5", "RAM": "16GB", "Battery": "12 hours" },
+    "images": []
+  },
+  {
+    "id": "vista-qled-55",
+    "slug": "vista-qled-55",
+    "name": "Vista QLED 55\"",
+    "categoryId": "tvs",
+    "price": "$1199",
+    "rating": 4,
+    "summary": "55-inch QLED TV with excellent HDR handling and low input lag for gaming.",
+    "specs": { "Panel": "QLED", "Resolution": "4K", "HDR": "HDR10+" },
+    "images": []
+  },
+  {
+    "id": "homecool-3000",
+    "slug": "homecool-3000",
+    "name": "HomeCool 3000",
+    "categoryId": "appliances",
+    "price": "$499",
+    "rating": 4,
+    "summary": "Energy-efficient dishwasher with quiet operation and excellent cleaning cycles.",
+    "specs": { "Energy": "A++", "Noise": "42 dB" },
+    "images": []
+  },
+  {
+    "id": "pulse-airbuds",
+    "slug": "pulse-airbuds",
+    "name": "Pulse AirBuds",
+    "categoryId": "smartphones",
+    "price": "$149",
+    "rating": 4,
+    "summary": "Wireless earbuds with adaptive noise cancellation and strong call quality.",
+    "specs": { "Battery": "24 hours w/case", "ANC": "Adaptive" },
+    "images": []
+  }
+]
