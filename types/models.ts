@@ -15,5 +15,9 @@ export type Product = {
   aiScore: number;
   summary: string;
   specs?: Record<string, string>;
+  pros?: string[];
+  cons?: string[];
+  expertSummary?: string;
+  buyUrl?: string;
   images?: string[];
 };
