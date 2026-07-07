@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import type { Product } from '../../types/models';
+import type { Product } from '@/types/models';
 
 export default function ProductCard({ product }: { product?: Product }) {
   if (!product) {

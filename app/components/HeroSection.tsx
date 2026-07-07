@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "./SearchBar";
+import SearchBar from "@/components/SearchBar";
 
 export default function HeroSection({ onSearch }: { onSearch?: (q: string) => void }) {
   return (

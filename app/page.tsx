@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import FeaturedCategories from "./components/FeaturedCategories";
-import HomeCatalog from "./components/HomeCatalog";
-import FeaturedProducts from "./components/FeaturedProducts";
-import ExpertReviews from "./components/ExpertReviews";
-import UserReviews from "./components/UserReviews";
-import CTA from "./components/CTA";
-import FooterSection from "./components/FooterSection";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import FeaturedCategories from "@/components/FeaturedCategories";
+import HomeCatalog from "@/components/HomeCatalog";
+import FeaturedProducts from "@/components/FeaturedProducts";
+import ExpertReviews from "@/components/ExpertReviews";
+import UserReviews from "@/components/UserReviews";
+import CTA from "@/components/CTA";
+import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
   return (

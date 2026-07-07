@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import type { Product, Category } from '../types/models';
+import type { Product, Category } from '@/types/models';
 
 const dataDir = path.join(process.cwd(), 'data');
 

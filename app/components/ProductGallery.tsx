@@ -1,5 +1,5 @@
 import React from "react";
-import type { Product } from '../../types/models';
+import type { Product } from '@/types/models';
 
 function StarRating({ rating }: { rating: number }) {
   return <span className="text-yellow-500">{'★'.repeat(rating)}{'☆'.repeat(5 - rating)}</span>;

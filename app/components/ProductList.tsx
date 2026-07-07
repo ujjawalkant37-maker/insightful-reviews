@@ -1,6 +1,6 @@
 import React from 'react';
-import type { Product } from '../../types/models';
-import ProductCard from './ProductCard';
+import type { Product } from '@/types/models';
+import ProductCard from '@/components/ProductCard';
 
 export default function ProductList({ products }: { products: Product[] }) {
   if (!products.length) {

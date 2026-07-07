@@ -1,5 +1,5 @@
 import React from "react";
-import ReviewCard from "./ReviewCard";
+import ReviewCard from "@/components/ReviewCard";
 
 const users = [
   { author: 'Jordan P.', title: 'Aurora X2 Pro — real-world', snippet: 'Camera and battery impressed me across a full week of heavy use.', rating: 5 },

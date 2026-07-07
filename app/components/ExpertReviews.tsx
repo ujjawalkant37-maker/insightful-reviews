@@ -1,5 +1,5 @@
 import React from "react";
-import ReviewCard from "./ReviewCard";
+import ReviewCard from "@/components/ReviewCard";
 
 const experts = [
   { author: 'Maya Ortega — Senior Analyst', title: 'Aurora X2 Pro review', snippet: 'Exceptional night photography and reliable performance; battery life is solid for heavy users.', rating: 5 },

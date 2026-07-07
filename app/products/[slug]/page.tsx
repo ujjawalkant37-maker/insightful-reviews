@@ -1,17 +1,29 @@
 import React from 'react';
-import { getProductBySlug, getCategories } from '../../../../lib/db';
-import Breadcrumbs from '../../../components/Breadcrumbs';
+import productsData from '@/data/products.json';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import type { Metadata } from 'next';
+import type { Product, Category } from '@/types/models';
+
+const products = productsData as unknown as Product[];
+const categories: Category[] = [
+  { id: 'smartphones', name: 'Smartphones', slug: 'smartphones', description: 'Handheld devices: cameras, performance and battery comparisons.' },
+  { id: 'laptops', name: 'Laptops', slug: 'laptops', description: 'Portable computers: productivity and battery life analysis.' },
+  { id: 'tvs', name: 'TVs', slug: 'tvs', description: 'Televisions: picture quality, HDR and smart features.' },
+  { id: 'appliances', name: 'Appliances', slug: 'appliances', description: 'Home appliances: efficiency, durability and performance.' },
+];
+
+function getProductBySlug(slug: string) {
+  return products.find((p) => p.slug === slug);
+}
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const product = await getProductBySlug(params.slug);
+  const product = getProductBySlug(params.slug);
   if (!product) return { title: 'Product not found' };
   return { title: `${product.name} - Insightful Reviews`, description: product.summary };
 }
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {
-  const product = await getProductBySlug(params.slug);
-  const categories = await getCategories();
+  const product = getProductBySlug(params.slug);
   if (!product) {
     return (
       <div className="container py-12">
