@@ -2,9 +2,17 @@ import React from "react";
 import Link from "next/link";
 import type { Product } from '../../types/models';
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({ product }: { product?: Product }) {
+  if (!product) {
+    return (
+      <div className="rounded-md border border-gray-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4">
+        <div className="text-sm text-gray-600 dark:text-zinc-300">Product data unavailable</div>
+      </div>
+    );
+  }
+
   return (
-    <Link href={`/products/${product.slug}`} className="block">
+    <a href={`/products/${product.slug}`} className="block">
       <div className="rounded-md border border-gray-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 hover:shadow transition">
         <div className="flex items-start justify-between gap-4">
           <div>
@@ -17,6 +25,6 @@ export default function ProductCard({ product }: { product: Product }) {
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 }

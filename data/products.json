@@ -17,7 +17,7 @@
     "categoryId": "laptops",
     "price": "$799",
     "rating": 4,
-    "summary": "Ultra-light 14" laptop focused on portability and all-day battery for professionals.",
+    "summary": "Ultra-light 14-inch laptop focused on portability and all-day battery for professionals.",
     "specs": { "CPU": "Intel i5", "RAM": "16GB", "Battery": "12 hours" },
     "images": []
   },
