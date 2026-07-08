@@ -36,13 +36,7 @@ export default async function ProductPage({ params }: { params: { slug: string |
   // Unwrap params if it's a Promise-like object
   const resolvedParams = (params && typeof (params as any).then === 'function') ? await (params as any) : params;
   const product = getProductBySlug(resolvedParams.slug);
-  // Temporary debug log — remove after diagnosis
-  try {
-    // eslint-disable-next-line no-console
-    console.log('[product-page] params.slug=', params.slug, 'normalized=', normalizeSlug(params.slug), 'found=', !!product);
-  } catch (e) {
-    // ignore logging errors in server render
-  }
+  // no debug logs
   if (!product) {
     return (
       <div className="container py-12">

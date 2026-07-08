@@ -48,7 +48,9 @@ export default async function ProductsPage({ searchParams }: { searchParams?: { 
       <p className="mt-1 text-sm text-gray-600 dark:text-zinc-300">Find the best products, read expert summaries and user feedback.</p>
 
       <div className="mt-6">
-        <ListSearchFilter categories={categories.map((c) => ({ id: c.id, name: c.name }))} />
+        <React.Suspense fallback={<div className="text-sm text-gray-600">Loading filters...</div>}>
+          <ListSearchFilter categories={categories.map((c) => ({ id: c.id, name: c.name }))} />
+        </React.Suspense>
       </div>
 
       <div className="mt-6">
