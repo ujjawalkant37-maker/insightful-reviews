@@ -2,9 +2,9 @@ import React from "react";
 import ReviewCard from "@/components/ReviewCard";
 
 const experts = [
-  { author: 'Maya Ortega — Senior Analyst', title: 'Aurora X2 Pro review', snippet: 'Exceptional night photography and reliable performance; battery life is solid for heavy users.', rating: 5 },
-  { author: 'Liam Chen — Hardware Editor', title: 'Breeze 14 review', snippet: 'Top-tier portability with balanced thermals, a great choice for on-the-go productivity.', rating: 4 },
-  { author: 'Priya Singh — AV Specialist', title: 'Vista QLED 55" review', snippet: 'Impressive HDR handling and accurate colors; ideal for cinematic viewing.', rating: 4 },
+  { id: 'e1', name: 'Maya Ortega — Senior Analyst', title: 'Aurora X2 Pro review', text: 'Exceptional night photography and reliable performance; battery life is solid for heavy users.', rating: 5, productId: '' },
+  { id: 'e2', name: 'Liam Chen — Hardware Editor', title: 'Breeze 14 review', text: 'Top-tier portability with balanced thermals, a great choice for on-the-go productivity.', rating: 4, productId: '' },
+  { id: 'e3', name: 'Priya Singh — AV Specialist', title: 'Vista QLED 55" review', text: 'Impressive HDR handling and accurate colors; ideal for cinematic viewing.', rating: 4, productId: '' },
 ];
 
 export default function ExpertReviews() {
@@ -17,7 +17,7 @@ export default function ExpertReviews() {
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {experts.map((r) => (
-          <ReviewCard key={r.title} author={r.author} title={r.title} snippet={r.snippet} rating={r.rating} />
+          <ReviewCard key={r.id} review={{ id: r.id, productId: r.productId, name: r.name, rating: r.rating, title: r.title, text: r.text, date: new Date().toISOString() }} />
         ))}
       </div>
     </section>

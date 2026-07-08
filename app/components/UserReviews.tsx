@@ -2,8 +2,8 @@ import React from "react";
 import ReviewCard from "@/components/ReviewCard";
 
 const users = [
-  { author: 'Jordan P.', title: 'Aurora X2 Pro — real-world', snippet: 'Camera and battery impressed me across a full week of heavy use.', rating: 5 },
-  { author: 'Sofia K.', title: 'Breeze 14 — commute laptop', snippet: 'Lightweight and reliable; great for students and professionals on the move.', rating: 4 },
+  { id: 'u1', name: 'Jordan P.', title: 'Aurora X2 Pro — real-world', text: 'Camera and battery impressed me across a full week of heavy use.', rating: 5, productId: '' },
+  { id: 'u2', name: 'Sofia K.', title: 'Breeze 14 — commute laptop', text: 'Lightweight and reliable; great for students and professionals on the move.', rating: 4, productId: '' },
 ];
 
 export default function UserReviews() {
@@ -16,7 +16,7 @@ export default function UserReviews() {
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {users.map((r) => (
-          <ReviewCard key={r.title} author={r.author} title={r.title} snippet={r.snippet} rating={r.rating} />
+          <ReviewCard key={r.id} review={{ id: r.id, productId: r.productId, name: r.name, rating: r.rating, title: r.title, text: r.text, date: new Date().toISOString() }} />
         ))}
       </div>
     </section>

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "r1",
+    "productId": "aurora-x2-pro",
+    "name": "Sofia Martinez",
+    "rating": 5,
+    "title": "Stunning camera and battery life",
+    "text": "The Aurora X2 Pro exceeded my expectations — night photos are incredible and the battery easily lasts all day.",
+    "date": "2026-06-15T10:23:00.000Z"
+  },
+  {
+    "id": "r2",
+    "productId": "aurora-x2-pro",
+    "name": "Daniel Kim",
+    "rating": 4,
+    "title": "Great phone, slight heating",
+    "text": "Love the performance but it gets warm under heavy load. Still a great purchase for photographers.",
+    "date": "2026-05-02T14:12:00.000Z"
+  },
+  {
+    "id": "r3",
+    "productId": "breeze-14",
+    "name": "Aisha Patel",
+    "rating": 5,
+    "title": "Lightweight workhorse",
+    "text": "Perfect laptop for travel — light, fast and the battery lasts all day.",
+    "date": "2026-03-20T09:00:00.000Z"
+  },
+  {
+    "id": "r4",
+    "productId": "flash-camera",
+    "name": "Liam O'Connor",
+    "rating": 5,
+    "title": "Amazing low-light shots",
+    "text": "If you love night photography, this is the phone to beat in its class.",
+    "date": "2026-04-18T18:30:00.000Z"
+  },
+  {
+    "id": "r5",
+    "productId": "pulse-airbuds",
+    "name": "Maya Singh",
+    "rating": 3,
+    "title": "Good sound but fit issues",
+    "text": "Sound quality is great for the price, but they don't always stay in my ears during runs.",
+    "date": "2026-06-01T12:00:00.000Z"
+  },
+  {
+    "id": "r6",
+    "productId": "aurora-x2-pro",
+    "name": "Ethan Zhang",
+    "rating": 5,
+    "title": "Love the UI and speed",
+    "text": "Smooth UI, great display, and cameras are top-notch. No buyers remorse.",
+    "date": "2026-06-20T08:45:00.000Z"
+  }
+]

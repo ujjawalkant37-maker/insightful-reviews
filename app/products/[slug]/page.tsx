@@ -3,6 +3,7 @@ import productsData from '@/data/products.json';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AIReviewSummary from '@/components/AIReviewSummary';
 import CompareButton from '@/components/CompareButton';
+import Reviews from '@/components/Reviews';
 import type { Metadata } from 'next';
 import type { Product, Category } from '@/types/models';
 
@@ -109,6 +110,12 @@ export default async function ProductPage({ params }: { params: { slug: string |
 
           <section className="mt-6">
             <AIReviewSummary product={product} />
+          </section>
+
+          <section>
+            <React.Suspense>
+              <Reviews productId={product.id} />
+            </React.Suspense>
           </section>
         </div>
 

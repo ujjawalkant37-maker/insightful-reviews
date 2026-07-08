@@ -21,3 +21,13 @@ export type Product = {
   buyUrl?: string;
   images?: string[];
 };
+
+export type Review = {
+  id: string;
+  productId: string;
+  name: string;
+  rating: number; // 1-5
+  title: string;
+  text: string;
+  date: string; // ISO
+};
