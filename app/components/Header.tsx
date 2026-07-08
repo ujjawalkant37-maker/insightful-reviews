@@ -1,8 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import Link from 'next/link';
+import { useWishlist } from './WishlistContext';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { count } = useWishlist();
 
   return (
     <header className="w-full bg-white dark:bg-black border-b border-gray-100 dark:border-zinc-800">
@@ -27,6 +30,14 @@ export default function Header() {
           <a href="#cta" className="hidden sm:inline-block px-4 py-2 rounded-md bg-indigo-600 text-white text-sm hover:bg-indigo-700">
             Get Started
           </a>
+          <Link href="/wishlist" className="relative inline-flex items-center px-2 py-1 rounded-md text-gray-700 dark:text-zinc-300 hover:bg-gray-100 dark:hover:bg-zinc-900">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            {/* badge */}
+            <span className="ml-2 text-sm hidden sm:inline">Wishlist</span>
+            <span className="absolute -top-1 -right-1 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-medium leading-none text-white bg-indigo-600 rounded-full">{count}</span>
+          </Link>
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen((s) => !s)}

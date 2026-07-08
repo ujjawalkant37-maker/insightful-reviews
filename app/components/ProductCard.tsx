@@ -3,6 +3,8 @@ import React from "react";
 import Link from "next/link";
 import type { Product } from '@/types/models';
 import { useCompare } from './useCompare';
+import { useWishlist } from './WishlistContext';
+import WishlistButton from './WishlistButton';
 
 export default function ProductCard({ product }: { product?: Product }) {
   if (!product) {
@@ -14,6 +16,7 @@ export default function ProductCard({ product }: { product?: Product }) {
   }
 
   const { isCompared, toggleCompare } = useCompare();
+  const { isWishlisted } = useWishlist();
 
   return (
     <div className="block">
@@ -33,6 +36,7 @@ export default function ProductCard({ product }: { product?: Product }) {
       </Link>
 
       <div className="mt-2 flex items-center gap-2">
+        <WishlistButton id={product.id} />
         <button
           onClick={() => toggleCompare(product.id)}
           className={`text-sm px-3 py-1 rounded-md border ${isCompared(product.id) ? 'bg-green-600 text-white border-green-600' : 'bg-white dark:bg-zinc-900 text-gray-700 dark:text-zinc-200'}`}

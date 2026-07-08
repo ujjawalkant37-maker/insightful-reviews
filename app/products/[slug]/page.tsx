@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import AIReviewSummary from '@/components/AIReviewSummary';
 import CompareButton from '@/components/CompareButton';
 import Reviews from '@/components/Reviews';
+import WishlistButton from '@/components/WishlistButton';
 import type { Metadata } from 'next';
 import type { Product, Category } from '@/types/models';
 
@@ -134,6 +135,13 @@ export default async function ProductPage({ params }: { params: { slug: string |
               {/* CompareButton is a client component that manages localStorage + navigation */}
               {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
               <CompareButton id={product.id} slug={product.slug} />
+            </React.Suspense>
+          </div>
+          <div className="mt-3">
+            <React.Suspense>
+              {/* WishlistButton toggles wishlist */}
+              {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
+              <WishlistButton id={product.id} />
             </React.Suspense>
           </div>
         </aside>
