@@ -1,6 +1,7 @@
 import React from 'react';
 import productsData from '@/data/products.json';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import AIReviewSummary from '@/components/AIReviewSummary';
 import type { Metadata } from 'next';
 import type { Product, Category } from '@/types/models';
 
@@ -104,6 +105,10 @@ export default async function ProductPage({ params }: { params: { slug: string |
               <p className="mt-2 text-sm text-gray-700 dark:text-zinc-300">{product.expertSummary}</p>
             </section>
           )}
+
+          <section className="mt-6">
+            <AIReviewSummary product={product} />
+          </section>
         </div>
 
         <aside className="md:col-span-1 rounded-md border border-gray-100 dark:border-zinc-800 p-4 bg-white dark:bg-zinc-900">
