@@ -5,16 +5,23 @@ const STORAGE_KEY = 'compareItems:v1';
 const MAX_ITEMS = 5;
 
 export function useCompare() {
-  const [items, setItems] = useState<string[]>(() => {
-    try {
-      if (typeof window === 'undefined') return [];
-      const raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? JSON.parse(raw) as string[] : [];
-    } catch (e) {
-      return [];
-    }
-  });
+  // start with a stable empty array so server and client markup match during
+  // hydration. Read and write localStorage only inside effects to avoid
+  // hydration mismatches.
+  const [items, setItems] = useState<string[]>([]);
 
+  // hydrate from localStorage on mount
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      const loaded = raw ? (JSON.parse(raw) as string[]) : [];
+      setItems(loaded);
+    } catch (e) {
+      // ignore
+    }
+  }, []);
+
+  // persist whenever items change (on client)
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
