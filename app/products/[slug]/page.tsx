@@ -2,6 +2,7 @@ import React from 'react';
 import productsData from '@/data/products.json';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AIReviewSummary from '@/components/AIReviewSummary';
+import CompareButton from '@/components/CompareButton';
 import type { Metadata } from 'next';
 import type { Product, Category } from '@/types/models';
 
@@ -121,7 +122,12 @@ export default async function ProductPage({ params }: { params: { slug: string |
 
           <div className="mt-6 flex gap-3">
             <a href={product.buyUrl ?? '#'} className={`flex-1 text-center px-4 py-2 rounded-md bg-indigo-600 text-white ${product.buyUrl ? 'hover:bg-indigo-700' : 'opacity-50 pointer-events-none'}`}>Buy Now</a>
-            <a href={`/products?compare=${product.id}`} className="flex-1 text-center px-4 py-2 rounded-md border border-gray-200">Compare</a>
+            {/* client-side compare behavior: add to compare list and navigate to /compare with slugs */}
+            <React.Suspense>
+              {/* CompareButton is a client component that manages localStorage + navigation */}
+              {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
+              <CompareButton id={product.id} slug={product.slug} />
+            </React.Suspense>
           </div>
         </aside>
       </div>

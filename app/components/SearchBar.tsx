@@ -1,24 +1,32 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
-export default function SearchBar({ onSearch }: { onSearch?: (q: string) => void }) {
-  const [q, setQ] = useState("");
-
+export default function SearchBar({
+  value = "",
+  onSearch,
+  onChange,
+  placeholder = "Search products and reviews",
+}: {
+  value?: string;
+  onSearch?: (q: string) => void;
+  onChange?: (q: string) => void;
+  placeholder?: string;
+}) {
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        onSearch?.(q.trim());
+        onSearch?.(value.trim());
       }}
-      className="w-full max-w-3xl"
+      className="w-full"
     >
       <label htmlFor="search" className="sr-only">Search products and reviews</label>
       <div className="flex items-center gap-2">
         <input
           id="search"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="Search for Smartphones, Laptops, TVs, Appliances..."
+          value={value}
+          onChange={(e) => onChange?.(e.target.value)}
+          placeholder={placeholder}
           className="flex-1 rounded-l-md border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
         <button
