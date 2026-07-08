@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "@/components/SearchBar";
 
-export default function HeroSection({ onSearch }: { onSearch?: (q: string) => void }) {
+export default function HeroSection({ value, onChange, onSearch }: { value?: string; onChange?: (q: string) => void; onSearch?: (q: string) => void }) {
   return (
     <section className="container py-16">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
@@ -14,7 +14,7 @@ export default function HeroSection({ onSearch }: { onSearch?: (q: string) => vo
           </p>
 
           <div className="mt-6">
-            <SearchBar onSearch={onSearch} />
+            <SearchBar value={value} onChange={onChange} onSearch={onSearch} />
           </div>
         </div>
 

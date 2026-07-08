@@ -18,9 +18,7 @@ function normalizeSearchText(product: Product) {
     .toLowerCase();
 }
 
-export default function HomeCatalog() {
-  const [query, setQuery] = useState("");
-
+export default function HomeCatalog({ query }: { query?: string }) {
   const filteredProducts = useMemo(() => {
     if (!query) return products;
     const lowerQuery = query.toLowerCase();
@@ -29,7 +27,6 @@ export default function HomeCatalog() {
 
   return (
     <div>
-      <SearchBar onSearch={setQuery} />
       <ProductGallery products={filteredProducts} categoryMap={categoryMap} />
     </div>
   );

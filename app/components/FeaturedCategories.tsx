@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 
 const categories = [
   { id: "smartphones", title: "Smartphones", emoji: "📱", desc: "Comprehensive hands-on analysis for the latest phones." },
@@ -15,7 +16,7 @@ export default function FeaturedCategories() {
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {categories.map((cat) => (
-          <a key={cat.id} href={`#${cat.id}`} className="group block rounded-lg border border-gray-100 dark:border-zinc-800 p-4 hover:shadow-md bg-white dark:bg-zinc-900">
+          <Link key={cat.id} href={`/products?category=${cat.id}`} className="group block rounded-lg border border-gray-100 dark:border-zinc-800 p-4 hover:shadow-md bg-white dark:bg-zinc-900">
             <div className="flex items-center gap-3">
               <div className="text-2xl">{cat.emoji}</div>
               <div>
@@ -23,7 +24,7 @@ export default function FeaturedCategories() {
                 <p className="mt-1 text-xs text-gray-600 dark:text-zinc-300">{cat.desc}</p>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

@@ -17,6 +17,7 @@ export default function ProductFilters({ categories }: { categories: { id: strin
 
   const params = useMemo(() => new URLSearchParams(searchParams?.toString() ?? ''), [searchParams]);
 
+  const [localSearch, setLocalSearch] = useState(params.get('search') ?? '');
   const [localPriceMin, setLocalPriceMin] = useState(params.get('priceMin') ?? '');
   const [localPriceMax, setLocalPriceMax] = useState(params.get('priceMax') ?? '');
 
@@ -28,7 +29,10 @@ export default function ProductFilters({ categories }: { categories: { id: strin
 
   const clearAll = () => {
     const next = new URLSearchParams(params.toString());
-    ['category', 'priceMin', 'priceMax', 'aiMin', 'minRating', 'sort'].forEach((k) => next.delete(k));
+    ['category', 'search', 'priceMin', 'priceMax', 'aiMin', 'minRating', 'sort'].forEach((k) => next.delete(k));
+    setLocalSearch('');
+    setLocalPriceMin('');
+    setLocalPriceMax('');
     router.replace(`${pathname}?${next.toString()}`);
   };
 
@@ -41,7 +45,20 @@ export default function ProductFilters({ categories }: { categories: { id: strin
   return (
     <div className="w-full">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
+          <form
+            onSubmit={(e) => { e.preventDefault(); apply({ search: localSearch || undefined }); }}
+            className="flex items-center gap-1"
+          >
+            <input
+              type="text"
+              placeholder="Search products…"
+              value={localSearch}
+              onChange={(e) => setLocalSearch(e.target.value)}
+              className="rounded-l-md border p-2 bg-white dark:bg-zinc-900 text-sm w-40"
+            />
+            <button type="submit" className="rounded-r-md bg-indigo-600 px-3 py-2 text-white text-sm hover:bg-indigo-700">Search</button>
+          </form>
           <select
             value={params.get('category') ?? ''}
             onChange={(e) => apply({ category: e.target.value || undefined })}
@@ -113,7 +130,7 @@ export default function ProductFilters({ categories }: { categories: { id: strin
       {/* active chips */}
       <div className="mt-3 flex items-center gap-2 flex-wrap">
         {Array.from(params.entries()).map(([k, v]) => {
-          if (!['category','priceMin','priceMax','aiMin','minRating'].includes(k)) return null;
+          if (!['category','search','priceMin','priceMax','aiMin','minRating'].includes(k)) return null;
           return (
             <div key={k} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 dark:bg-zinc-800 text-sm">
               <span className="font-medium">{k}:</span>
