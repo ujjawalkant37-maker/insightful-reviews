@@ -1,11 +1,14 @@
+"use client";
 import React from "react";
 import type { Product } from '@/types/models';
+import { useCompare } from './useCompare';
 
 function StarRating({ rating }: { rating: number }) {
   return <span className="text-yellow-500">{'★'.repeat(rating)}{'☆'.repeat(5 - rating)}</span>;
 }
 
 export default function ProductGallery({ products, categoryMap }: { products: Product[]; categoryMap: Record<string, string>; }) {
+  const { add, isCompared } = useCompare();
   return (
     <section className="container py-12">
       <div className="flex items-center justify-between gap-4">
@@ -41,6 +44,16 @@ export default function ProductGallery({ products, categoryMap }: { products: Pr
               >
                 View Details
               </a>
+            </div>
+            <div className="mt-4 flex items-center justify-between gap-3 text-sm">
+              <button
+                type="button"
+                onClick={() => add(product.id)}
+                disabled={isCompared(product.id)}
+                className={`flex-1 rounded-md px-4 py-2 text-sm ${isCompared(product.id) ? 'bg-green-600 text-white border border-green-600' : 'border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 dark:bg-zinc-900 dark:text-zinc-200'}`}
+              >
+                {isCompared(product.id) ? 'Added' : 'Add to compare'}
+              </button>
             </div>
           </article>
         ))}

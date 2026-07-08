@@ -48,13 +48,25 @@ export function useCompare() {
     setItems((prev) => prev.filter((p) => p !== id));
   }, []);
 
+  const merge = useCallback((ids: string[]) => {
+    setItems((prev) => {
+      const merged = [...prev];
+      for (const id of ids) {
+        if (merged.includes(id)) continue;
+        if (merged.length >= MAX_ITEMS) break;
+        merged.push(id);
+      }
+      return merged;
+    });
+  }, []);
+
   const toggleCompare = useCallback((id: string) => {
     setItems((prev) => (prev.includes(id) ? prev.filter((p) => p !== id) : (prev.length >= MAX_ITEMS ? prev : [...prev, id])) );
   }, []);
 
   const clear = useCallback(() => setItems([]), []);
 
-  return { compareIds: items, isCompared, add, remove, toggleCompare, clear } as const;
+  return { compareIds: items, isCompared, add, remove, merge, toggleCompare, clear } as const;
 }
 
 export default useCompare;
