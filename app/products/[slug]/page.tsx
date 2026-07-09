@@ -7,7 +7,7 @@ import Reviews from '@/components/Reviews';
 import WishlistButton from '@/components/WishlistButton';
 import type { Metadata } from 'next';
 import type { Product, Category } from '@/types/models';
-
+import AIVerdict from "@/components/AIVerdict";
 const products = productsData as unknown as Product[];
 const categories: Category[] = [
   { id: 'smartphones', name: 'Smartphones', slug: 'smartphones', description: 'Handheld devices: cameras, performance and battery comparisons.' },
@@ -111,6 +111,7 @@ export default async function ProductPage({ params }: { params: { slug: string |
 
           <section className="mt-6">
             <AIReviewSummary product={product} />
+            <AIVerdict score={product.aiScore} />
           </section>
 
           <section>
