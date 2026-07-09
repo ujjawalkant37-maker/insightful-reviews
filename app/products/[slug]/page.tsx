@@ -5,6 +5,7 @@ import AIReviewSummary from '@/components/AIReviewSummary';
 import PriceHistory from "@/components/PriceHistory";
 import CompareButton from '@/components/CompareButton';
 import Reviews from '@/components/Reviews';
+import RatingBreakdown from "@/components/RatingBreakdown";
 import TopAlternatives from "@/components/TopAlternatives";
 import WishlistButton from '@/components/WishlistButton';
 import ReviewStats from "@/components/ReviewStats";
@@ -115,6 +116,7 @@ export default async function ProductPage({ params }: { params: { slug: string |
           <section className="mt-6">
             <AIReviewSummary product={product} />
             <ReviewStats rating={product.rating} />
+            <RatingBreakdown rating={product.rating} />
             <PriceHistory currentPrice={product.price} />
             <TopAlternatives
   currentId={product.id}
