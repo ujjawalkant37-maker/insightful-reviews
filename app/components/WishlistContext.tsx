@@ -10,11 +10,11 @@ import React, {
 import { supabase } from "@/lib/supabase";
 
 type WishlistContextType = {
-  items: number[];
-  add: (id: number) => Promise<void>;
-  remove: (id: number) => Promise<void>;
-  toggle: (id: number) => Promise<void>;
-  isWishlisted: (id: number) => boolean;
+  items: string[];
+  add: (id: string) => Promise<void>;
+  remove: (id: string) => Promise<void>;
+  toggle: (id: string) => Promise<void>;
+  isWishlisted: (id: string) => boolean;
   count: number;
   clear: () => Promise<void>;
 };
@@ -26,66 +26,86 @@ export function WishlistProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [items, setItems] = useState<number[]>([]);
+  const [items, setItems] = useState<string[]>([]);
   const [userId, setUserId] = useState<string | null>(null);
 
   useEffect(() => {
-    loadWishlist();
+    init();
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(() => {
-      loadWishlist();
+      init();
     });
 
     return () => subscription.unsubscribe();
   }, []);
 
-  async function loadWishlist() {
+  async function init() {
     const {
       data: { user },
     } = await supabase.auth.getUser();
 
     if (!user) {
-      setItems([]);
       setUserId(null);
+      setItems([]);
       return;
     }
 
     setUserId(user.id);
-
-    const { data } = await supabase
-      .from("wishlist")
-      .select("product_id")
-      .eq("user_id", user.id);
-
-    setItems((data ?? []).map((x: any) => x.product_id));
+    await loadWishlist(user.id);
   }
 
-  async function add(id: number) {
+  async function loadWishlist(uid: string) {
+    const { data, error } = await supabase
+      .from("wishlist")
+      .select("product_id")
+      .eq("user_id", uid);
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    setItems((data ?? []).map((row: any) => String(row.product_id)));
+  }
+
+  async function add(id: string) {
     if (!userId) return;
 
-    await supabase.from("wishlist").insert({
+    if (items.includes(id)) return;
+
+    const { error } = await supabase.from("wishlist").insert({
       user_id: userId,
       product_id: id,
     });
 
-    setItems((s) => [...new Set([...s, id])]);
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    setItems((prev) => [...prev, id]);
   }
 
-  async function remove(id: number) {
+  async function remove(id: string) {
     if (!userId) return;
 
-    await supabase
+    const { error } = await supabase
       .from("wishlist")
       .delete()
       .eq("user_id", userId)
       .eq("product_id", id);
 
-    setItems((s) => s.filter((x) => x !== id));
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    setItems((prev) => prev.filter((x) => x !== id));
   }
 
-  async function toggle(id: number) {
+  async function toggle(id: string) {
     if (items.includes(id)) {
       await remove(id);
     } else {
@@ -93,16 +113,24 @@ export function WishlistProvider({
     }
   }
 
+  function isWishlisted(id: string) {
+    return items.includes(id);
+  }
+
   async function clear() {
     if (!userId) return;
 
-    await supabase.from("wishlist").delete().eq("user_id", userId);
+    const { error } = await supabase
+      .from("wishlist")
+      .delete()
+      .eq("user_id", userId);
+
+    if (error) {
+      console.error(error);
+      return;
+    }
 
     setItems([]);
-  }
-
-  function isWishlisted(id: number) {
-    return items.includes(id);
   }
 
   const value = useMemo(
@@ -126,11 +154,13 @@ export function WishlistProvider({
 }
 
 export function useWishlist() {
-  const ctx = useContext(WishlistContext);
+  const context = useContext(WishlistContext);
 
-  if (!ctx) {
-    throw new Error("useWishlist must be used within WishlistProvider");
+  if (!context) {
+    throw new Error(
+      "useWishlist must be used within WishlistProvider"
+    );
   }
 
-  return ctx;
+  return context;
 }
