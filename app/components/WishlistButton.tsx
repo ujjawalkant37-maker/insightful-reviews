@@ -4,24 +4,35 @@ import React from "react";
 import { useWishlist } from "./WishlistContext";
 import { useToast } from "./ToastContext";
 
-type Props = {
-  id: string;
-};
-
-export default function WishlistButton({ id }: Props) {
+export default function WishlistButton({
+  id,
+}: {
+  id: number;
+}) {
   const { isWishlisted, toggle } = useWishlist();
   const { push } = useToast();
 
   const active = isWishlisted(id);
 
-  async function handleClick() {
+  async function handleToggle() {
     await toggle(id);
 
-    push(
-      active
-        ? "Removed from wishlist"
-        : "Added to wishlist"
-    );
+    if (result === "added") {
+      push("Added to wishlist");
+      return;
+    }
+
+    if (result === "removed") {
+      push("Removed from wishlist");
+      return;
+    }
+
+    if (result === "auth-required") {
+      push("Sign in to save wishlist items");
+      return;
+    }
+
+    push("Could not update wishlist. Try again.");
   }
 
   return (
