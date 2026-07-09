@@ -2,6 +2,7 @@ import React from 'react';
 import productsData from '@/data/products.json';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AIReviewSummary from '@/components/AIReviewSummary';
+import PriceHistory from "@/components/PriceHistory";
 import CompareButton from '@/components/CompareButton';
 import Reviews from '@/components/Reviews';
 import WishlistButton from '@/components/WishlistButton';
@@ -111,6 +112,7 @@ export default async function ProductPage({ params }: { params: { slug: string |
 
           <section className="mt-6">
             <AIReviewSummary product={product} />
+            <PriceHistory currentPrice={product.price} />
             <AIVerdict score={product.aiScore} />
           </section>
 
