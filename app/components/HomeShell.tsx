@@ -1,5 +1,5 @@
 "use client";
-
+import WriteReviewButton from "@/components/WriteReviewButton";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import HeroSection from "./HeroSection";
@@ -37,7 +37,7 @@ export default function HomeShell() {
       <FeaturedProducts />
 
       <ExpertReviews />
-
+      <WriteReviewButton />
       <UserReviews />
 
       <CTA />
