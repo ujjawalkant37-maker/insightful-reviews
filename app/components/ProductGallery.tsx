@@ -2,6 +2,7 @@
 import React from "react";
 import type { Product } from '@/types/models';
 import { useCompare } from './useCompare';
+import WishlistButton from './WishlistButton';
 
 function StarRating({ rating }: { rating: number }) {
   return <span className="text-yellow-500">{'★'.repeat(rating)}{'☆'.repeat(5 - rating)}</span>;
@@ -46,6 +47,7 @@ export default function ProductGallery({ products, categoryMap }: { products: Pr
               </a>
             </div>
             <div className="mt-4 flex items-center justify-between gap-3 text-sm">
+              <WishlistButton id={product.id} />
               <button
                 type="button"
                 onClick={() => add(product.id)}

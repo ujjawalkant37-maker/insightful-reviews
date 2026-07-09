@@ -3,7 +3,6 @@ import React from "react";
 import Link from "next/link";
 import type { Product } from '@/types/models';
 import { useCompare } from './useCompare';
-import { useWishlist } from './WishlistContext';
 import WishlistButton from './WishlistButton';
 
 export default function ProductCard({ product }: { product?: Product }) {
@@ -16,7 +15,6 @@ export default function ProductCard({ product }: { product?: Product }) {
   }
 
   const { isCompared, toggleCompare } = useCompare();
-  const { isWishlisted } = useWishlist();
 
   return (
     <div className="block">

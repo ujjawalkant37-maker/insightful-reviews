@@ -6,9 +6,26 @@ import ProductCard from '@/components/ProductCard';
 import type { Product } from '@/types/models';
 
 export default function WishlistClient() {
-  const { items, clear } = useWishlist();
+  const { items, clear, isReady } = useWishlist();
   const products = productsData as unknown as Product[];
-  const selected = items.map((id) => products.find((p) => p.id === id)).filter(Boolean) as Product[];
+
+  const productById = new Map(products.map((product) => [product.id, product]));
+  const selected = items
+    .map((id) => productById.get(id))
+    .filter(Boolean) as Product[];
+
+  async function handleClear() {
+    await clear();
+  }
+
+  if (!isReady) {
+    return (
+      <div className="container py-12">
+        <h1 className="text-2xl font-semibold">Your Wishlist</h1>
+        <p className="mt-4 text-sm text-gray-600 dark:text-zinc-300">Loading your saved items...</p>
+      </div>
+    );
+  }
 
   if (selected.length === 0) {
     return (
@@ -24,7 +41,7 @@ export default function WishlistClient() {
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Your Wishlist</h1>
         <div>
-          <button onClick={() => clear()} className="px-3 py-1 rounded-md border">Clear</button>
+          <button onClick={handleClear} className="px-3 py-1 rounded-md border">Clear</button>
         </div>
       </div>
 

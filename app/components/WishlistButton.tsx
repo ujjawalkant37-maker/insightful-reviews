@@ -7,7 +7,7 @@ import { useToast } from "./ToastContext";
 export default function WishlistButton({
   id,
 }: {
-  id: number;
+  id: string;
 }) {
   const { isWishlisted, toggle } = useWishlist();
   const { push } = useToast();
@@ -15,13 +15,24 @@ export default function WishlistButton({
   const active = isWishlisted(id);
 
   async function handleToggle() {
-    await toggle(id);
+    const result = await toggle(id);
 
-    push(
-      active
-        ? "Removed from wishlist"
-        : "Added to wishlist"
-    );
+    if (result === "added") {
+      push("Added to wishlist");
+      return;
+    }
+
+    if (result === "removed") {
+      push("Removed from wishlist");
+      return;
+    }
+
+    if (result === "auth-required") {
+      push("Sign in to save wishlist items");
+      return;
+    }
+
+    push("Could not update wishlist. Try again.");
   }
 
   return (
