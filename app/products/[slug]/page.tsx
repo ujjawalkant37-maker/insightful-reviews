@@ -7,6 +7,7 @@ import CompareButton from '@/components/CompareButton';
 import Reviews from '@/components/Reviews';
 import TopAlternatives from "@/components/TopAlternatives";
 import WishlistButton from '@/components/WishlistButton';
+import ReviewStats from "@/components/ReviewStats";
 import type { Metadata } from 'next';
 import type { Product, Category } from '@/types/models';
 import AIVerdict from "@/components/AIVerdict";
@@ -113,6 +114,7 @@ export default async function ProductPage({ params }: { params: { slug: string |
 
           <section className="mt-6">
             <AIReviewSummary product={product} />
+            <ReviewStats rating={product.rating} />
             <PriceHistory currentPrice={product.price} />
             <TopAlternatives
   currentId={product.id}
