@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import type { Product, Category } from '@/types/models';
 import ProductGallery from '@/components/ProductGallery';
+import RelatedProducts from "@/components/RelatedProducts";
 import ProductFilters from '@/components/ProductFilters';
 import productsData from '@/data/products.json';
 import categoriesData from '@/data/categories.json';
@@ -71,6 +72,11 @@ export default async function ProductsPage({
         <ProductFilters categories={categories} />
       </React.Suspense>
       <ProductGallery products={filteredProducts} categoryMap={categoryMap} />
+      <RelatedProducts
+  currentProductId={product.id}
+  categoryId={product.categoryId}
+  products={products}
+/>
     </div>
   );
 }
