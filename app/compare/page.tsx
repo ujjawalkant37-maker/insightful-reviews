@@ -1,15 +1,17 @@
-import React from 'react';
-import CompareClient from './CompareClient';
+import Header from "@/components/Header";
+import HomeShell from "@/components/HomeShell";
+import FooterSection from "@/components/FooterSection";
 
-export default function ComparePage() {
+export default function Home() {
   return (
-    <React.Suspense fallback={
-      <div className="container py-12">
-        <h1 className="text-2xl font-semibold">Compare Products</h1>
-        <p className="mt-4 text-sm text-gray-600 dark:text-zinc-300">Loading comparison…</p>
-      </div>
-    }>
-      <CompareClient />
-    </React.Suspense>
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <Header />
+
+      <main className="flex-1">
+        <HomeShell />
+      </main>
+
+      <FooterSection />
+    </div>
   );
 }

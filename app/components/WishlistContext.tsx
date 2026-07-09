@@ -1,53 +1,136 @@
 "use client";
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-const STORAGE_KEY = 'wishlist:v1';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+import { supabase } from "@/lib/supabase";
 
 type WishlistContextType = {
-  items: string[];
-  add: (id: string) => void;
-  remove: (id: string) => void;
-  toggle: (id: string) => void;
-  isWishlisted: (id: string) => boolean;
+  items: number[];
+  add: (id: number) => Promise<void>;
+  remove: (id: number) => Promise<void>;
+  toggle: (id: number) => Promise<void>;
+  isWishlisted: (id: number) => boolean;
   count: number;
-  clear: () => void;
+  clear: () => Promise<void>;
 };
 
 const WishlistContext = createContext<WishlistContextType | null>(null);
 
-export function WishlistProvider({ children }: { children: React.ReactNode }) {
-  const [items, setItems] = useState<string[]>([]);
+export function WishlistProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [items, setItems] = useState<number[]>([]);
+  const [userId, setUserId] = useState<string | null>(null);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) setItems(JSON.parse(raw));
-    } catch (e) {
-      // ignore
-    }
+    loadWishlist();
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange(() => {
+      loadWishlist();
+    });
+
+    return () => subscription.unsubscribe();
   }, []);
 
-  useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-    } catch (e) {
-      // ignore
+  async function loadWishlist() {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      setItems([]);
+      setUserId(null);
+      return;
     }
-  }, [items]);
 
-  const add = (id: string) => setItems((s) => Array.from(new Set([...s, id])));
-  const remove = (id: string) => setItems((s) => s.filter((x) => x !== id));
-  const toggle = (id: string) => setItems((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
-  const isWishlisted = (id: string) => items.includes(id);
-  const clear = () => setItems([]);
+    setUserId(user.id);
 
-  const value = useMemo(() => ({ items, add, remove, toggle, isWishlisted, count: items.length, clear }), [items]);
+    const { data } = await supabase
+      .from("wishlist")
+      .select("product_id")
+      .eq("user_id", user.id);
 
-  return <WishlistContext.Provider value={value}>{children}</WishlistContext.Provider>;
+    setItems((data ?? []).map((x: any) => x.product_id));
+  }
+
+  async function add(id: number) {
+    if (!userId) return;
+
+    await supabase.from("wishlist").insert({
+      user_id: userId,
+      product_id: id,
+    });
+
+    setItems((s) => [...new Set([...s, id])]);
+  }
+
+  async function remove(id: number) {
+    if (!userId) return;
+
+    await supabase
+      .from("wishlist")
+      .delete()
+      .eq("user_id", userId)
+      .eq("product_id", id);
+
+    setItems((s) => s.filter((x) => x !== id));
+  }
+
+  async function toggle(id: number) {
+    if (items.includes(id)) {
+      await remove(id);
+    } else {
+      await add(id);
+    }
+  }
+
+  async function clear() {
+    if (!userId) return;
+
+    await supabase.from("wishlist").delete().eq("user_id", userId);
+
+    setItems([]);
+  }
+
+  function isWishlisted(id: number) {
+    return items.includes(id);
+  }
+
+  const value = useMemo(
+    () => ({
+      items,
+      add,
+      remove,
+      toggle,
+      isWishlisted,
+      count: items.length,
+      clear,
+    }),
+    [items]
+  );
+
+  return (
+    <WishlistContext.Provider value={value}>
+      {children}
+    </WishlistContext.Provider>
+  );
 }
 
 export function useWishlist() {
   const ctx = useContext(WishlistContext);
-  if (!ctx) throw new Error('useWishlist must be used within WishlistProvider');
+
+  if (!ctx) {
+    throw new Error("useWishlist must be used within WishlistProvider");
+  }
+
   return ctx;
 }
