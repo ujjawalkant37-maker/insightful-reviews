@@ -5,6 +5,7 @@ import AIReviewSummary from '@/components/AIReviewSummary';
 import PriceHistory from "@/components/PriceHistory";
 import CompareButton from '@/components/CompareButton';
 import Reviews from '@/components/Reviews';
+import TopAlternatives from "@/components/TopAlternatives";
 import WishlistButton from '@/components/WishlistButton';
 import type { Metadata } from 'next';
 import type { Product, Category } from '@/types/models';
@@ -113,6 +114,10 @@ export default async function ProductPage({ params }: { params: { slug: string |
           <section className="mt-6">
             <AIReviewSummary product={product} />
             <PriceHistory currentPrice={product.price} />
+            <TopAlternatives
+  currentId={product.id}
+  products={products}
+/>
             <AIVerdict score={product.aiScore} />
           </section>
 
