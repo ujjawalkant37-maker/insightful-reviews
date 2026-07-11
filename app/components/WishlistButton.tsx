@@ -1,72 +1,70 @@
 "use client";
 
 import React from "react";
+import { Heart } from "lucide-react";
 import { useWishlist } from "./WishlistContext";
 import { useToast } from "./ToastContext";
 
-export default function WishlistButton({
-  id,
-}: {
-  id: number;
-}) {
+type Props = {
+  id: string;
+};
+
+export default function WishlistButton({ id }: Props) {
   const { isWishlisted, toggle } = useWishlist();
   const { push } = useToast();
 
   const active = isWishlisted(id);
 
-  async function handleToggle() {
-    await toggle(id);
+  const handleClick = async (
+    e: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    e.preventDefault();
+    e.stopPropagation();
 
-    if (result === "added") {
-      push("Added to wishlist");
-      return;
+    console.log("Wishlist Product ID:", id);
+    
+    try {
+      const result = await toggle(id);
+
+      switch (result) {
+        case "added":
+          push("Added to wishlist");
+          break;
+
+        case "removed":
+          push("Removed from wishlist");
+          break;
+
+        case "auth-required":
+          push("Please sign in to use Wishlist");
+          break;
+
+        case "error":
+        default:
+          push("Something went wrong");
+          break;
+      }
+    } catch (err: any) {
+      console.error("Wishlist Error:", err);
+      push(err?.message ?? "Wishlist failed");
     }
-
-    if (result === "removed") {
-      push("Removed from wishlist");
-      return;
-    }
-
-    if (result === "auth-required") {
-      push("Sign in to save wishlist items");
-      return;
-    }
-
-    push("Could not update wishlist. Try again.");
-  }
+  };
 
   return (
     <button
       type="button"
       onClick={handleClick}
       aria-label="Wishlist"
-      className="rounded-full p-2 transition hover:bg-red-50"
+      className="rounded-full p-2 transition hover:bg-red-50 dark:hover:bg-zinc-800"
     >
-      {active ? (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="#ef4444"
-          className="h-6 w-6"
-        >
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-        </svg>
-      ) : (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="h-6 w-6 text-gray-500"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 8.25c0-2.485-2.239-4.5-5-4.5-1.74 0-3.27.81-4 2.09-.73-1.28-2.26-2.09-4-2.09-2.761 0-5 2.015-5 4.5 0 7.22 9 12 9 12s9-4.78 9-12z"
-          />
-        </svg>
-      )}
+      <Heart
+        size={22}
+        className={
+          active
+            ? "fill-red-500 text-red-500"
+            : "text-gray-500 hover:text-red-500"
+        }
+      />
     </button>
   );
 }

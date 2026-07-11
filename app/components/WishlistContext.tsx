@@ -98,60 +98,81 @@ export function WishlistProvider({
       return;
     }
 
-    const nextItems = (data ?? [])
-      .map((x: { product_id: string }) => normalizeId(x.product_id))
-      .filter(Boolean);
+    const nextItems = (data ?? []).map(
+  (x: { product_id: number }) => String(x.product_id)
+);
 
     setItems(Array.from(new Set(nextItems)));
     setIsReady(true);
   }
 
   async function add(id: string) {
-    const resolvedUserId = await getCurrentUserId();
+  const resolvedUserId = await getCurrentUserId();
 
-    if (!resolvedUserId) return false;
+  if (!resolvedUserId) return false;
 
-    const productId = normalizeId(id);
+  console.log("Wishlist Product ID:", id);
 
-    if (items.includes(productId)) return true;
+  const productId = Number(id);
 
-    const { error } = await supabase.from("wishlist").insert({
-      user_id: resolvedUserId,
-      product_id: productId,
-    });
+  console.log("Converted Product ID:", productId);
 
-    if (error) return false;
-
-    setItems((current) =>
-      current.includes(productId)
-        ? current
-        : [...current, productId]
-    );
-
-    return true;
+  if (Number.isNaN(productId)) {
+    console.error("Invalid product id:", id);
+    return false;
   }
 
-  async function remove(id: string) {
-    const resolvedUserId = await getCurrentUserId();
+  if (items.includes(String(productId))) return true;
 
-    if (!resolvedUserId) return false;
+  const payload = {
+    user_id: resolvedUserId,
+    product_id: productId,
+  };
 
-    const productId = normalizeId(id);
+  console.log("INSERT PAYLOAD:", payload);
 
-    const { error } = await supabase
-      .from("wishlist")
-      .delete()
-      .eq("user_id", resolvedUserId)
-      .eq("product_id", productId);
+  const { data, error } = await supabase
+    .from("wishlist")
+    .insert(payload)
+    .select();
 
-    if (error) return false;
+  console.log("INSERT DATA:", data);
+  console.log("INSERT ERROR:", error);
 
-    setItems((current) =>
-      current.filter((itemId) => itemId !== productId)
-    );
+  if (error) return false;
 
-    return true;
-  }
+  setItems((current) =>
+    current.includes(String(productId))
+      ? current
+      : [...current, String(productId)]
+  );
+
+  return true;
+}
+
+ async function remove(id: string) {
+  const resolvedUserId = await getCurrentUserId();
+
+  if (!resolvedUserId) return false;
+
+  const productId = Number(id);
+
+  const { error } = await supabase
+    .from("wishlist")
+    .delete()
+    .eq("user_id", resolvedUserId)
+    .eq("product_id", productId);
+
+  console.log("DELETE ERROR:", error);
+
+  if (error) return false;
+
+  setItems((current) =>
+    current.filter((itemId) => itemId !== String(productId))
+  );
+
+  return true;
+}
 
   async function toggle(id: string): Promise<WishlistToggleResult> {
     const productId = normalizeId(id);

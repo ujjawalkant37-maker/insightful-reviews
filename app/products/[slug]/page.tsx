@@ -150,11 +150,11 @@ export default async function ProductPage({ params }: { params: { slug: string |
             </React.Suspense>
           </div>
           <div className="mt-3">
-            <React.Suspense>
-              {/* WishlistButton toggles wishlist */}
-              {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
-              <WishlistButton id={product.id} />
-            </React.Suspense>
+            <React.Suspense fallback={null}>
+ <WishlistButton
+  id={String(product.supabaseId)}
+/>
+</React.Suspense>
           </div>
         </aside>
       </div>
