@@ -13,13 +13,19 @@ import {
 
 const categories = categoriesData as Category[];
 
-const categoryMap: Record<string, string> = categories.reduce(
-  (map, category) => {
-    map[category.id] = category.name;
-    return map;
-  },
-  {} as Record<string, string>
-);
+const categoryMap: Record<string, string> = {
+  "1": "Smartphones",
+  "2": "Laptops",
+  "3": "TVs",
+  "4": "Appliances",
+};
+
+const categorySlugMap: Record<string, string> = {
+  smartphones: "1",
+  laptops: "2",
+  tvs: "3",
+  appliances: "4",
+};
 
 export const metadata: Metadata = {
   title: "Products - Insightful Reviews",
@@ -76,14 +82,17 @@ export default async function ProductsPage({
       expertSummary: product.description,
       buyUrl: product.buy_url ?? "",
       images: product.images ?? [],
-    }))
+    })
   );
 
   if (category) {
-    filteredProducts = filteredProducts.filter(
-      (p) => p.categoryId === category
-    );
-  }
+  const dbCategory =
+    categorySlugMap[category] ?? category;
+
+  filteredProducts = filteredProducts.filter(
+    (p) => p.categoryId === dbCategory
+  );
+}
 
   if (search) {
     const query = search.toLowerCase();
