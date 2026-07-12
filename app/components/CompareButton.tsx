@@ -1,51 +1,108 @@
 "use client";
-import React from 'react';
-import { useRouter } from 'next/navigation';
-import useCompare from './useCompare';
-import productsData from '@/data/products.json';
-import type { Product } from '@/types/models';
 
-const products = productsData as unknown as Product[];
+import React from "react";
+import { useRouter } from "next/navigation";
 
-export default function CompareButton({ id, slug }: { id: string; slug: string }) {
+import useCompare from "./useCompare";
+
+import {
+  getProducts,
+} from "@/lib/getProducts";
+
+export default function CompareButton({
+  id,
+  slug,
+}: {
+  id: string;
+  slug: string;
+}) {
   const router = useRouter();
-  const { compareIds, add, isCompared } = useCompare();
 
-  const handleClick = (e: React.MouseEvent) => {
+  const {
+    compareIds,
+    add,
+    isCompared,
+  } = useCompare();
+
+  async function handleClick(
+    e: React.MouseEvent
+  ) {
     e.preventDefault();
 
-    const already = isCompared(id);
-    if (!already && compareIds.length >= 5) {
-      try {
-        window.alert('You already have 5 products selected for comparison. Remove one to add another.');
-      } catch (err) {
-        // ignore
-      }
+    const already =
+      isCompared(id);
+
+    if (
+      !already &&
+      compareIds.length >= 5
+    ) {
+      alert(
+        "You can compare only 5 products at a time."
+      );
       return;
     }
 
-    // ensure the clicked product is in the compare list
-    if (!already) add(id);
+    if (!already) {
+      add(id);
+    }
 
-    // build slugs list from stored compare ids plus this one (deduped)
-    const combinedIds = Array.from(new Set([...compareIds, id]));
-    const slugs = combinedIds
-      .map((pid) => products.find((p) => p.id === pid)?.slug)
-      .filter(Boolean) as string[];
+    const allProducts =
+      await getProducts();
 
-    const q = new URLSearchParams();
-    if (slugs.length) q.set('products', slugs.join(','));
+    const combinedIds =
+      Array.from(
+        new Set([
+          ...compareIds,
+          id,
+        ])
+      );
 
-    router.push(`/compare?${q.toString()}`);
-  };
+    const slugs =
+      combinedIds
+        .map((compareId) => {
+
+          const product =
+            allProducts.find(
+              (p) =>
+                String(p.id) ===
+                compareId
+            );
+
+          return product?.slug;
+
+        })
+        .filter(
+          Boolean
+        ) as string[];
+
+    const params =
+      new URLSearchParams();
+
+    if (slugs.length > 0) {
+      params.set(
+        "products",
+        slugs.join(",")
+      );
+    }
+
+    router.push(
+      `/compare?${params.toString()}`
+    );
+  }
 
   return (
+
     <button
       onClick={handleClick}
-      className="flex-1 text-center px-4 py-2 rounded-md border border-gray-200"
+      className="flex-1 rounded-md border border-gray-300 px-4 py-2 text-center hover:bg-gray-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
       aria-pressed={isCompared(id)}
     >
-      Compare
+
+      {isCompared(id)
+        ? "Added"
+        : "Compare"}
+
     </button>
+
   );
 }
