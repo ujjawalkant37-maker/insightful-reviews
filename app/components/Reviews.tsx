@@ -7,7 +7,7 @@ import React, {
   useState,
 } from "react";
 import Link from "next/link";
-import ReviewCard from "./ReviewCard";
+import DatabaseReviewCard from "./DatabaseReviewCard";
 import { getReviews, DatabaseReview } from "@/lib/getReviews";
 
 type SortKey = "most-recent" | "highest" | "lowest";
@@ -195,25 +195,11 @@ useEffect(() => {
 
               {sorted.map((review) => (
 
-                <div
+                <DatabaseReviewCard
                   key={review.id}
-                  className="rounded-2xl border p-6"
-                >
-
-                  <ReviewCard
-                    review={{
-                      id: String(review.id),
-                      productId: String(review.product_id),
-                      name: "Verified User",
-                      rating: review.rating,
-                      title: review.title,
-                      text: review.review,
-                      date: review.created_at,
-                    }}
-                  />
-
-                </div>
-
+                  review={review}
+                  onVote={loadReviews}
+                />
               ))}
 
             </div>
