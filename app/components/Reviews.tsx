@@ -1,6 +1,11 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import Link from "next/link";
 import ReviewCard from "./ReviewCard";
 import { getReviews, DatabaseReview } from "@/lib/getReviews";
@@ -18,19 +23,25 @@ export default function Reviews({
   const [sortKey, setSortKey] =
     useState<SortKey>("most-recent");
 
-  useEffect(() => {
-    async function loadReviews() {
-      setLoading(true);
+  const loadReviews = useCallback(async () => {
+   const data = await getReviews(Number(productId));
 
-      const data = await getReviews(Number(productId));
+  setReviews(data);
 
-      setReviews(data);
+  setLoading(false);
+}, [productId]);
 
-      setLoading(false);
-    }
+useEffect(() => {
+  loadReviews();
+}, [loadReviews]);
 
+useEffect(() => {
+  const interval = setInterval(() => {
     loadReviews();
-  }, [productId]);
+  }, 5000);
+
+  return () => clearInterval(interval);
+}, [loadReviews]);
 
   const sorted = useMemo(() => {
     const copy = [...reviews];
