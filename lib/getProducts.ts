@@ -20,13 +20,25 @@ export type DatabaseProduct = {
 };
 
 export async function getProducts() {
-  const { data, error } = await supabase
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+
+  console.log("========== DEBUG ==========");
+  console.log("SESSION:", session);
+
+  const { data, error, status } = await supabase
     .from("products")
     .select("*")
     .order("name", { ascending: true });
 
+  console.log("STATUS:", status);
+  console.log("ERROR:", error);
+  console.log("ROWS:", data);
+  console.log("===========================");
+
   if (error) {
-    console.error("Failed to fetch products:", error.message);
+    console.error(error);
     return [];
   }
 
@@ -41,7 +53,7 @@ export async function getProductById(id: number) {
     .single();
 
   if (error) {
-    console.error(error.message);
+    console.error(error);
     return null;
   }
 
@@ -56,45 +68,37 @@ export async function getProductBySlug(slug: string) {
     .single();
 
   if (error) {
-    console.error(error.message);
+    console.error(error);
     return null;
   }
 
   return data as DatabaseProduct;
 }
 
-export async function getProductsByCategory(
-  categoryId: number
-) {
+export async function getProductsByCategory(categoryId: number) {
   const { data, error } = await supabase
     .from("products")
     .select("*")
     .eq("category_id", categoryId)
-    .order("rating", {
-      ascending: false,
-    });
+    .order("rating", { ascending: false });
 
   if (error) {
-    console.error(error.message);
+    console.error(error);
     return [];
   }
 
   return (data ?? []) as DatabaseProduct[];
 }
 
-export async function searchProducts(
-  keyword: string
-) {
+export async function searchProducts(keyword: string) {
   const { data, error } = await supabase
     .from("products")
     .select("*")
     .ilike("name", `%${keyword}%`)
-    .order("rating", {
-      ascending: false,
-    });
+    .order("rating", { ascending: false });
 
   if (error) {
-    console.error(error.message);
+    console.error(error);
     return [];
   }
 
