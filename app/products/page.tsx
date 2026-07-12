@@ -1,43 +1,31 @@
 import React from "react";
 import type { Metadata } from "next";
-import type { Category } from "@/types/models";
 
 import ProductGallery from "@/components/ProductGallery";
 import ProductFilters from "@/components/ProductFilters";
 
-import categoriesData from "@/data/categories.json";
 import {
   getProducts,
   DatabaseProduct,
 } from "@/lib/getProducts";
 
-const categories = categoriesData as Category[];
-
-const categoryMap: Record<string, string> = {
-  "1": "Smartphones",
-  "2": "Laptops",
-  "3": "TVs",
-  "4": "Appliances",
-};
-
-const categorySlugMap: Record<string, string> = {
-  smartphones: "1",
-  laptops: "2",
-  tvs: "3",
-  appliances: "4",
-};
+import {
+  getCategories,
+} from "@/lib/getCategories";
 
 export const metadata: Metadata = {
   title: "Products - Insightful Reviews",
   description: "Browse the full product catalog.",
 };
 
-function parseNum(v?: string): number | undefined {
+function parseNum(v?: string): number |undefined {
   if (!v) return undefined;
 
   const n = parseFloat(v);
 
-  return Number.isFinite(n) ? n : undefined;
+  return Number.isFinite(n)
+    ? n
+    : undefined;
 }
 
 export default async function ProductsPage({
@@ -53,6 +41,7 @@ export default async function ProductsPage({
     sort?: string;
   }>;
 }) {
+
   const {
     category,
     search,
@@ -63,126 +52,234 @@ export default async function ProductsPage({
     sort,
   } = await searchParams;
 
-  const databaseProducts = await getProducts();
+  const databaseProducts =
+    await getProducts();
 
-  let filteredProducts = databaseProducts.map(
-    (product: DatabaseProduct) => ({
-      id: String(product.id),
-      supabaseId: product.id,
-      slug: product.slug,
-      name: product.name,
-      categoryId: String(product.category_id),
-      price: `₹${product.price.toLocaleString("en-IN")}`,
-      rating: product.rating,
-      aiScore: product.ai_score,
-      summary: product.summary,
-      specs: product.specifications ?? {},
-      pros: product.pros ?? [],
-      cons: product.cons ?? [],
-      expertSummary: product.description,
-      buyUrl: product.buy_url ?? "",
-      images: product.images ?? [],
-    })
-  );
+  const categories =
+    await getCategories();
+
+  const categoryMap: Record<string, string> =
+    {};
+
+  const categorySlugMap: Record<
+    string,
+    string
+  > = {};
+
+  categories.forEach((category) => {
+    categoryMap[String(category.id)] =
+      category.name;
+
+    categorySlugMap[category.slug] =
+      String(category.id);
+  });
+
+  let filteredProducts =
+    databaseProducts.map(
+      (product: DatabaseProduct) => ({
+        id: String(product.id),
+        supabaseId: product.id,
+        slug: product.slug,
+        name: product.name,
+        categoryId: String(
+          product.category_id
+        ),
+        price: `₹${product.price.toLocaleString(
+          "en-IN"
+        )}`,
+        rating: product.rating,
+        aiScore: product.ai_score,
+        summary: product.summary,
+        specs:
+          product.specifications ?? {},
+        pros: product.pros ?? [],
+        cons: product.cons ?? [],
+        expertSummary:
+          product.description,
+        buyUrl:
+          product.buy_url ?? "",
+        images:
+          product.images ?? [],
+      })
+    );
 
   if (category) {
-  const dbCategory =
-    categorySlugMap[category] ?? category;
 
-  filteredProducts = filteredProducts.filter(
-    (p) => p.categoryId === dbCategory
-  );
-}
+    const dbCategory =
+      categorySlugMap[category] ??
+      category;
 
-  if (search) {
-    const query = search.toLowerCase();
+    filteredProducts =
+      filteredProducts.filter(
+        (product) =>
+          product.categoryId ===
+          dbCategory
+      );
 
-    filteredProducts = filteredProducts.filter((p) =>
-      [
-        p.name,
-        p.summary,
-        categoryMap[p.categoryId] ?? "",
-      ]
-        .join(" ")
-        .toLowerCase()
-        .includes(query)
-    );
   }
 
-  const minPrice = parseNum(priceMin);
-  const maxPrice = parseNum(priceMax);
+  if (search) {
+
+    const query =
+      search.toLowerCase();
+
+    filteredProducts =
+      filteredProducts.filter(
+        (product) =>
+          [
+            product.name,
+            product.summary,
+            categoryMap[
+              product.categoryId
+            ] ?? "",
+          ]
+            .join(" ")
+            .toLowerCase()
+            .includes(query)
+      );
+
+  }
+
+  const minPrice =
+    parseNum(priceMin);
+
+  const maxPrice =
+    parseNum(priceMax);
 
   if (minPrice !== undefined) {
-    filteredProducts = filteredProducts.filter(
-      (p) =>
-        Number(
-          p.price.replace(/[^0-9]/g, "")
-        ) >= minPrice
-    );
+
+    filteredProducts =
+      filteredProducts.filter(
+        (product) =>
+          Number(
+            product.price.replace(
+              /[^0-9]/g,
+              ""
+            )
+          ) >= minPrice
+      );
+
   }
 
   if (maxPrice !== undefined) {
-    filteredProducts = filteredProducts.filter(
-      (p) =>
-        Number(
-          p.price.replace(/[^0-9]/g, "")
-        ) <= maxPrice
-    );
+
+    filteredProducts =
+      filteredProducts.filter(
+        (product) =>
+          Number(
+            product.price.replace(
+              /[^0-9]/g,
+              ""
+            )
+          ) <= maxPrice
+      );
+
   }
 
-  const aiScore = parseNum(aiMin);
+  const aiScore =
+    parseNum(aiMin);
 
   if (aiScore !== undefined) {
-    filteredProducts = filteredProducts.filter(
-      (p) => p.aiScore >= aiScore
-    );
+
+    filteredProducts =
+      filteredProducts.filter(
+        (product) =>
+          product.aiScore >= aiScore
+      );
+
   }
 
-  const rating = parseNum(minRating);
+  const rating =
+    parseNum(minRating);
 
   if (rating !== undefined) {
-    filteredProducts = filteredProducts.filter(
-      (p) => p.rating >= rating
-    );
+
+    filteredProducts =
+      filteredProducts.filter(
+        (product) =>
+          product.rating >= rating
+      );
+
   }
 
   switch (sort) {
+
     case "price_asc":
+
       filteredProducts.sort(
         (a, b) =>
-          Number(a.price.replace(/[^0-9]/g, "")) -
-          Number(b.price.replace(/[^0-9]/g, ""))
+          Number(
+            a.price.replace(
+              /[^0-9]/g,
+              ""
+            )
+          ) -
+          Number(
+            b.price.replace(
+              /[^0-9]/g,
+              ""
+            )
+          )
       );
+
       break;
 
     case "price_desc":
+
       filteredProducts.sort(
         (a, b) =>
-          Number(b.price.replace(/[^0-9]/g, "")) -
-          Number(a.price.replace(/[^0-9]/g, ""))
+          Number(
+            b.price.replace(
+              /[^0-9]/g,
+              ""
+            )
+          ) -
+          Number(
+            a.price.replace(
+              /[^0-9]/g,
+              ""
+            )
+          )
       );
+
       break;
 
     case "highest_rated":
+
       filteredProducts.sort(
-        (a, b) => b.rating - a.rating
+        (a, b) =>
+          b.rating - a.rating
       );
+
       break;
 
     case "highest_ai":
+
       filteredProducts.sort(
-        (a, b) => b.aiScore - a.aiScore
+        (a, b) =>
+          b.aiScore - a.aiScore
       );
+
       break;
+
   }
 
   return (
+
     <div className="container py-6">
 
       <React.Suspense
-        fallback={<div>Loading Filters...</div>}
+        fallback={
+          <div>
+            Loading Filters...
+          </div>
+        }
       >
-        <ProductFilters categories={categories} />
+
+        <ProductFilters
+          categories={categories}
+        />
+
       </React.Suspense>
 
       <ProductGallery
@@ -191,5 +288,7 @@ export default async function ProductsPage({
       />
 
     </div>
+
   );
+
 }
