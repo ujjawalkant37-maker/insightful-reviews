@@ -14,6 +14,8 @@ export default function WriteReviewPage() {
 
   const [rating, setRating] = useState(5);
   const [title, setTitle] = useState("");
+  const [pros, setPros] = useState("");
+  const [cons, setCons] = useState("");
   const [review, setReview] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -40,6 +42,8 @@ export default function WriteReviewPage() {
         rating,
         title,
         review,
+        pros,
+        cons,
       });
 
       alert("Review submitted successfully.");
@@ -59,13 +63,17 @@ export default function WriteReviewPage() {
 
       <main className="mx-auto max-w-3xl px-6 py-10">
 
-        <h1 className="mb-8 text-4xl font-bold">
+        <h1 className="mb-2 text-4xl font-bold">
           Write Review
         </h1>
 
+        <p className="mb-8 text-gray-500">
+          Share your genuine experience to help other buyers.
+        </p>
+
         <form
           onSubmit={handleSubmit}
-          className="rounded-xl border bg-white p-8 shadow dark:bg-zinc-900 dark:border-zinc-800"
+          className="rounded-2xl border bg-white p-8 shadow dark:border-zinc-800 dark:bg-zinc-900"
         >
 
           <div className="mb-8">
@@ -89,12 +97,11 @@ export default function WriteReviewPage() {
             </label>
 
             <input
-              value={title}
-              onChange={(e) =>
-                setTitle(e.target.value)
-              }
-              className="w-full rounded-lg border p-3 dark:bg-zinc-800 dark:border-zinc-700"
               required
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
+              placeholder="Summarize your experience"
             />
 
           </div>
@@ -102,17 +109,48 @@ export default function WriteReviewPage() {
           <div className="mb-8">
 
             <label className="mb-2 block font-semibold">
-              Your Review
+              Pros
             </label>
 
             <textarea
+              rows={3}
+              value={pros}
+              onChange={(e) => setPros(e.target.value)}
+              className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
+              placeholder="What did you like?"
+            />
+
+          </div>
+
+          <div className="mb-8">
+
+            <label className="mb-2 block font-semibold">
+              Cons
+            </label>
+
+            <textarea
+              rows={3}
+              value={cons}
+              onChange={(e) => setCons(e.target.value)}
+              className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
+              placeholder="What could be improved?"
+            />
+
+          </div>
+
+          <div className="mb-8">
+
+            <label className="mb-2 block font-semibold">
+              Detailed Review
+            </label>
+
+            <textarea
+              required
               rows={8}
               value={review}
-              onChange={(e) =>
-                setReview(e.target.value)
-              }
-              className="w-full rounded-lg border p-3 dark:bg-zinc-800 dark:border-zinc-700"
-              required
+              onChange={(e) => setReview(e.target.value)}
+              className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
+              placeholder="Write your complete experience..."
             />
 
           </div>
@@ -122,9 +160,7 @@ export default function WriteReviewPage() {
             disabled={loading}
             className="w-full rounded-xl bg-indigo-600 py-4 text-lg font-semibold text-white hover:bg-indigo-700 disabled:opacity-50"
           >
-            {loading
-              ? "Submitting..."
-              : "Submit Review"}
+            {loading ? "Submitting..." : "Submit Review"}
           </button>
 
         </form>
