@@ -1,12 +1,33 @@
-import React from 'react';
-import WishlistClient from './WishlistClient';
+import React, { Suspense } from "react";
+import Header from "@/components/Header";
+import FooterSection from "@/components/FooterSection";
+import ProtectedRoute from "@/app/components/ProtectedRoute";
+import WishlistClient from "./WishlistClient";
 
 export default function WishlistPage() {
   return (
-    <React.Suspense>
-      {/* client-only wishlist viewer */}
-      {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
-      <WishlistClient />
-    </React.Suspense>
+    <ProtectedRoute>
+      <div className="min-h-screen flex flex-col bg-background text-foreground">
+
+        <Header />
+
+        <main className="flex-1">
+
+          <Suspense
+            fallback={
+              <div className="container py-20 text-center">
+                Loading Wishlist...
+              </div>
+            }
+          >
+            <WishlistClient />
+          </Suspense>
+
+        </main>
+
+        <FooterSection />
+
+      </div>
+    </ProtectedRoute>
   );
 }
