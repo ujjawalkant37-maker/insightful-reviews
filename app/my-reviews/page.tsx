@@ -9,7 +9,7 @@ import {
   deleteReview,
 } from "@/lib/getReviews";
 import ProtectedRoute from "@/app/components/ProtectedRoute";
-import ReviewCard from "@/components/ReviewCard";
+import DatabaseReviewCard from "@/components/DatabaseReviewCard";
 
 export default function MyReviewsPage() {
   const [reviews, setReviews] = useState<DatabaseReview[]>([]);
@@ -32,7 +32,6 @@ export default function MyReviewsPage() {
     const data = await getUserReviews(user.id);
 
     setReviews(data);
-
     setLoading(false);
   }
 
@@ -55,11 +54,15 @@ export default function MyReviewsPage() {
       ? 0
       : (
           reviews.reduce(
-            (sum, review) =>
-              sum + review.rating,
+            (sum, review) => sum + review.rating,
             0
           ) / reviews.length
         ).toFixed(1);
+
+  const helpfulVotes = reviews.reduce(
+    (sum, review) => sum + (review.helpful ?? 0),
+    0
+  );
 
   return (
     <ProtectedRoute>
@@ -121,7 +124,7 @@ export default function MyReviewsPage() {
               </div>
 
               <div className="mt-3 text-4xl font-bold text-green-600">
-                0
+                {helpfulVotes}
               </div>
 
             </div>
@@ -130,7 +133,7 @@ export default function MyReviewsPage() {
 
           {loading ? (
 
-            <div className="py-20 text-center">
+            <div className="py-20 text-center text-lg font-medium">
               Loading Reviews...
             </div>
 
@@ -150,32 +153,29 @@ export default function MyReviewsPage() {
                 You haven't written any reviews.
               </p>
 
+              <Link
+                href="/write-review"
+                className="mt-8 inline-block rounded-xl bg-indigo-600 px-8 py-4 font-semibold text-white hover:bg-indigo-700"
+              >
+                Write Your First Review
+              </Link>
+
             </div>
 
           ) : (
 
-            <div className="mt-12 space-y-8">
+            <div className="mt-12 space-y-10">
 
               {reviews.map((review) => (
 
-                <div
-                  key={review.id}
-                  className="rounded-2xl border bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
-                >
+                <div key={review.id}>
 
-                  <ReviewCard
-                    review={{
-                      id: String(review.id),
-                      productId: String(review.product_id),
-                      name: "You",
-                      rating: review.rating,
-                      title: review.title,
-                      text: review.review,
-                      date: review.created_at,
-                    }}
+                  <DatabaseReviewCard
+                    review={review}
+                    onVote={loadReviews}
                   />
 
-                  <div className="mt-6 flex gap-3">
+                  <div className="mt-5 flex flex-wrap gap-3">
 
                     <Link
                       href={`/edit-review?id=${review.id}`}
@@ -185,19 +185,17 @@ export default function MyReviewsPage() {
                     </Link>
 
                     <button
-                      onClick={() =>
-                        handleDelete(review.id)
-                      }
-                      className="rounded-xl bg-red-600 px-5 py-2 text-white"
+                      onClick={() => handleDelete(review.id)}
+                      className="rounded-xl bg-red-600 px-5 py-2 text-white hover:bg-red-700"
                     >
                       Delete
                     </button>
 
                     <Link
-                      href={`/products`}
-                      className="rounded-xl border px-5 py-2"
+                      href="/products"
+                      className="rounded-xl border px-5 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800"
                     >
-                      View Product
+                      View Products
                     </Link>
 
                   </div>
