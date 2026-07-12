@@ -177,11 +177,12 @@ export default function MyReviewsPage() {
 
                   <div className="mt-6 flex gap-3">
 
-                    <button
-                      className="rounded-xl bg-indigo-600 px-5 py-2 text-white"
+                    <Link
+                      href={`/edit-review?id=${review.id}`}
+                      className="rounded-xl bg-indigo-600 px-5 py-2 text-white hover:bg-indigo-700"
                     >
                       Edit
-                    </button>
+                    </Link>
 
                     <button
                       onClick={() =>
