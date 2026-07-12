@@ -1,14 +1,16 @@
 import React from "react";
 import type { Metadata } from "next";
-import type { Product, Category } from "@/types/models";
+import type { Category } from "@/types/models";
 
 import ProductGallery from "@/components/ProductGallery";
 import ProductFilters from "@/components/ProductFilters";
 
-import productsData from "@/data/products.json";
 import categoriesData from "@/data/categories.json";
+import {
+  getProducts,
+  DatabaseProduct,
+} from "@/lib/getProducts";
 
-const products = productsData as unknown as Product[];
 const categories = categoriesData as Category[];
 
 const categoryMap: Record<string, string> = categories.reduce(
@@ -30,14 +32,6 @@ function parseNum(v?: string): number | undefined {
   const n = parseFloat(v);
 
   return Number.isFinite(n) ? n : undefined;
-}
-
-function parseProductPrice(price?: string): number {
-  if (!price) return Infinity;
-
-  const n = parseFloat(price.replace(/[^0-9.-]/g, ""));
-
-  return Number.isFinite(n) ? n : Infinity;
 }
 
 export default async function ProductsPage({
@@ -63,7 +57,27 @@ export default async function ProductsPage({
     sort,
   } = await searchParams;
 
-  let filteredProducts = [...products];
+  const databaseProducts = await getProducts();
+
+  let filteredProducts = databaseProducts.map(
+    (product: DatabaseProduct) => ({
+      id: String(product.id),
+      supabaseId: product.id,
+      slug: product.slug,
+      name: product.name,
+      categoryId: String(product.category_id),
+      price: `₹${product.price.toLocaleString("en-IN")}`,
+      rating: product.rating,
+      aiScore: product.ai_score,
+      summary: product.summary,
+      specs: product.specifications ?? {},
+      pros: product.pros ?? [],
+      cons: product.cons ?? [],
+      expertSummary: product.description,
+      buyUrl: product.buy_url ?? "",
+      images: product.images ?? [],
+    }))
+  );
 
   if (category) {
     filteredProducts = filteredProducts.filter(
@@ -78,7 +92,7 @@ export default async function ProductsPage({
       [
         p.name,
         p.summary,
-        categoryMap[p.categoryId] ?? p.categoryId,
+        categoryMap[p.categoryId] ?? "",
       ]
         .join(" ")
         .toLowerCase()
@@ -91,13 +105,19 @@ export default async function ProductsPage({
 
   if (minPrice !== undefined) {
     filteredProducts = filteredProducts.filter(
-      (p) => parseProductPrice(p.price) >= minPrice
+      (p) =>
+        Number(
+          p.price.replace(/[^0-9]/g, "")
+        ) >= minPrice
     );
   }
 
   if (maxPrice !== undefined) {
     filteredProducts = filteredProducts.filter(
-      (p) => parseProductPrice(p.price) <= maxPrice
+      (p) =>
+        Number(
+          p.price.replace(/[^0-9]/g, "")
+        ) <= maxPrice
     );
   }
 
@@ -121,16 +141,16 @@ export default async function ProductsPage({
     case "price_asc":
       filteredProducts.sort(
         (a, b) =>
-          parseProductPrice(a.price) -
-          parseProductPrice(b.price)
+          Number(a.price.replace(/[^0-9]/g, "")) -
+          Number(b.price.replace(/[^0-9]/g, ""))
       );
       break;
 
     case "price_desc":
       filteredProducts.sort(
         (a, b) =>
-          parseProductPrice(b.price) -
-          parseProductPrice(a.price)
+          Number(b.price.replace(/[^0-9]/g, "")) -
+          Number(a.price.replace(/[^0-9]/g, ""))
       );
       break;
 
@@ -149,6 +169,7 @@ export default async function ProductsPage({
 
   return (
     <div className="container py-6">
+
       <React.Suspense
         fallback={<div>Loading Filters...</div>}
       >
@@ -159,6 +180,7 @@ export default async function ProductsPage({
         products={filteredProducts}
         categoryMap={categoryMap}
       />
+
     </div>
   );
 }
