@@ -10,6 +10,9 @@ export type DatabaseReview = {
   created_at: string;
   pros?: string | null;
   cons?: string | null;
+
+   helpful: number;
+  not_helpful: number;
 };
 
 export async function getReviews(productId: number) {
@@ -87,4 +90,46 @@ export async function updateReview(
     .eq("id", id);
 
   if (error) throw error;
+}
+
+export async function markHelpful(reviewId: number) {
+  const { data, error } = await supabase
+    .from("reviews")
+    .select("helpful")
+    .eq("id", reviewId)
+    .single();
+
+  if (error) throw error;
+
+  const current = data.helpful ?? 0;
+
+  const { error: updateError } = await supabase
+    .from("reviews")
+    .update({
+      helpful: current + 1,
+    })
+    .eq("id", reviewId);
+
+  if (updateError) throw updateError;
+}
+
+export async function markNotHelpful(reviewId: number) {
+  const { data, error } = await supabase
+    .from("reviews")
+    .select("not_helpful")
+    .eq("id", reviewId)
+    .single();
+
+  if (error) throw error;
+
+  const current = data.not_helpful ?? 0;
+
+  const { error: updateError } = await supabase
+    .from("reviews")
+    .update({
+      not_helpful: current + 1,
+    })
+    .eq("id", reviewId);
+
+  if (updateError) throw updateError;
 }
