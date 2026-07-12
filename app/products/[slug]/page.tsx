@@ -140,24 +140,43 @@ export default async function ProductPage({ params }: { params: { slug: string |
           <div className="mt-4 text-sm text-gray-600 dark:text-zinc-300">AI score</div>
           <div className="text-lg font-semibold mt-1">{product.aiScore}%</div>
 
-          <div className="mt-6 flex gap-3">
-            <a href={product.buyUrl ?? '#'} className={`flex-1 text-center px-4 py-2 rounded-md bg-indigo-600 text-white ${product.buyUrl ? 'hover:bg-indigo-700' : 'opacity-50 pointer-events-none'}`}>Buy Now</a>
-            {/* client-side compare behavior: add to compare list and navigate to /compare with slugs */}
-            <React.Suspense>
-              {/* CompareButton is a client component that manages localStorage + navigation */}
-              {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
-              <CompareButton id={product.id} slug={product.slug} />
-            </React.Suspense>
-          </div>
-          <div className="mt-3">
-            <React.Suspense fallback={null}>
- <WishlistButton
-  id={String(product.supabaseId)}
-/>
-</React.Suspense>
-          </div>
-        </aside>
-      </div>
-    </div>
-  );
+          <div className="mt-6 flex flex-col gap-3">
+
+  <a
+    href={product.buyUrl ?? "#"}
+    className={`w-full text-center rounded-md bg-indigo-600 px-4 py-2 text-white ${
+      product.buyUrl
+        ? "hover:bg-indigo-700"
+        : "pointer-events-none opacity-50"
+    }`}
+  >
+    Buy Now
+  </a>
+
+  <a
+    href={`/write-review?productId=${product.id}`}
+    className="w-full rounded-md border border-indigo-600 px-4 py-2 text-center text-indigo-600 hover:bg-indigo-50"
+  >
+    Write Review
+  </a>
+
+  <React.Suspense>
+    <CompareButton
+      id={product.id}
+      slug={product.slug}
+    />
+  </React.Suspense>
+
+  <React.Suspense fallback={null}>
+    <WishlistButton id={product.id} />
+  </React.Suspense>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+);
 }
