@@ -10,56 +10,100 @@ export default function TopAlternatives({
   currentId,
   products,
 }: Props) {
+
   const alternatives = products
-    .filter((p) => p.id !== currentId)
-    .sort((a, b) => b.aiScore - a.aiScore)
+    .filter(
+      (product) =>
+        product.id !== currentId
+    )
+    .sort(
+      (a, b) =>
+        b.aiScore - a.aiScore
+    )
     .slice(0, 3);
 
-  if (!alternatives.length) return null;
+  if (alternatives.length === 0) {
+    return null;
+  }
 
   return (
-    <section className="mt-10 rounded-xl border bg-white p-6 shadow dark:border-zinc-800 dark:bg-zinc-900">
 
-      <h2 className="text-2xl font-bold">
-        🏆 Top Alternatives
-      </h2>
+    <section className="mt-10 rounded-2xl border bg-white p-6 shadow dark:border-zinc-800 dark:bg-zinc-900">
 
-      <p className="mt-2 text-sm text-gray-500">
-        AI recommends these products as strong alternatives.
-      </p>
+      <div className="flex items-center justify-between">
+
+        <div>
+
+          <h2 className="text-2xl font-bold">
+            🏆 Top Alternatives
+          </h2>
+
+          <p className="mt-2 text-sm text-gray-500">
+            AI recommends these products
+            as the strongest alternatives.
+          </p>
+
+        </div>
+
+      </div>
 
       <div className="mt-6 space-y-4">
 
-        {alternatives.map((item, index) => (
+        {alternatives.map(
+          (
+            product,
+            index
+          ) => (
 
-          <Link
-            key={item.id}
-            href={`/products/${item.slug}`}
-            className="flex items-center justify-between rounded-lg border p-4 hover:bg-slate-50 dark:hover:bg-zinc-800"
-          >
+            <Link
+              key={product.id}
+              href={`/products/${product.slug}`}
+              className="flex items-center justify-between rounded-xl border p-4 transition hover:bg-slate-50 dark:border-zinc-800 dark:hover:bg-zinc-800"
+            >
 
-            <div>
+              <div>
 
-              <div className="font-semibold">
-                #{index + 1} {item.name}
+                <div className="font-semibold">
+
+                  #{index + 1}{" "}
+                  {product.name}
+
+                </div>
+
+                <div className="mt-2 flex flex-wrap gap-3 text-sm text-gray-500">
+
+                  <span>
+                    ⭐ {product.rating}
+                  </span>
+
+                  <span>
+                    AI Score{" "}
+                    {product.aiScore}%
+                  </span>
+
+                </div>
+
               </div>
 
-              <div className="mt-1 text-sm text-gray-500">
-                ⭐ {item.rating} | AI Score {item.aiScore}%
+              <div className="text-right">
+
+                <div className="text-lg font-bold">
+
+                  {product.price}
+
+                </div>
+
               </div>
 
-            </div>
+            </Link>
 
-            <div className="text-lg font-bold">
-              {item.price}
-            </div>
-
-          </Link>
-
-        ))}
+          )
+        )}
 
       </div>
 
     </section>
+
   );
+
 }
