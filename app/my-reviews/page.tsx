@@ -1,24 +1,62 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import reviewsData from "@/data/reviews.json";
-import ReviewCard from "@/components/ReviewCard";
-import type { Review } from "@/types/models";
+import { supabase } from "@/lib/supabase";
+import {
+  DatabaseReview,
+  getUserReviews,
+  deleteReview,
+} from "@/lib/getReviews";
 import ProtectedRoute from "@/app/components/ProtectedRoute";
+import ReviewCard from "@/components/ReviewCard";
 
 export default function MyReviewsPage() {
-  const reviews = useMemo(
-    () => reviewsData as Review[],
-    []
-  );
+  const [reviews, setReviews] = useState<DatabaseReview[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadReviews();
+  }, []);
+
+  async function loadReviews() {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      setLoading(false);
+      return;
+    }
+
+    const data = await getUserReviews(user.id);
+
+    setReviews(data);
+
+    setLoading(false);
+  }
+
+  async function handleDelete(id: number) {
+    const ok = window.confirm(
+      "Delete this review?"
+    );
+
+    if (!ok) return;
+
+    await deleteReview(id);
+
+    setReviews((current) =>
+      current.filter((review) => review.id !== id)
+    );
+  }
 
   const average =
     reviews.length === 0
       ? 0
       : (
           reviews.reduce(
-            (sum, review) => sum + review.rating,
+            (sum, review) =>
+              sum + review.rating,
             0
           ) / reviews.length
         ).toFixed(1);
@@ -43,21 +81,14 @@ export default function MyReviewsPage() {
               </h1>
 
               <p className="mt-3 text-gray-500">
-                Manage every review you've written.
+                Manage your submitted reviews.
               </p>
 
             </div>
 
-            <Link
-              href="/write-review"
-              className="rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700"
-            >
-              Write New Review
-            </Link>
-
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-4">
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
 
             <div className="rounded-2xl bg-white p-6 shadow dark:bg-zinc-900">
 
@@ -90,86 +121,93 @@ export default function MyReviewsPage() {
               </div>
 
               <div className="mt-3 text-4xl font-bold text-green-600">
-                248
-              </div>
-
-            </div>
-
-            <div className="rounded-2xl bg-white p-6 shadow dark:bg-zinc-900">
-
-              <div className="text-sm text-gray-500">
-                Reviewer Rank
-              </div>
-
-              <div className="mt-3 text-4xl font-bold text-red-500">
-                Gold
+                0
               </div>
 
             </div>
 
           </div>
 
-          <div className="mt-12 space-y-8">
+          {loading ? (
 
-            {reviews.length === 0 ? (
+            <div className="py-20 text-center">
+              Loading Reviews...
+            </div>
 
-              <div className="rounded-2xl border border-dashed bg-white p-12 text-center dark:border-zinc-800 dark:bg-zinc-900">
+          ) : reviews.length === 0 ? (
 
-                <div className="text-7xl">
-                  ⭐
-                </div>
+            <div className="mt-12 rounded-2xl border border-dashed bg-white p-12 text-center dark:border-zinc-800 dark:bg-zinc-900">
 
-                <h2 className="mt-6 text-3xl font-bold">
-                  No Reviews Yet
-                </h2>
-
-                <p className="mt-4 text-gray-500">
-                  Start helping other buyers by writing your first review.
-                </p>
-
-                <Link
-                  href="/write-review"
-                  className="mt-8 inline-block rounded-xl bg-indigo-600 px-8 py-4 font-semibold text-white hover:bg-indigo-700"
-                >
-                  Write Review
-                </Link>
-
+              <div className="text-6xl">
+                ⭐
               </div>
 
-            ) : (
+              <h2 className="mt-6 text-3xl font-bold">
+                No Reviews Yet
+              </h2>
 
-              reviews.map((review) => (
+              <p className="mt-4 text-gray-500">
+                You haven't written any reviews.
+              </p>
+
+            </div>
+
+          ) : (
+
+            <div className="mt-12 space-y-8">
+
+              {reviews.map((review) => (
 
                 <div
                   key={review.id}
                   className="rounded-2xl border bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
                 >
 
-                  <ReviewCard review={review} />
+                  <ReviewCard
+                    review={{
+                      id: String(review.id),
+                      productId: String(review.product_id),
+                      name: "You",
+                      rating: review.rating,
+                      title: review.title,
+                      text: review.review,
+                      date: review.created_at,
+                    }}
+                  />
 
-                  <div className="mt-6 flex flex-wrap gap-3">
+                  <div className="mt-6 flex gap-3">
 
-                    <button className="rounded-xl bg-indigo-600 px-5 py-2 font-semibold text-white hover:bg-indigo-700">
+                    <button
+                      className="rounded-xl bg-indigo-600 px-5 py-2 text-white"
+                    >
                       Edit
                     </button>
 
-                    <button className="rounded-xl bg-red-600 px-5 py-2 font-semibold text-white hover:bg-red-700">
+                    <button
+                      onClick={() =>
+                        handleDelete(review.id)
+                      }
+                      className="rounded-xl bg-red-600 px-5 py-2 text-white"
+                    >
                       Delete
                     </button>
 
-                    <button className="rounded-xl border px-5 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800">
-                      Share
-                    </button>
+                    <Link
+                      href={`/products`}
+                      className="rounded-xl border px-5 py-2"
+                    >
+                      View Product
+                    </Link>
 
                   </div>
 
                 </div>
 
-              ))
+              ))}
 
-            )}
+            </div>
 
-          </div>
+          )}
 
         </div>
 
