@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import ProtectedRoute from "@/app/components/ProtectedRoute";
 
 export default function SettingsPage() {
   const router = useRouter();
 
-  const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
   const [emailNotifications, setEmailNotifications] =
     useState(true);
@@ -15,242 +15,206 @@ export default function SettingsPage() {
     useState(false);
 
   useEffect(() => {
-    checkUser();
+    loadSettings();
   }, []);
 
-  async function checkUser() {
+  async function loadSettings() {
     const {
       data: { user },
     } = await supabase.auth.getUser();
 
-    if (!user) {
-      router.replace("/login");
-      return;
-    }
-
-    setLoading(false);
+    if (!user) return;
   }
 
   async function logout() {
     await supabase.auth.signOut();
-    router.push("/");
-    router.refresh();
-  }
-
-  if (loading) {
-    return (
-      <main className="min-h-screen flex items-center justify-center">
-        <div className="text-lg font-semibold">
-          Loading Settings...
-        </div>
-      </main>
-    );
+    window.location.href = "/";
   }
 
   return (
-    <main className="min-h-screen bg-slate-50 dark:bg-zinc-950">
+    <ProtectedRoute>
 
-      <div className="container mx-auto max-w-5xl px-4 py-10">
+      <main className="min-h-screen bg-slate-50 dark:bg-zinc-950">
 
-        <div className="mb-10">
+        <div className="container mx-auto max-w-5xl px-4 py-10">
 
-          <h1 className="text-4xl font-bold">
-            Settings
-          </h1>
+          <div className="mb-10">
 
-          <p className="mt-2 text-gray-500">
-            Manage your account preferences.
-          </p>
+            <h1 className="text-4xl font-bold">
+              Settings
+            </h1>
 
-        </div>
+            <p className="mt-2 text-gray-500">
+              Manage your account preferences.
+            </p>
 
-        <div className="space-y-8">
+          </div>
 
-          {/* Appearance */}
+          <div className="space-y-8">
 
-          <section className="rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
+            <section className="rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
 
-            <h2 className="text-2xl font-bold">
-              🎨 Appearance
-            </h2>
+              <h2 className="text-2xl font-bold">
+                🎨 Appearance
+              </h2>
 
-            <div className="mt-6 flex items-center justify-between">
-
-              <div>
-
-                <h3 className="font-semibold">
-                  Dark Mode
-                </h3>
-
-                <p className="text-sm text-gray-500">
-                  Enable dark theme.
-                </p>
-
-              </div>
-
-              <input
-                type="checkbox"
-                checked={darkMode}
-                onChange={(e) =>
-                  setDarkMode(e.target.checked)
-                }
-                className="h-5 w-5"
-              />
-
-            </div>
-
-          </section>
-
-          {/* Notifications */}
-
-          <section className="rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
-
-            <h2 className="text-2xl font-bold">
-              🔔 Notifications
-            </h2>
-
-            <div className="mt-6 space-y-6">
-
-              <div className="flex items-center justify-between">
+              <div className="mt-6 flex items-center justify-between">
 
                 <div>
 
                   <h3 className="font-semibold">
-                    Email Notifications
+                    Dark Mode
                   </h3>
 
                   <p className="text-sm text-gray-500">
-                    Receive review replies and updates.
+                    Enable dark theme.
                   </p>
 
                 </div>
 
                 <input
                   type="checkbox"
-                  checked={emailNotifications}
-                  onChange={(e) =>
-                    setEmailNotifications(
-                      e.target.checked
-                    )
-                  }
+                  checked={darkMode}
+                  onChange={(e) => setDarkMode(e.target.checked)}
                   className="h-5 w-5"
                 />
 
               </div>
 
-              <div className="flex items-center justify-between">
+            </section>
 
-                <div>
+            <section className="rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
 
-                  <h3 className="font-semibold">
-                    Marketing Emails
-                  </h3>
+              <h2 className="text-2xl font-bold">
+                🔔 Notifications
+              </h2>
 
-                  <p className="text-sm text-gray-500">
-                    Product launches and offers.
-                  </p>
+              <div className="mt-6 space-y-6">
+
+                <div className="flex items-center justify-between">
+
+                  <div>
+
+                    <h3 className="font-semibold">
+                      Email Notifications
+                    </h3>
+
+                    <p className="text-sm text-gray-500">
+                      Receive review replies and updates.
+                    </p>
+
+                  </div>
+
+                  <input
+                    type="checkbox"
+                    checked={emailNotifications}
+                    onChange={(e) =>
+                      setEmailNotifications(e.target.checked)
+                    }
+                    className="h-5 w-5"
+                  />
 
                 </div>
 
-                <input
-                  type="checkbox"
-                  checked={marketingEmails}
-                  onChange={(e) =>
-                    setMarketingEmails(
-                      e.target.checked
-                    )
-                  }
-                  className="h-5 w-5"
-                />
+                <div className="flex items-center justify-between">
+
+                  <div>
+
+                    <h3 className="font-semibold">
+                      Marketing Emails
+                    </h3>
+
+                    <p className="text-sm text-gray-500">
+                      Product launches and offers.
+                    </p>
+
+                  </div>
+
+                  <input
+                    type="checkbox"
+                    checked={marketingEmails}
+                    onChange={(e) =>
+                      setMarketingEmails(e.target.checked)
+                    }
+                    className="h-5 w-5"
+                  />
+
+                </div>
 
               </div>
 
-            </div>
+            </section>
 
-          </section>
+            <section className="rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
 
-          {/* Privacy */}
+              <h2 className="text-2xl font-bold">
+                🔒 Privacy
+              </h2>
 
-          <section className="rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
+              <div className="mt-6 space-y-3">
 
-            <h2 className="text-2xl font-bold">
-              🔒 Privacy
-            </h2>
+                <button className="w-full rounded-xl border p-4 text-left hover:bg-gray-50 dark:hover:bg-zinc-800">
+                  Download My Data
+                </button>
 
-            <div className="mt-6 space-y-3">
+                <button className="w-full rounded-xl border p-4 text-left hover:bg-gray-50 dark:hover:bg-zinc-800">
+                  Export Reviews
+                </button>
 
-              <button className="w-full rounded-xl border p-4 text-left hover:bg-gray-50 dark:hover:bg-zinc-800">
-                Download My Data
-              </button>
+              </div>
 
-              <button className="w-full rounded-xl border p-4 text-left hover:bg-gray-50 dark:hover:bg-zinc-800">
-                Export Reviews
-              </button>
+            </section>
 
-            </div>
+            <section className="rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
 
-          </section>
+              <h2 className="text-2xl font-bold">
+                🛡 Security
+              </h2>
 
-          {/* Security */}
+              <div className="mt-6 space-y-4">
 
-          <section className="rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
+                <button
+                  onClick={() => router.push("/profile")}
+                  className="rounded-xl bg-indigo-600 px-6 py-3 text-white hover:bg-indigo-700"
+                >
+                  Edit Profile
+                </button>
 
-            <h2 className="text-2xl font-bold">
-              🛡 Security
-            </h2>
+                <button
+                  onClick={logout}
+                  className="rounded-xl bg-red-600 px-6 py-3 text-white hover:bg-red-700"
+                >
+                  Logout
+                </button>
 
-            <div className="mt-6 space-y-4">
+              </div>
 
-              <button
-                className="rounded-xl bg-indigo-600 px-6 py-3 text-white hover:bg-indigo-700"
-                onClick={() =>
-                  router.push("/profile")
-                }
-              >
-                Edit Profile
-              </button>
+            </section>
 
-              <button
-                className="rounded-xl bg-red-600 px-6 py-3 text-white hover:bg-red-700"
-                onClick={logout}
-              >
-                Logout
-              </button>
+            <section className="rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
 
-            </div>
+              <h2 className="text-2xl font-bold">
+                ℹ About
+              </h2>
 
-          </section>
+              <div className="mt-6 space-y-2 text-gray-600 dark:text-gray-300">
 
-          {/* About */}
+                <p>Insightful Reviews</p>
 
-          <section className="rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
+                <p>Version 1.0.0</p>
 
-            <h2 className="text-2xl font-bold">
-              ℹ About
-            </h2>
+                <p>© 2026 Insightful Reviews</p>
 
-            <div className="mt-6 space-y-2 text-gray-600 dark:text-gray-300">
+              </div>
 
-              <p>
-                Insightful Reviews
-              </p>
+            </section>
 
-              <p>
-                Version 1.0.0
-              </p>
-
-              <p>
-                © 2026 Insightful Reviews
-              </p>
-
-            </div>
-
-          </section>
+          </div>
 
         </div>
 
-      </div>
+      </main>
 
-    </main>
+    </ProtectedRoute>
   );
 }
