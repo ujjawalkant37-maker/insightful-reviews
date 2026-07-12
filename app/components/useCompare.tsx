@@ -1,72 +1,225 @@
 "use client";
-import { useCallback, useEffect, useState } from 'react';
 
-const STORAGE_KEY = 'compareItems:v1';
+import {
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
+
+const STORAGE_KEY =
+  "compareItems:v2";
+
 const MAX_ITEMS = 5;
 
 export function useCompare() {
-  // start with a stable empty array so server and client markup match during
-  // hydration. Read and write localStorage only inside effects to avoid
-  // hydration mismatches.
-  const [items, setItems] = useState<string[]>([]);
 
-  // hydrate from localStorage on mount
+  const [items, setItems] =
+    useState<string[]>([]);
+
   useEffect(() => {
+
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      const loaded = raw ? (JSON.parse(raw) as string[]) : [];
-      setItems(loaded);
-    } catch (e) {
-      // ignore
+
+      const saved =
+        localStorage.getItem(
+          STORAGE_KEY
+        );
+
+      if (!saved) return;
+
+      const parsed =
+        JSON.parse(saved);
+
+      if (Array.isArray(parsed)) {
+
+        setItems(
+          parsed.map(String)
+        );
+
+      }
+
+    } catch (error) {
+
+      console.error(error);
+
     }
+
   }, []);
 
-  // persist whenever items change (on client)
   useEffect(() => {
+
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-    } catch (e) {
-      // ignore
+
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify(items)
+      );
+
+    } catch (error) {
+
+      console.error(error);
+
     }
+
   }, [items]);
 
-  const isCompared = useCallback((id: string) => items.includes(id), [items]);
+  const isCompared =
+    useCallback(
+      (id: string) =>
+        items.includes(id),
+      [items]
+    );
 
-  const add = useCallback((id: string) => {
-    setItems((prev) => {
-      if (prev.includes(id)) return prev;
-      if (prev.length >= MAX_ITEMS) {
-        // simple user feedback
-        try { window.alert('You can compare up to 5 products only.'); } catch (e) { /* ignore */ }
-        return prev;
-      }
-      return [...prev, id];
-    });
-  }, []);
+  const add =
+    useCallback(
+      (id: string) => {
 
-  const remove = useCallback((id: string) => {
-    setItems((prev) => prev.filter((p) => p !== id));
-  }, []);
+        setItems((current) => {
 
-  const merge = useCallback((ids: string[]) => {
-    setItems((prev) => {
-      const merged = [...prev];
-      for (const id of ids) {
-        if (merged.includes(id)) continue;
-        if (merged.length >= MAX_ITEMS) break;
-        merged.push(id);
-      }
-      return merged;
-    });
-  }, []);
+          if (
+            current.includes(id)
+          ) {
+            return current;
+          }
 
-  const toggleCompare = useCallback((id: string) => {
-    setItems((prev) => (prev.includes(id) ? prev.filter((p) => p !== id) : (prev.length >= MAX_ITEMS ? prev : [...prev, id])) );
-  }, []);
+          if (
+            current.length >=
+            MAX_ITEMS
+          ) {
 
-  const clear = useCallback(() => setItems([]), []);
+            alert(
+              "You can compare a maximum of 5 products."
+            );
 
-  return { compareIds: items, isCompared, add, remove, merge, toggleCompare, clear } as const;
+            return current;
+
+          }
+
+          return [
+            ...current,
+            id,
+          ];
+
+        });
+
+      },
+      []
+    );
+
+  const remove =
+    useCallback(
+      (id: string) => {
+
+        setItems(
+          (current) =>
+            current.filter(
+              (item) =>
+                item !== id
+            )
+        );
+
+      },
+      []
+    );
+
+  const toggleCompare =
+    useCallback(
+      (id: string) => {
+
+        setItems((current) => {
+
+          if (
+            current.includes(id)
+          ) {
+
+            return current.filter(
+              (item) =>
+                item !== id
+            );
+
+          }
+
+          if (
+            current.length >=
+            MAX_ITEMS
+          ) {
+
+            alert(
+              "Maximum 5 products can be compared."
+            );
+
+            return current;
+
+          }
+
+          return [
+            ...current,
+            id,
+          ];
+
+        });
+
+      },
+      []
+    );
+
+  const merge =
+    useCallback(
+      (ids: string[]) => {
+
+        setItems(
+          (current) => {
+
+            const merged = [
+              ...current,
+            ];
+
+            ids.forEach(
+              (id) => {
+
+                if (
+                  merged.includes(id)
+                ) {
+                  return;
+                }
+
+                if (
+                  merged.length >=
+                  MAX_ITEMS
+                ) {
+                  return;
+                }
+
+                merged.push(id);
+
+              }
+            );
+
+            return merged;
+
+          }
+        );
+
+      },
+      []
+    );
+
+  const clear =
+    useCallback(() => {
+
+      setItems([]);
+
+    }, []);
+
+  return {
+    compareIds: items,
+    isCompared,
+    add,
+    remove,
+    merge,
+    toggleCompare,
+    clear,
+  } as const;
 }
 
 export default useCompare;
