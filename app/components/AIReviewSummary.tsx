@@ -1,73 +1,79 @@
 import type { Product } from "@/types/models";
 
 const fallbackBestFor: Record<string, string[]> = {
-  smartphones: [
+  "1": [
     "Mobile photographers",
-    "Heavy users needing long battery life",
-    "Flagship lovers",
+    "Heavy users",
+    "Flagship buyers",
   ],
-  laptops: [
+  "2": [
     "Students",
     "Professionals",
     "Content creators",
   ],
-  tvs: [
+  "3": [
     "Movie lovers",
     "Console gamers",
-    "Family entertainment",
+    "Families",
   ],
-  appliances: [
+  "4": [
     "Large families",
     "Energy conscious homes",
     "Smart home users",
   ],
 };
 
-const fallbackNotRecommendedFor: Record<string, string[]> = {
-  smartphones: [
-    "People looking for the cheapest phone",
-    "Basic calling-only users",
+const fallbackNotRecommendedFor: Record<
+  string,
+  string[]
+> = {
+  "1": [
+    "Lowest-budget buyers",
+    "Calling-only users",
   ],
-  laptops: [
-    "Very low-budget buyers",
-    "Users needing only web browsing",
-  ],
-  tvs: [
-    "Small bedrooms",
+  "2": [
+    "Basic web browsing only",
     "Ultra-budget buyers",
   ],
-  appliances: [
+  "3": [
+    "Small room setups",
+    "Budget shoppers",
+  ],
+  "4": [
     "People wanting manual controls",
     "Budget-only shoppers",
   ],
 };
 
-function scoreText(score: number) {
-  if (score >= 95)
+function scoreInfo(score: number) {
+  if (score >= 95) {
     return {
       label: "Outstanding",
-      color: "bg-green-600",
       verdict: "BUY",
+      color: "bg-green-600",
     };
+  }
 
-  if (score >= 90)
+  if (score >= 90) {
     return {
       label: "Excellent",
-      color: "bg-green-500",
       verdict: "BUY",
+      color: "bg-green-500",
     };
+  }
 
-  if (score >= 82)
+  if (score >= 82) {
     return {
       label: "Very Good",
-      color: "bg-yellow-500",
       verdict: "WAIT",
+      color: "bg-yellow-500",
     };
+  }
 
   return {
     label: "Average",
-    color: "bg-red-500",
     verdict: "AVOID",
+    color: "bg-red-500",
   };
 }
 
@@ -76,15 +82,17 @@ export default function AIReviewSummary({
 }: {
   product: Product;
 }) {
-  const score = scoreText(product.aiScore);
+  const score = scoreInfo(
+    product.aiScore
+  );
 
   const strengths =
     product.pros?.length
       ? product.pros
       : [
-          "Excellent value",
           "Reliable performance",
-          "Balanced feature set",
+          "Excellent value",
+          "Balanced features",
         ];
 
   const weaknesses =
@@ -95,8 +103,9 @@ export default function AIReviewSummary({
         ];
 
   const bestFor =
-    fallbackBestFor[product.categoryId] ??
-    ["General users"];
+    fallbackBestFor[
+      product.categoryId
+    ] ?? ["General users"];
 
   const avoid =
     fallbackNotRecommendedFor[
@@ -119,11 +128,12 @@ export default function AIReviewSummary({
           </h2>
 
           <p className="mt-3 text-gray-600 dark:text-gray-400">
-            AI analysed expert opinions,
-            specifications,
+            AI analyzed specifications,
+            user reviews,
+            expert opinions,
             ratings,
-            user feedback
-            and overall value.
+            value for money
+            and overall product quality.
           </p>
 
         </div>
@@ -141,8 +151,7 @@ export default function AIReviewSummary({
           </div>
 
           <div className="mt-1 text-sm text-gray-500">
-            Verdict:
-            {" "}
+            Verdict{" "}
             <span className="font-bold">
               {score.verdict}
             </span>
@@ -160,7 +169,7 @@ export default function AIReviewSummary({
             ✅ Strengths
           </h3>
 
-          <ul className="space-y-3">
+          <ul className="space-y-2">
 
             {strengths.map((item) => (
               <li key={item}>
@@ -178,7 +187,7 @@ export default function AIReviewSummary({
             ❌ Weaknesses
           </h3>
 
-          <ul className="space-y-3">
+          <ul className="space-y-2">
 
             {weaknesses.map((item) => (
               <li key={item}>
@@ -239,8 +248,10 @@ export default function AIReviewSummary({
         </h3>
 
         <p className="mt-3 leading-7 text-gray-700">
-          {product.expertSummary ??
+
+          {product.expertSummary ||
             product.summary}
+
         </p>
 
       </div>
