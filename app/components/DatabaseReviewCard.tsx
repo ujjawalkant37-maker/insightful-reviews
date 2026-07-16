@@ -6,7 +6,7 @@ import {
   DatabaseReview,
   markHelpful,
   markNotHelpful,
-} from "@/lib/getReviews";
+} from "@/@/lib/reviews";
 
 type Props = {
   review: DatabaseReview;
