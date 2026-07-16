@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 type Props = {
   value: number;
@@ -17,8 +17,16 @@ export default function StarRating({
   editable = false,
   onChange,
 }: Props) {
+  const [hover, setHover] = useState<number | null>(null);
+
+  const displayValue = hover ?? value;
+
   return (
-    <div className="flex items-center gap-1">
+    <div
+      className="flex items-center gap-1"
+      role={editable ? "radiogroup" : "img"}
+      aria-label={`Rating ${value} out of ${max}`}
+    >
       {Array.from({ length: max }).map((_, index) => {
         const star = index + 1;
 
@@ -27,15 +35,44 @@ export default function StarRating({
             key={star}
             type="button"
             disabled={!editable}
+            aria-label={`${star} Star`}
+            aria-checked={value === star}
+            role={editable ? "radio" : undefined}
+            tabIndex={editable ? 0 : -1}
             onClick={() => editable && onChange?.(star)}
-            className={`${editable ? "cursor-pointer" : "cursor-default"}`}
+            onMouseEnter={() =>
+              editable && setHover(star)
+            }
+            onMouseLeave={() =>
+              editable && setHover(null)
+            }
+            onKeyDown={(e) => {
+              if (!editable) return;
+
+              if (
+                e.key === "Enter" ||
+                e.key === " "
+              ) {
+                e.preventDefault();
+                onChange?.(star);
+              }
+            }}
+            className={`transition-transform ${
+              editable
+                ? "cursor-pointer hover:scale-110"
+                : "cursor-default"
+            }`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={size}
               height={size}
               viewBox="0 0 24 24"
-              fill={star <= value ? "#facc15" : "none"}
+              fill={
+                star <= displayValue
+                  ? "#facc15"
+                  : "none"
+              }
               stroke="#facc15"
               strokeWidth="2"
               strokeLinecap="round"
