@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ProtectedRoute from "@/app/components/ProtectedRoute";
 import { supabase } from "@/lib/supabase";
-import { updateReview } from "@/lib/getReviews";
+import { updateReview } from "@/lib/reviews";
 import StarRating from "@/components/StarRating";
 
 export default function EditReviewPage() {
