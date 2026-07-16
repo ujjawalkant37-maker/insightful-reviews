@@ -8,7 +8,7 @@ import React, {
 } from "react";
 import Link from "next/link";
 import DatabaseReviewCard from "./DatabaseReviewCard";
-import { getReviews, DatabaseReview } from "@/lib/getReviews";
+import { getReviews, DatabaseReview } from "@/lib/reviews";
 
 type SortKey = "most-recent" | "highest" | "lowest";
 
