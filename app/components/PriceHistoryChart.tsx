@@ -33,24 +33,23 @@ export default function PriceHistoryChart({
   productName,
   currentPrice,
 }: Props) {
-  const prices = sampleData.map((d) => d.price);
+  const prices = sampleData.map((item) => item.price);
 
   const lowest = Math.min(...prices);
   const highest = Math.max(...prices);
 
   const average = Math.round(
-    prices.reduce((a, b) => a + b, 0) /
+    prices.reduce((total, price) => total + price, 0) /
       prices.length
   );
 
   return (
-    <section className="rounded-3xl border bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+    <section>
+      {/* Header */}
 
       <div className="flex items-center justify-between">
-
         <div>
-
-          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
             📈 Price History
           </span>
 
@@ -62,13 +61,12 @@ export default function PriceHistoryChart({
             Historical price movement for{" "}
             <strong>{productName}</strong>.
           </p>
-
         </div>
-
       </div>
 
-      <div className="mt-10 h-[380px]">
+      {/* Chart */}
 
+      <div className="mt-10 h-[380px]">
         <ResponsiveContainer
           width="100%"
           height="100%"
@@ -80,13 +78,13 @@ export default function PriceHistoryChart({
 
             <YAxis
               tickFormatter={(value) =>
-                `₹${Math.round(value / 1000)}k`
+                `₹${Math.round(Number(value) / 1000)}k`
               }
             />
 
             <Tooltip
-              formatter={(value: number) =>
-                formatPrice(value)
+              formatter={(value) =>
+                formatPrice(Number(value ?? 0))
               }
             />
 
@@ -96,16 +94,14 @@ export default function PriceHistoryChart({
               strokeWidth={3}
               dot
             />
-
           </LineChart>
         </ResponsiveContainer>
-
       </div>
 
+      {/* Price Statistics */}
+
       <div className="mt-10 grid gap-6 md:grid-cols-4">
-
         <div className="rounded-2xl bg-green-50 p-6 dark:bg-green-950/20">
-
           <div className="text-sm text-gray-500">
             Current Price
           </div>
@@ -113,11 +109,9 @@ export default function PriceHistoryChart({
           <div className="mt-2 text-3xl font-bold text-green-700">
             {formatPrice(currentPrice)}
           </div>
-
         </div>
 
         <div className="rounded-2xl bg-blue-50 p-6 dark:bg-blue-950/20">
-
           <div className="text-sm text-gray-500">
             Lowest Price
           </div>
@@ -125,11 +119,9 @@ export default function PriceHistoryChart({
           <div className="mt-2 text-3xl font-bold text-blue-700">
             {formatPrice(lowest)}
           </div>
-
         </div>
 
         <div className="rounded-2xl bg-red-50 p-6 dark:bg-red-950/20">
-
           <div className="text-sm text-gray-500">
             Highest Price
           </div>
@@ -137,11 +129,9 @@ export default function PriceHistoryChart({
           <div className="mt-2 text-3xl font-bold text-red-700">
             {formatPrice(highest)}
           </div>
-
         </div>
 
         <div className="rounded-2xl bg-yellow-50 p-6 dark:bg-yellow-950/20">
-
           <div className="text-sm text-gray-500">
             Average Price
           </div>
@@ -149,13 +139,12 @@ export default function PriceHistoryChart({
           <div className="mt-2 text-3xl font-bold text-yellow-700">
             {formatPrice(average)}
           </div>
-
         </div>
-
       </div>
 
-      <div className="mt-10 rounded-2xl bg-slate-50 p-6 dark:bg-zinc-800">
+      {/* Price Insight */}
 
+      <div className="mt-10 rounded-2xl bg-slate-50 p-6 dark:bg-zinc-800">
         <h3 className="text-xl font-bold">
           Price Insight
         </h3>
@@ -168,9 +157,7 @@ export default function PriceHistoryChart({
           prices, lowest recorded price, highest recorded
           price, festive sale trends, and price-drop alerts.
         </p>
-
       </div>
-
     </section>
   );
 }

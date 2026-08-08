@@ -1,12 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useState } from "react";
+import {
+  useRouter,
+  useSearchParams,
+} from "next/navigation";
+
 import { createReview } from "@/lib/reviews";
 import StarRating from "@/components/StarRating";
 import ProtectedRoute from "@/app/components/ProtectedRoute";
 
-export default function WriteReviewPage() {
+function WriteReviewContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -60,9 +64,7 @@ export default function WriteReviewPage() {
 
   return (
     <ProtectedRoute>
-
       <main className="mx-auto max-w-3xl px-6 py-10">
-
         <h1 className="mb-2 text-4xl font-bold">
           Write Review
         </h1>
@@ -75,9 +77,7 @@ export default function WriteReviewPage() {
           onSubmit={handleSubmit}
           className="rounded-2xl border bg-white p-8 shadow dark:border-zinc-800 dark:bg-zinc-900"
         >
-
           <div className="mb-8">
-
             <label className="mb-2 block font-semibold">
               Rating
             </label>
@@ -87,72 +87,87 @@ export default function WriteReviewPage() {
               editable
               onChange={setRating}
             />
-
           </div>
 
           <div className="mb-8">
-
-            <label className="mb-2 block font-semibold">
+            <label
+              htmlFor="review-title"
+              className="mb-2 block font-semibold"
+            >
               Review Title
             </label>
 
             <input
+              id="review-title"
               required
               value={title}
-              onChange={(e) => setTitle(e.target.value)}
+              onChange={(e) =>
+                setTitle(e.target.value)
+              }
               className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
               placeholder="Summarize your experience"
             />
-
           </div>
 
           <div className="mb-8">
-
-            <label className="mb-2 block font-semibold">
+            <label
+              htmlFor="review-pros"
+              className="mb-2 block font-semibold"
+            >
               Pros
             </label>
 
             <textarea
+              id="review-pros"
               rows={3}
               value={pros}
-              onChange={(e) => setPros(e.target.value)}
+              onChange={(e) =>
+                setPros(e.target.value)
+              }
               className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
               placeholder="What did you like?"
             />
-
           </div>
 
           <div className="mb-8">
-
-            <label className="mb-2 block font-semibold">
+            <label
+              htmlFor="review-cons"
+              className="mb-2 block font-semibold"
+            >
               Cons
             </label>
 
             <textarea
+              id="review-cons"
               rows={3}
               value={cons}
-              onChange={(e) => setCons(e.target.value)}
+              onChange={(e) =>
+                setCons(e.target.value)
+              }
               className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
               placeholder="What could be improved?"
             />
-
           </div>
 
           <div className="mb-8">
-
-            <label className="mb-2 block font-semibold">
+            <label
+              htmlFor="review-content"
+              className="mb-2 block font-semibold"
+            >
               Detailed Review
             </label>
 
             <textarea
+              id="review-content"
               required
               rows={8}
               value={review}
-              onChange={(e) => setReview(e.target.value)}
+              onChange={(e) =>
+                setReview(e.target.value)
+              }
               className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
               placeholder="Write your complete experience..."
             />
-
           </div>
 
           <button
@@ -160,13 +175,28 @@ export default function WriteReviewPage() {
             disabled={loading}
             className="w-full rounded-xl bg-indigo-600 py-4 text-lg font-semibold text-white hover:bg-indigo-700 disabled:opacity-50"
           >
-            {loading ? "Submitting..." : "Submit Review"}
+            {loading
+              ? "Submitting..."
+              : "Submit Review"}
           </button>
-
         </form>
-
       </main>
-
     </ProtectedRoute>
+  );
+}
+
+export default function WriteReviewPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="mx-auto max-w-3xl px-6 py-10">
+          <div className="rounded-2xl border bg-white p-8 text-gray-500 shadow dark:border-zinc-800 dark:bg-zinc-900">
+            Loading Review...
+          </div>
+        </main>
+      }
+    >
+      <WriteReviewContent />
+    </Suspense>
   );
 }

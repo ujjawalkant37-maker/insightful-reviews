@@ -10,7 +10,14 @@ import type { Product } from "@/types/models";
 export default function WishlistClient() {
   const { items, clear } = useWishlist();
 
-  const products = productsData as Product[];
+  const products = productsData.map((product) => ({
+  ...product,
+  specs: Object.fromEntries(
+    Object.entries(product.specs ?? {}).filter(
+      ([, value]) => typeof value === "string"
+    )
+  ) as Record<string, string>,
+})) as Product[];
 
   const selected = products.filter((product) =>
     items.includes(product.id)

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { askAI } from "@/lib/ai";
 
 type Props = {
@@ -23,11 +23,7 @@ export default function AIDecisionEngine({
   const [loading, setLoading] = useState(true);
   const [decision, setDecision] = useState("");
 
-  useEffect(() => {
-    generateDecision();
-  }, [productName]);
-
-  async function generateDecision() {
+  const generateDecision = useCallback(async () => {
     try {
       setLoading(true);
 
@@ -94,26 +90,27 @@ FINAL VERDICT
 `;
 
       const response = await askAI(prompt);
-
       setDecision(response);
     } catch (error) {
       console.error(error);
-
-      setDecision(
-        "Unable to generate AI decision."
-      );
+      setDecision("Unable to generate AI decision.");
+    } finally {
+      setLoading(false);
     }
+  }, [productName, category, price, aiScore, trustScore, summary]);
 
-    setLoading(false);
-  }
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      void generateDecision();
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, [generateDecision]);
 
   return (
     <section className="rounded-3xl border bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-
       <div className="flex items-center justify-between">
-
         <div>
-
           <span className="rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700">
             🧠 AI Decision Engine
           </span>
@@ -128,7 +125,6 @@ FINAL VERDICT
             overall product quality to provide
             a final buying recommendation.
           </p>
-
         </div>
 
         <button
@@ -136,85 +132,46 @@ FINAL VERDICT
           disabled={loading}
           className="rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700 disabled:opacity-50"
         >
-          {loading
-            ? "Analyzing..."
-            : "Run AI Again"}
+          {loading ? "Analyzing..." : "Run AI Again"}
         </button>
-
       </div>
 
       {loading ? (
-
         <div className="py-24 text-center">
-
-          <div className="mx-auto h-14 w-14 animate-spin rounded-full border-4 border-indigo-600 border-t-transparent"></div>
-
+          <div className="mx-auto h-14 w-14 animate-spin rounded-full border-4 border-indigo-600 border-t-transparent" />
           <p className="mt-6 text-lg">
             AI is evaluating this product...
           </p>
-
         </div>
-
       ) : (
-
         <div className="mt-10 whitespace-pre-wrap rounded-2xl bg-slate-50 p-8 leading-8 dark:bg-zinc-800">
-
           {decision}
-
         </div>
-
       )}
 
       <div className="mt-12 grid gap-6 md:grid-cols-4">
-
-        <InfoCard
-          title="Product"
-          value={productName}
-        />
-
-        <InfoCard
-          title="Category"
-          value={category || "--"}
-        />
-
-        <InfoCard
-          title="Price"
-          value={`₹${price ?? "--"}`}
-        />
-
+        <InfoCard title="Product" value={productName} />
+        <InfoCard title="Category" value={category || "--"} />
+        <InfoCard title="Price" value={`₹${price ?? "--"}`} />
         <InfoCard
           title="Trust Score"
-          value={
-            trustScore !== undefined
-              ? `${trustScore}/100`
-              : "--"
-          }
+          value={trustScore !== undefined ? `${trustScore}/100` : "--"}
         />
-
       </div>
 
       <div className="mt-10 rounded-2xl border border-indigo-200 bg-indigo-50 p-6 dark:border-indigo-900 dark:bg-indigo-950/20">
-
         <h3 className="text-xl font-bold text-indigo-700 dark:text-indigo-300">
           How the AI Decision Engine Works
         </h3>
 
         <ul className="mt-5 space-y-3 text-gray-700 dark:text-gray-300">
-
           <li>• AI analyzes the available product information.</li>
-
           <li>• Trust Score contributes to reliability assessment.</li>
-
           <li>• Price and value influence the buying recommendation.</li>
-
           <li>• The engine weighs strengths, weaknesses, and potential risks.</li>
-
           <li>• If available information is limited, the AI states that explicitly instead of guessing.</li>
-
         </ul>
-
       </div>
-
     </section>
   );
 }
@@ -228,15 +185,8 @@ function InfoCard({
 }) {
   return (
     <div className="rounded-2xl bg-slate-50 p-5 text-center dark:bg-zinc-800">
-
-      <div className="text-sm text-gray-500">
-        {title}
-      </div>
-
-      <div className="mt-3 text-xl font-bold">
-        {value}
-      </div>
-
+      <div className="text-sm text-gray-500">{title}</div>
+      <div className="mt-3 text-xl font-bold">{value}</div>
     </div>
   );
 }

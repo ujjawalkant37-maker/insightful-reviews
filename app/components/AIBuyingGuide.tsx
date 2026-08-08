@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { askAI } from "@/lib/ai";
 
 type Props = {
@@ -19,11 +19,7 @@ export default function AIBuyingGuide({
   const [guide, setGuide] = useState("");
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    generateGuide();
-  }, [productName]);
-
-  async function generateGuide() {
+  const generateGuide = useCallback(async () => {
     try {
       setLoading(true);
 
@@ -71,26 +67,27 @@ FINAL RECOMMENDATION
 `;
 
       const response = await askAI(prompt);
-
       setGuide(response);
     } catch (error) {
       console.error(error);
-
-      setGuide(
-        "Unable to generate the AI buying guide."
-      );
+      setGuide("Unable to generate the AI buying guide.");
+    } finally {
+      setLoading(false);
     }
+  }, [productName, category, summary, price]);
 
-    setLoading(false);
-  }
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      void generateGuide();
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, [generateGuide]);
 
   return (
     <section className="rounded-3xl border bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-
       <div className="flex items-center justify-between">
-
         <div>
-
           <span className="rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700">
             🤖 AI Buying Guide
           </span>
@@ -104,7 +101,6 @@ FINAL RECOMMENDATION
             who should avoid it, and whether it offers
             good value for money.
           </p>
-
         </div>
 
         <button
@@ -114,83 +110,42 @@ FINAL RECOMMENDATION
         >
           {loading ? "Generating..." : "Regenerate"}
         </button>
-
       </div>
 
       {loading ? (
-
         <div className="py-20 text-center">
-
-          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-indigo-600 border-t-transparent"></div>
-
+          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-indigo-600 border-t-transparent" />
           <p className="mt-5">
             AI is preparing your buying guide...
           </p>
-
         </div>
-
       ) : (
-
         <div className="mt-10 whitespace-pre-wrap rounded-2xl bg-slate-50 p-6 leading-8 dark:bg-zinc-800">
-
           {guide}
-
         </div>
-
       )}
 
       <div className="mt-10 grid gap-6 md:grid-cols-4">
-
         <div className="rounded-2xl bg-blue-50 p-5 dark:bg-blue-950/20">
-
-          <div className="text-sm text-gray-500">
-            Product
-          </div>
-
-          <div className="mt-2 text-lg font-bold">
-            {productName}
-          </div>
-
+          <div className="text-sm text-gray-500">Product</div>
+          <div className="mt-2 text-lg font-bold">{productName}</div>
         </div>
 
         <div className="rounded-2xl bg-green-50 p-5 dark:bg-green-950/20">
-
-          <div className="text-sm text-gray-500">
-            Category
-          </div>
-
-          <div className="mt-2 text-lg font-bold">
-            {category || "--"}
-          </div>
-
+          <div className="text-sm text-gray-500">Category</div>
+          <div className="mt-2 text-lg font-bold">{category || "--"}</div>
         </div>
 
         <div className="rounded-2xl bg-yellow-50 p-5 dark:bg-yellow-950/20">
-
-          <div className="text-sm text-gray-500">
-            Price
-          </div>
-
-          <div className="mt-2 text-lg font-bold">
-            ₹{price ?? "--"}
-          </div>
-
+          <div className="text-sm text-gray-500">Price</div>
+          <div className="mt-2 text-lg font-bold">₹{price ?? "--"}</div>
         </div>
 
         <div className="rounded-2xl bg-purple-50 p-5 dark:bg-purple-950/20">
-
-          <div className="text-sm text-gray-500">
-            Powered By
-          </div>
-
-          <div className="mt-2 text-lg font-bold">
-            GPT AI
-          </div>
-
+          <div className="text-sm text-gray-500">Powered By</div>
+          <div className="mt-2 text-lg font-bold">GPT AI</div>
         </div>
-
       </div>
-
     </section>
   );
 }

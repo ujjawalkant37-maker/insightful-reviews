@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import {
   Printer,
   Download,
@@ -80,9 +82,14 @@ export default function AIProductReport({
         <div className="flex items-center gap-6">
 
           {image && (
-            <img
+            <Image
               src={image}
               alt={productName}
+              width={144}
+              height={144}
+
+              unoptimized
+
               className="h-36 w-36 rounded-2xl object-cover border"
             />
           )}

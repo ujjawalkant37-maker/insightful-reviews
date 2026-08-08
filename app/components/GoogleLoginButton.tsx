@@ -1,38 +1,46 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Image from "next/image";
+
+import { useCallback, useEffect, useState } from "react";
+import type { User } from "@supabase/supabase-js";
 import { supabase } from "@/lib/supabase";
 
 export default function GoogleLoginButton() {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
+
+  const loadUser = useCallback(async () => {
+    const {
+      data: { user: currentUser },
+    } = await supabase.auth.getUser();
+
+    setUser(currentUser);
+
+    if (currentUser) {
+      await supabase.from("profiles").upsert({
+        id: currentUser.id,
+        full_name: currentUser.user_metadata?.full_name,
+        avatar_url: currentUser.user_metadata?.avatar_url,
+      });
+    }
+  }, []);
 
   useEffect(() => {
-    loadUser();
+    const timer = window.setTimeout(() => {
+      void loadUser();
+    }, 0);
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(() => {
-      loadUser();
+      void loadUser();
     });
 
-    return () => subscription.unsubscribe();
-  }, []);
-
-  async function loadUser() {
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-
-    setUser(user);
-
-    if (user) {
-      await supabase.from("profiles").upsert({
-        id: user.id,
-        full_name: user.user_metadata?.full_name,
-        avatar_url: user.user_metadata?.avatar_url,
-      });
-    }
-  }
+    return () => {
+      window.clearTimeout(timer);
+      subscription.unsubscribe();
+    };
+  }, [loadUser]);
 
   async function signIn() {
     await supabase.auth.signInWithOAuth({
@@ -45,11 +53,13 @@ export default function GoogleLoginButton() {
 
   async function signOut() {
     await supabase.auth.signOut();
+    setUser(null);
   }
 
   if (!user) {
     return (
       <button
+        type="button"
         onClick={signIn}
         className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
       >
@@ -60,11 +70,20 @@ export default function GoogleLoginButton() {
 
   return (
     <div className="flex items-center gap-4">
-      <img
-        src={user.user_metadata?.avatar_url}
-        alt=""
-        className="w-10 h-10 rounded-full"
-      />
+      {user.user_metadata?.avatar_url ? (
+        <Image
+          src={user.user_metadata.avatar_url}
+          alt=""
+          width={40}
+          height={40}
+          unoptimized
+          className="h-10 w-10 rounded-full"
+        />
+      ) : (
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white">
+          {user.user_metadata?.full_name?.charAt(0) ?? "U"}
+        </div>
+      )}
 
       <div>
         <p className="font-medium">{user.user_metadata?.full_name}</p>
@@ -72,6 +91,7 @@ export default function GoogleLoginButton() {
       </div>
 
       <button
+        type="button"
         onClick={signOut}
         className="rounded-lg bg-red-600 px-4 py-2 text-white"
       >

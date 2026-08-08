@@ -13,11 +13,10 @@ type UserProfile = {
 export default function DashboardPage() {
   const [profile, setProfile] = useState<UserProfile | null>(null);
 
-  useEffect(() => {
-    loadUser();
-  }, []);
 
-  async function loadUser() {
+
+  useEffect(() => {
+    async function loadUser() {
     const {
       data: { user },
     } = await supabase.auth.getUser();
@@ -31,7 +30,17 @@ export default function DashboardPage() {
         (user.user_metadata?.name as string) ||
         "",
     });
-  }
+  
+    }
+
+    const timer = window.setTimeout(() => {
+      void loadUser();
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+
 
   async function logout() {
     await supabase.auth.signOut();

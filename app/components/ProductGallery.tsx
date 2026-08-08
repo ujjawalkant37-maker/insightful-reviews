@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import React from "react";
 import type { Product } from '@/types/models';
 import { useCompare } from './useCompare';
@@ -22,8 +24,17 @@ export default function ProductGallery({ products, categoryMap }: { products: Pr
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {products.map((product) => (
           <article key={product.id} className="rounded-xl border border-gray-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 shadow-sm">
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 dark:bg-zinc-800">
-              <img src={product.images?.[0] ?? '/placeholder.svg'} alt={product.name} className="h-full w-full object-cover" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 dark:bg-zinc-800">
+              <Image
+                src={product.images?.[0] ?? "/placeholder.svg"}
+                alt={product.name}
+                fill
+
+                unoptimized
+
+                sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                className="object-cover"
+              />
             </div>
             <div className="mt-4 flex items-start justify-between gap-4">
               <div>

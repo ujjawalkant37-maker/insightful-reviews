@@ -60,7 +60,7 @@ export default function HomeShell() {
       <section className="container py-12">
         <div className="mb-6">
           <h2 className="text-3xl font-bold">
-            ⭐ Editor's Choice
+            ⭐ Editor&apos;s Choice
           </h2>
 
           <p className="mt-2 text-gray-600 dark:text-gray-400">

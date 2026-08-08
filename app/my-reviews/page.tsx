@@ -150,7 +150,7 @@ export default function MyReviewsPage() {
               </h2>
 
               <p className="mt-4 text-gray-500">
-                You haven't written any reviews.
+                You haven&apos;t written any reviews.
               </p>
 
               <Link

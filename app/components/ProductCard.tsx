@@ -12,6 +12,8 @@ export default function ProductCard({
 }: {
   product?: Product;
 }) {
+  const { isCompared, toggleCompare } = useCompare();
+
   if (!product) {
     return (
       <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
@@ -19,8 +21,6 @@ export default function ProductCard({
       </div>
     );
   }
-
-  const { isCompared, toggleCompare } = useCompare();
 
   const compared = isCompared(product.id);
 

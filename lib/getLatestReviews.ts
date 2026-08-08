@@ -50,5 +50,19 @@ export async function getLatestReviews() {
     return [];
   }
 
-  return (data ?? []) as LatestReview[];
+  return (data ?? []).map((item) => ({
+  ...item,
+  product: Array.isArray(item.product)
+    ? item.product[0] ?? {
+        id: 0,
+        name: "",
+        slug: "",
+      }
+    : item.product,
+  profile: Array.isArray(item.profile)
+    ? item.profile[0] ?? {
+        full_name: "",
+      }
+    : item.profile,
+})) as LatestReview[];
 }

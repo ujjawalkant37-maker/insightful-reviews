@@ -1,13 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import {
+  Suspense,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
+import {
+  useRouter,
+  useSearchParams,
+} from "next/navigation";
+
 import ProtectedRoute from "@/app/components/ProtectedRoute";
 import { supabase } from "@/lib/supabase";
 import { updateReview } from "@/lib/reviews";
 import StarRating from "@/components/StarRating";
 
-export default function EditReviewPage() {
+function EditReviewContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -20,11 +29,7 @@ export default function EditReviewPage() {
   const [title, setTitle] = useState("");
   const [review, setReview] = useState("");
 
-  useEffect(() => {
-    loadReview();
-  }, []);
-
-  async function loadReview() {
+  const loadReview = useCallback(async () => {
     if (!reviewId) {
       router.push("/my-reviews");
       return;
@@ -44,14 +49,26 @@ export default function EditReviewPage() {
     setRating(data.rating);
     setTitle(data.title);
     setReview(data.review);
-
     setLoading(false);
-  }
+  }, [reviewId, router]);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      void loadReview();
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, [loadReview]);
 
   async function saveReview(
     e: React.FormEvent<HTMLFormElement>
   ) {
     e.preventDefault();
+
+    if (!reviewId) {
+      router.push("/my-reviews");
+      return;
+    }
 
     setSaving(true);
 
@@ -69,24 +86,24 @@ export default function EditReviewPage() {
     } catch (err) {
       console.error(err);
       alert("Unable to update review.");
+    } finally {
+      setSaving(false);
     }
-
-    setSaving(false);
   }
 
   if (loading) {
     return (
-      <main className="flex min-h-screen items-center justify-center">
-        Loading Review...
+      <main className="mx-auto max-w-3xl px-6 py-10">
+        <div className="rounded-2xl border bg-white p-8 text-gray-500 shadow dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+          Loading Review...
+        </div>
       </main>
     );
   }
 
   return (
     <ProtectedRoute>
-
       <main className="mx-auto max-w-3xl px-6 py-10">
-
         <h1 className="mb-8 text-4xl font-bold">
           Edit Review
         </h1>
@@ -95,9 +112,7 @@ export default function EditReviewPage() {
           onSubmit={saveReview}
           className="rounded-2xl border bg-white p-8 shadow dark:border-zinc-800 dark:bg-zinc-900"
         >
-
           <div className="mb-8">
-
             <label className="mb-3 block font-semibold">
               Rating
             </label>
@@ -107,32 +122,36 @@ export default function EditReviewPage() {
               editable
               onChange={setRating}
             />
-
           </div>
 
           <div className="mb-8">
-
-            <label className="mb-3 block font-semibold">
+            <label
+              htmlFor="review-title"
+              className="mb-3 block font-semibold"
+            >
               Title
             </label>
 
             <input
+              id="review-title"
               value={title}
               onChange={(e) =>
                 setTitle(e.target.value)
               }
               className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
             />
-
           </div>
 
           <div className="mb-8">
-
-            <label className="mb-3 block font-semibold">
+            <label
+              htmlFor="review-content"
+              className="mb-3 block font-semibold"
+            >
               Review
             </label>
 
             <textarea
+              id="review-content"
               rows={8}
               value={review}
               onChange={(e) =>
@@ -140,20 +159,35 @@ export default function EditReviewPage() {
               }
               className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
             />
-
           </div>
 
           <button
+            type="submit"
             disabled={saving}
             className="w-full rounded-xl bg-indigo-600 py-4 text-white hover:bg-indigo-700 disabled:opacity-50"
           >
-            {saving ? "Saving..." : "Save Changes"}
+            {saving
+              ? "Saving..."
+              : "Save Changes"}
           </button>
-
         </form>
-
       </main>
-
     </ProtectedRoute>
+  );
+}
+
+export default function EditReviewPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="mx-auto max-w-3xl px-6 py-10">
+          <div className="rounded-2xl border bg-white p-8 text-gray-500 shadow dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+            Loading Review...
+          </div>
+        </main>
+      }
+    >
+      <EditReviewContent />
+    </Suspense>
   );
 }

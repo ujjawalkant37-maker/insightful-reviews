@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
@@ -99,9 +101,12 @@ export default function AuthButton() {
         onClick={() => setOpen(!open)}
         className="flex items-center gap-3 rounded-lg border px-3 py-2 hover:bg-gray-100 dark:hover:bg-zinc-800"
       >
-        <img
+        <Image
           src={avatar}
           alt="Profile"
+          width={40}
+          height={40}
+          unoptimized
           className="h-10 w-10 rounded-full"
         />
 

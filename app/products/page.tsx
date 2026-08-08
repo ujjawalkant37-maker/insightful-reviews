@@ -6,26 +6,28 @@ import ProductFilters from "@/components/ProductFilters";
 
 import {
   getProducts,
-  DatabaseProduct,
+  type DatabaseProduct,
 } from "@/lib/getProducts";
 
-import {
-  getCategories,
-} from "@/lib/getCategories";
+import { getCategories } from "@/lib/getCategories";
 
 export const metadata: Metadata = {
   title: "Products - Insightful Reviews",
   description: "Browse the full product catalog.",
 };
 
-function parseNum(v?: string): number |undefined {
-  if (!v) return undefined;
+function parseNum(value?: string): number | undefined {
+  if (!value) {
+    return undefined;
+  }
 
-  const n = parseFloat(v);
+  const number = parseFloat(value);
 
-  return Number.isFinite(n)
-    ? n
-    : undefined;
+  return Number.isFinite(number) ? number : undefined;
+}
+
+function priceToNumber(price: string): number {
+  return Number(price.replace(/[^0-9.]/g, ""));
 }
 
 export default async function ProductsPage({
@@ -41,7 +43,6 @@ export default async function ProductsPage({
     sort?: string;
   }>;
 }) {
-
   const {
     category,
     search,
@@ -52,243 +53,197 @@ export default async function ProductsPage({
     sort,
   } = await searchParams;
 
-  const databaseProducts =
-    await getProducts();
+  const databaseProducts = await getProducts();
 
-  const categories =
-    await getCategories();
+  const categories = await getCategories();
 
-  const categoryMap: Record<string, string> =
-    {};
+  const categoryMap: Record<string, string> = {};
 
-  const categorySlugMap: Record<
-    string,
-    string
-  > = {};
+  const categorySlugMap: Record<string, string> = {};
 
   categories.forEach((category) => {
-    categoryMap[String(category.id)] =
-      category.name;
+    categoryMap[String(category.id)] = category.name;
 
-    categorySlugMap[category.slug] =
-      String(category.id);
+    categorySlugMap[category.slug] = String(category.id);
   });
 
-  let filteredProducts =
-    databaseProducts.map(
-      (product: DatabaseProduct) => ({
-        id: String(product.id),
-        supabaseId: product.id,
-        slug: product.slug,
-        name: product.name,
-        categoryId: String(
-          product.category_id
-        ),
-        price: `₹${product.price.toLocaleString(
-          "en-IN"
-        )}`,
-        rating: product.rating,
-        aiScore: product.ai_score,
-        summary: product.summary,
-        specs:
-          product.specifications ?? {},
-        pros: product.pros ?? [],
-        cons: product.cons ?? [],
-        expertSummary:
-          product.description,
-        buyUrl:
-          product.buy_url ?? "",
-        images:
-          product.images ?? [],
-      })
-    );
+  let filteredProducts = databaseProducts.map(
+    (product: DatabaseProduct) => ({
+      id: String(product.id),
+
+      supabaseId: product.id,
+
+      slug: product.slug,
+
+      name: product.name,
+
+      categoryId: String(product.category_id),
+
+      price: `₹${product.price.toLocaleString("en-IN")}`,
+
+      rating: product.rating,
+
+      aiScore: product.ai_score,
+
+      summary: product.summary,
+
+      specs: product.specifications ?? {},
+
+      pros: product.pros ?? [],
+
+      cons: product.cons ?? [],
+
+      expertSummary: product.description,
+
+      buyUrl: product.buy_url ?? "",
+
+      images: product.images ?? [],
+    })
+  );
+
+  /* -------------------------------------------------- */
+  /* Category Filter                                    */
+  /* -------------------------------------------------- */
 
   if (category) {
-
     const dbCategory =
-      categorySlugMap[category] ??
-      category;
+      categorySlugMap[category] ?? category;
 
-    filteredProducts =
-      filteredProducts.filter(
-        (product) =>
-          product.categoryId ===
-          dbCategory
-      );
-
+    filteredProducts = filteredProducts.filter(
+      (product) =>
+        product.categoryId === dbCategory
+    );
   }
+
+  /* -------------------------------------------------- */
+  /* Search Filter                                      */
+  /* -------------------------------------------------- */
 
   if (search) {
+    const query = search.toLowerCase().trim();
 
-    const query =
-      search.toLowerCase();
-
-    filteredProducts =
-      filteredProducts.filter(
-        (product) =>
-          [
-            product.name,
-            product.summary,
-            categoryMap[
-              product.categoryId
-            ] ?? "",
-          ]
-            .join(" ")
-            .toLowerCase()
-            .includes(query)
-      );
-
+    filteredProducts = filteredProducts.filter(
+      (product) =>
+        [
+          product.name,
+          product.summary,
+          categoryMap[product.categoryId] ?? "",
+        ]
+          .join(" ")
+          .toLowerCase()
+          .includes(query)
+    );
   }
 
-  const minPrice =
-    parseNum(priceMin);
+  /* -------------------------------------------------- */
+  /* Price Filters                                      */
+  /* -------------------------------------------------- */
 
-  const maxPrice =
-    parseNum(priceMax);
+  const minPrice = parseNum(priceMin);
+
+  const maxPrice = parseNum(priceMax);
 
   if (minPrice !== undefined) {
-
-    filteredProducts =
-      filteredProducts.filter(
-        (product) =>
-          Number(
-            product.price.replace(
-              /[^0-9]/g,
-              ""
-            )
-          ) >= minPrice
-      );
-
+    filteredProducts = filteredProducts.filter(
+      (product) =>
+        priceToNumber(product.price) >= minPrice
+    );
   }
 
   if (maxPrice !== undefined) {
-
-    filteredProducts =
-      filteredProducts.filter(
-        (product) =>
-          Number(
-            product.price.replace(
-              /[^0-9]/g,
-              ""
-            )
-          ) <= maxPrice
-      );
-
+    filteredProducts = filteredProducts.filter(
+      (product) =>
+        priceToNumber(product.price) <= maxPrice
+    );
   }
 
-  const aiScore =
-    parseNum(aiMin);
+  /* -------------------------------------------------- */
+  /* AI Score Filter                                    */
+  /* -------------------------------------------------- */
 
-  if (aiScore !== undefined) {
+  const minimumAIScore = parseNum(aiMin);
 
-    filteredProducts =
-      filteredProducts.filter(
-        (product) =>
-          product.aiScore >= aiScore
-      );
-
+  if (minimumAIScore !== undefined) {
+    filteredProducts = filteredProducts.filter(
+      (product) =>
+        product.aiScore >= minimumAIScore
+    );
   }
 
-  const rating =
-    parseNum(minRating);
+  /* -------------------------------------------------- */
+  /* Rating Filter                                      */
+  /* -------------------------------------------------- */
 
-  if (rating !== undefined) {
+  const minimumRating = parseNum(minRating);
 
-    filteredProducts =
-      filteredProducts.filter(
-        (product) =>
-          product.rating >= rating
-      );
-
+  if (minimumRating !== undefined) {
+    filteredProducts = filteredProducts.filter(
+      (product) =>
+        product.rating >= minimumRating
+    );
   }
+
+  /* -------------------------------------------------- */
+  /* Sorting                                            */
+  /* -------------------------------------------------- */
 
   switch (sort) {
-
     case "price_asc":
-
       filteredProducts.sort(
         (a, b) =>
-          Number(
-            a.price.replace(
-              /[^0-9]/g,
-              ""
-            )
-          ) -
-          Number(
-            b.price.replace(
-              /[^0-9]/g,
-              ""
-            )
-          )
+          priceToNumber(a.price) -
+          priceToNumber(b.price)
       );
-
       break;
 
     case "price_desc":
-
       filteredProducts.sort(
         (a, b) =>
-          Number(
-            b.price.replace(
-              /[^0-9]/g,
-              ""
-            )
-          ) -
-          Number(
-            a.price.replace(
-              /[^0-9]/g,
-              ""
-            )
-          )
+          priceToNumber(b.price) -
+          priceToNumber(a.price)
       );
-
       break;
 
     case "highest_rated":
-
       filteredProducts.sort(
         (a, b) =>
           b.rating - a.rating
       );
-
       break;
 
     case "highest_ai":
-
       filteredProducts.sort(
         (a, b) =>
           b.aiScore - a.aiScore
       );
-
       break;
 
+    default:
+      break;
   }
 
+  /* -------------------------------------------------- */
+  /* Render                                              */
+  /* -------------------------------------------------- */
+
   return (
-
     <div className="container py-6">
-
       <React.Suspense
         fallback={
-          <div>
+          <div className="py-6 text-center text-gray-500">
             Loading Filters...
           </div>
         }
       >
-
         <ProductFilters
           categories={categories}
         />
-
       </React.Suspense>
 
       <ProductGallery
         products={filteredProducts}
         categoryMap={categoryMap}
       />
-
     </div>
-
   );
-
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -176,16 +177,17 @@ export default async function ProductPage({
 
           {mappedProduct.images?.[0] && (
 
-            <div className="mt-4">
+            <div className="relative mt-4 h-96 w-full overflow-hidden rounded-lg">
 
-              <img
-                src={
-                  mappedProduct.images[0]
-                }
-                alt={
-                  mappedProduct.name
-                }
-                className="max-h-96 w-full rounded-lg object-cover"
+              <Image
+                src={mappedProduct.images[0]}
+                alt={mappedProduct.name}
+                fill
+
+                unoptimized
+
+                sizes="(max-width: 768px) 100vw, 66vw"
+                className="object-cover"
               />
 
             </div>
@@ -349,25 +351,18 @@ export default async function ProductPage({
             />
 
             <PriceHistory
-              currentPrice={
-                mappedProduct.price
-              }
-            />
+  currentPrice={mappedProduct.price}
+/>
 
-            <TopAlternatives
-              currentId={
-                mappedProduct.id
-              }
-              products={
-                mappedProducts
-              }
-            />
+<TopAlternatives
+  currentId={mappedProduct.id}
+  products={mappedProducts}
+/>
 
-            <AIVerdict
-              score={
-                mappedProduct.aiScore
-              }
-            />
+<AIVerdict
+  productName={mappedProduct.name}
+  aiScore={mappedProduct.aiScore}
+/>
 
           </section>
 

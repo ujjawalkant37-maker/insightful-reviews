@@ -89,22 +89,6 @@ declare global {
   interface SpeechRecognitionErrorEvent {
     error: string;
   }
-
-  interface SpeechRecognitionResultList {
-    length: number;
-    [index: number]: SpeechRecognitionResult;
-  }
-
-  interface SpeechRecognitionResult {
-    isFinal: boolean;
-    length: number;
-    [index: number]: SpeechRecognitionAlternative;
-  }
-
-  interface SpeechRecognitionAlternative {
-    transcript: string;
-    confidence: number;
-  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -370,7 +354,6 @@ export default function AICopilot() {
   const [darkMode, setDarkMode] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
     const [lastPrompt, setLastPrompt] = useState("");
-  const [lastResponse, setLastResponse] = useState("");
   const [scores, setScores] = useState<ScoreCard[]>(() =>
     buildScoreCards(INITIAL_GREETING.content)
   );
@@ -414,7 +397,6 @@ export default function AICopilot() {
         : null;
 
     if (saved === "dark") {
-      setDarkMode(true);
       document.documentElement.classList.add("dark");
     }
   }, []);
@@ -557,7 +539,6 @@ ${value}
 
         appendMessage(assistantMessage);
 
-        setLastResponse(response);
         setScores(buildScoreCards(response));
         setInput("");
       } catch (err) {
@@ -614,7 +595,6 @@ ${value}
     setMessages([INITIAL_GREETING]);
     setScores(buildScoreCards(INITIAL_GREETING.content));
     setLastPrompt("");
-    setLastResponse("");
     setError("");
   }, []);
 
@@ -642,20 +622,6 @@ ${value}
       ].join(" • "),
     []
   );
-
-  const latestAssistantMessage = useMemo(
-    () =>
-      [...messages]
-        .reverse()
-        .find((message) => message.role === "assistant"),
-    [messages]
-  );
-
-  useEffect(() => {
-    if (latestAssistantMessage) {
-      setLastResponse(latestAssistantMessage.content);
-    }
-  }, [latestAssistantMessage]);
 
   return (
         <div
@@ -838,13 +804,13 @@ ${value}
         </aside>
 
         {/* -------------------------------------------------------------- */}
-        {/* Chat Area (continues in Part IV)                              */}
+        {/* Chat Area */}
         {/* -------------------------------------------------------------- */}
 
-        <main className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm dark:border-white/10 dark:bg-neutral-900">
-        </main>
-                  {/* -------------------------------------------------------------- */}
+                <main className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm dark:border-white/10 dark:bg-neutral-900">
+          {/* -------------------------------------------------------------- */}
           {/* Chat Header                                                    */}
+          {/* -------------------------------------------------------------- */}
           {/* -------------------------------------------------------------- */}
 
           <div className="border-b border-black/10 px-5 py-4 dark:border-white/10">
@@ -1034,7 +1000,7 @@ ${value}
             </div>
           )}
 
-          {/* Composer begins in Part V */}
+          {/* Composer */}
                     {/* -------------------------------------------------------------- */}
           {/* Composer                                                       */}
           {/* -------------------------------------------------------------- */}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import ProtectedRoute from "@/app/components/ProtectedRoute";
@@ -14,17 +14,7 @@ export default function SettingsPage() {
   const [marketingEmails, setMarketingEmails] =
     useState(false);
 
-  useEffect(() => {
-    loadSettings();
-  }, []);
 
-  async function loadSettings() {
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-
-    if (!user) return;
-  }
 
   async function logout() {
     await supabase.auth.signOut();

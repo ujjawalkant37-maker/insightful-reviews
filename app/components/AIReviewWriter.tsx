@@ -214,7 +214,7 @@ ${value}
 
       <p className="mt-6 text-sm text-gray-500">
         AI only improves writing quality. It should never add experiences
-        you didn't actually have.
+        you didn&apos;t actually have.
       </p>
 
     </section>

@@ -11,7 +11,6 @@ import {
 
 export default function CompareButton({
   id,
-  slug,
 }: {
   id: string;
   slug: string;

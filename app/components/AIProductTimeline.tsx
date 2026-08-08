@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { askAI } from "@/lib/ai";
 
 type Props = {
@@ -19,11 +19,7 @@ export default function AIProductTimeline({
   const [loading, setLoading] = useState(true);
   const [timeline, setTimeline] = useState("");
 
-  useEffect(() => {
-    generateTimeline();
-  }, [productName]);
-
-  async function generateTimeline() {
+  const generateTimeline = useCallback(async () => {
     try {
       setLoading(true);
 
@@ -72,26 +68,27 @@ Never invent specific facts.
 `;
 
       const result = await askAI(prompt);
-
       setTimeline(result);
     } catch (error) {
       console.error(error);
-
-      setTimeline(
-        "Unable to generate the product timeline."
-      );
+      setTimeline("Unable to generate the product timeline.");
+    } finally {
+      setLoading(false);
     }
+  }, [productName, category, launchYear, summary]);
 
-    setLoading(false);
-  }
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      void generateTimeline();
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, [generateTimeline]);
 
   return (
     <section className="rounded-3xl border bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-
       <div className="flex items-center justify-between">
-
         <div>
-
           <span className="rounded-full bg-violet-100 px-4 py-2 text-sm font-semibold text-violet-700">
             🕒 AI Product Timeline
           </span>
@@ -102,10 +99,9 @@ Never invent specific facts.
 
           <p className="mt-3 text-gray-500">
             Understand where this product stands in its
-            lifecycle and whether it's still a good time
+            lifecycle and whether it&apos;s still a good time
             to buy or upgrade.
           </p>
-
         </div>
 
         <button
@@ -115,71 +111,37 @@ Never invent specific facts.
         >
           {loading ? "Generating..." : "Refresh"}
         </button>
-
       </div>
 
       {loading ? (
-
         <div className="py-20 text-center">
-
-          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-violet-600 border-t-transparent"></div>
-
+          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-violet-600 border-t-transparent" />
           <p className="mt-5">
             AI is building the product timeline...
           </p>
-
         </div>
-
       ) : (
-
         <div className="mt-10 whitespace-pre-wrap rounded-2xl bg-slate-50 p-6 leading-8 dark:bg-zinc-800">
-
           {timeline}
-
         </div>
-
       )}
 
       <div className="mt-10 grid gap-6 md:grid-cols-3">
-
         <div className="rounded-2xl bg-blue-50 p-5 dark:bg-blue-950/20">
-
-          <div className="text-sm text-gray-500">
-            Product
-          </div>
-
-          <div className="mt-2 text-lg font-bold">
-            {productName}
-          </div>
-
+          <div className="text-sm text-gray-500">Product</div>
+          <div className="mt-2 text-lg font-bold">{productName}</div>
         </div>
 
         <div className="rounded-2xl bg-green-50 p-5 dark:bg-green-950/20">
-
-          <div className="text-sm text-gray-500">
-            Category
-          </div>
-
-          <div className="mt-2 text-lg font-bold">
-            {category || "--"}
-          </div>
-
+          <div className="text-sm text-gray-500">Category</div>
+          <div className="mt-2 text-lg font-bold">{category || "--"}</div>
         </div>
 
         <div className="rounded-2xl bg-orange-50 p-5 dark:bg-orange-950/20">
-
-          <div className="text-sm text-gray-500">
-            Launch Year
-          </div>
-
-          <div className="mt-2 text-lg font-bold">
-            {launchYear ?? "--"}
-          </div>
-
+          <div className="text-sm text-gray-500">Launch Year</div>
+          <div className="mt-2 text-lg font-bold">{launchYear ?? "--"}</div>
         </div>
-
       </div>
-
     </section>
   );
 }

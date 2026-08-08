@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
@@ -10,14 +10,9 @@ export default function ProtectedRoute({
   children: React.ReactNode;
 }) {
   const router = useRouter();
-
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    checkUser();
-  }, []);
-
-  async function checkUser() {
+  const checkUser = useCallback(async () => {
     const {
       data: { user },
     } = await supabase.auth.getUser();
@@ -28,19 +23,24 @@ export default function ProtectedRoute({
     }
 
     setLoading(false);
-  }
+  }, [router]);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      void checkUser();
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, [checkUser]);
 
   if (loading) {
     return (
-      <main className="min-h-screen flex items-center justify-center">
+      <main className="flex min-h-screen items-center justify-center">
         <div className="text-center">
-
-          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-indigo-600 border-t-transparent"></div>
-
+          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-indigo-600 border-t-transparent" />
           <p className="mt-5 text-lg font-medium">
             Checking authentication...
           </p>
-
         </div>
       </main>
     );

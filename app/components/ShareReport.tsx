@@ -5,9 +5,6 @@ import {
   Share2,
   Copy,
   Check,
-  Facebook,
-  Linkedin,
-  Twitter,
 } from "lucide-react";
 
 type Props = {
@@ -18,54 +15,79 @@ type Props = {
 
 export default function ShareReport({
   title,
-  url = typeof window !== "undefined"
-    ? window.location.href
-    : "",
+  url,
   description = "",
 }: Props) {
-  const [copied, setCopied] =
-    useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const shareUrl =
+    url ||
+    (typeof window !== "undefined"
+      ? window.location.href
+      : "");
 
   async function copyLink() {
     try {
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(shareUrl);
 
       setCopied(true);
 
-      setTimeout(() => {
+      window.setTimeout(() => {
         setCopied(false);
       }, 2000);
     } catch (error) {
-      console.error(error);
+      console.error("Unable to copy link:", error);
     }
   }
 
   async function nativeShare() {
-    if (
-      navigator.share
-    ) {
+    if (typeof navigator !== "undefined" && navigator.share) {
       try {
         await navigator.share({
           title,
           text: description,
-          url,
+          url: shareUrl,
         });
       } catch (error) {
-        console.error(error);
+        if (
+          error instanceof DOMException &&
+          error.name === "AbortError"
+        ) {
+          return;
+        }
+
+        console.error(
+          "Unable to share report:",
+          error
+        );
       }
     } else {
-      copyLink();
+      await copyLink();
     }
   }
 
+  const twitterUrl =
+    `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+      shareUrl
+    )}&text=${encodeURIComponent(title)}`;
+
+  const facebookUrl =
+    `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+      shareUrl
+    )}`;
+
+  const linkedinUrl =
+    `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+      shareUrl
+    )}`;
+
   return (
-    <section className="rounded-3xl border bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+    <section>
+      {/* Header */}
 
       <div className="flex items-center justify-between">
-
         <div>
-
-          <span className="rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700">
+          <span className="rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300">
             📤 Share Report
           </span>
 
@@ -74,28 +96,28 @@ export default function ShareReport({
           </h2>
 
           <p className="mt-3 text-gray-500">
-            Share this AI report with
-            friends, family or colleagues.
+            Share this AI report with friends, family or
+            colleagues.
           </p>
-
         </div>
-
       </div>
 
-      <div className="mt-10 flex flex-wrap gap-4">
+      {/* Share Buttons */}
 
+      <div className="mt-10 flex flex-wrap gap-4">
         <button
-          onClick={nativeShare}
-          className="flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700"
+          type="button"
+          onClick={() => void nativeShare()}
+          className="flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white transition hover:bg-indigo-700"
         >
           <Share2 size={18} />
-
           Share
         </button>
 
         <button
-          onClick={copyLink}
-          className="flex items-center gap-2 rounded-xl border px-6 py-3 hover:bg-gray-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+          type="button"
+          onClick={() => void copyLink()}
+          className="flex items-center gap-2 rounded-xl border px-6 py-3 transition hover:bg-gray-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
         >
           {copied ? (
             <Check size={18} />
@@ -103,66 +125,51 @@ export default function ShareReport({
             <Copy size={18} />
           )}
 
-          {copied
-            ? "Copied!"
-            : "Copy Link"}
+          {copied ? "Copied!" : "Copy Link"}
         </button>
 
         <a
-          href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-            url
-          )}&text=${encodeURIComponent(
-            title
-          )}`}
+          href={twitterUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-xl border px-6 py-3 hover:bg-gray-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+          className="flex items-center gap-2 rounded-xl border px-6 py-3 transition hover:bg-gray-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
         >
-          <Twitter size={18} />
-
+          <Share2 size={18} />
           X / Twitter
         </a>
 
         <a
-          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-            url
-          )}`}
+          href={facebookUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-xl border px-6 py-3 hover:bg-gray-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+          className="flex items-center gap-2 rounded-xl border px-6 py-3 transition hover:bg-gray-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
         >
-          <Facebook size={18} />
-
+          <Share2 size={18} />
           Facebook
         </a>
 
         <a
-          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-            url
-          )}`}
+          href={linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-xl border px-6 py-3 hover:bg-gray-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+          className="flex items-center gap-2 rounded-xl border px-6 py-3 transition hover:bg-gray-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
         >
-          <Linkedin size={18} />
-
+          <Share2 size={18} />
           LinkedIn
         </a>
-
       </div>
 
-      <div className="mt-10 rounded-2xl bg-slate-50 p-5 dark:bg-zinc-800">
+      {/* Report Link */}
 
+      <div className="mt-10 rounded-2xl bg-slate-50 p-5 dark:bg-zinc-800">
         <div className="text-sm font-semibold text-gray-500">
           Report Link
         </div>
 
         <div className="mt-3 break-all rounded-xl border bg-white p-4 text-sm dark:border-zinc-700 dark:bg-zinc-900">
-          {url}
+          {shareUrl}
         </div>
-
       </div>
-
     </section>
   );
 }

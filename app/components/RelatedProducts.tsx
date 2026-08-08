@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/types/models";
 
@@ -39,11 +40,18 @@ export default function RelatedProducts({
             className="rounded-xl border bg-white p-4 shadow transition hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
           >
 
-            <img
-              src={product.images?.[0] ?? "/placeholder.svg"}
-              alt={product.name}
-              className="h-40 w-full rounded-lg object-cover"
-            />
+            <div className="relative h-40 w-full overflow-hidden rounded-lg">
+              <Image
+                src={product.images?.[0] ?? "/placeholder.svg"}
+                alt={product.name}
+                fill
+
+                unoptimized
+
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover"
+              />
+            </div>
 
             <h3 className="mt-4 font-semibold">
               {product.name}

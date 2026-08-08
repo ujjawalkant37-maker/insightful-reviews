@@ -130,7 +130,7 @@ export default function FeaturedCategories() {
       <div className="mt-16 rounded-3xl bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-600 p-10 text-center text-white shadow-xl">
 
         <h3 className="text-3xl font-bold">
-          Can't Decide What to Buy?
+          Can&apos;t Decide What to Buy?
         </h3>
 
         <p className="mx-auto mt-4 max-w-2xl text-blue-100">

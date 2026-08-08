@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { askAI } from "@/lib/ai";
 
 type Props = {
@@ -15,14 +15,9 @@ export default function AISummary({
   summary,
 }: Props) {
   const [loading, setLoading] = useState(true);
-
   const [aiSummary, setAiSummary] = useState("");
 
-  useEffect(() => {
-    generateSummary();
-  }, [productName]);
-
-  async function generateSummary() {
+  const generateSummary = useCallback(async () => {
     try {
       setLoading(true);
 
@@ -54,27 +49,27 @@ Be unbiased.
 `;
 
       const response = await askAI(prompt);
-
       setAiSummary(response);
     } catch (err) {
       console.error(err);
-
-      setAiSummary(
-        summary ??
-          "Unable to generate AI summary."
-      );
+      setAiSummary(summary ?? "Unable to generate AI summary.");
+    } finally {
+      setLoading(false);
     }
+  }, [productName, category, summary]);
 
-    setLoading(false);
-  }
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      void generateSummary();
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, [generateSummary]);
 
   return (
     <section className="rounded-3xl border bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-
       <div className="flex items-center justify-between">
-
         <div>
-
           <span className="rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700">
             🤖 AI Generated Summary
           </span>
@@ -82,40 +77,29 @@ Be unbiased.
           <h2 className="mt-5 text-3xl font-bold">
             Product Overview
           </h2>
-
         </div>
 
         <button
           onClick={generateSummary}
-          className="rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700"
+          disabled={loading}
+          className="rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700 disabled:opacity-50"
         >
-          Regenerate
+          {loading ? "Generating..." : "Regenerate"}
         </button>
-
       </div>
 
       {loading ? (
-
         <div className="py-20 text-center">
-
-          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-indigo-600 border-t-transparent"></div>
-
+          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-indigo-600 border-t-transparent" />
           <p className="mt-5 text-lg">
             AI is analyzing this product...
           </p>
-
         </div>
-
       ) : (
-
         <div className="mt-8 whitespace-pre-wrap leading-8 text-gray-700 dark:text-gray-300">
-
           {aiSummary}
-
         </div>
-
       )}
-
     </section>
   );
 }

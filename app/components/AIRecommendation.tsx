@@ -97,7 +97,7 @@ Remain unbiased.
 
         <p className="mt-3 text-gray-500">
           Tell AI your budget and priorities.
-          We'll recommend the best products.
+          We&apos;ll recommend the best products.
         </p>
 
       </div>

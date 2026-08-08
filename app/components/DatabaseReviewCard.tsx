@@ -29,7 +29,7 @@ export default function DatabaseReviewCard({
     return Math.round(
       ((review.helpful ?? 0) / totalVotes) * 100
     );
-  }, [review.helpful, review.not_helpful, totalVotes]);
+  }, [review.helpful, totalVotes]);
 
   async function handleHelpful() {
     if (loading) return;

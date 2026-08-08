@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 
@@ -155,14 +157,19 @@ export default function CompareClient() {
 
                   <div className="space-y-4">
 
-                    <div className="mx-auto h-40 w-40 overflow-hidden rounded-2xl bg-slate-100">
+                    <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-2xl bg-slate-100">
 
                       {product.images?.length ? (
 
-                        <img
+                        <Image
                           src={product.images[0]}
                           alt={product.name}
-                          className="h-full w-full object-cover"
+                          fill
+
+                          unoptimized
+
+                          sizes="160px"
+                          className="object-cover"
                         />
 
                       ) : (

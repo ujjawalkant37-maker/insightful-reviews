@@ -16,7 +16,7 @@ export default function CTA() {
           <div className="mx-auto max-w-4xl text-center">
 
             <span className="rounded-full bg-white/15 px-5 py-2 text-sm font-semibold text-white backdrop-blur">
-              🚀 Join India's Next AI Review Platform
+              🚀 Join India&apos;s Next AI Review Platform
             </span>
 
             <h2 className="mt-8 text-4xl font-extrabold text-white lg:text-5xl">

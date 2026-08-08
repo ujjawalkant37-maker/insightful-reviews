@@ -16,11 +16,10 @@ export default function ProfilePage() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    loadProfile();
-  }, []);
 
-  async function loadProfile() {
+
+  useEffect(() => {
+    async function loadProfile() {
     const {
       data: { user },
     } = await supabase.auth.getUser();
@@ -34,7 +33,17 @@ export default function ProfilePage() {
       (user.user_metadata?.name as string) ||
       ""
     );
-  }
+  
+    }
+
+    const timer = window.setTimeout(() => {
+      void loadProfile();
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+
 
   async function saveProfile(e: React.FormEvent) {
     e.preventDefault();

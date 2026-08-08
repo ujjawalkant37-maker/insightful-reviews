@@ -4,7 +4,7 @@ import Link from "next/link";
 const aiPicks = [
   {
     title: "Samsung Galaxy S25 Ultra",
-    badge: "🏆 Editor's Choice",
+    badge: "🏆 Editor&apos;s Choice",
     verdict: "BUY",
     score: 98,
     rating: 5,
@@ -133,7 +133,7 @@ export default function FeaturedProducts() {
         </span>
 
         <h2 className="mt-5 text-4xl font-bold text-gray-900 dark:text-white">
-          Editor's Choice
+          Editor&apos;s Choice
         </h2>
 
         <p className="mx-auto mt-4 max-w-3xl text-gray-600 dark:text-gray-400">

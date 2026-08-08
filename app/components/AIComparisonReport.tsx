@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import {
   Brain,
   ShieldCheck,
@@ -665,9 +667,14 @@ function ProductCard({
 
       {product.image && (
 
-        <img
+        <Image
           src={product.image}
           alt={product.name}
+          width={160}
+          height={160}
+
+          unoptimized
+
           className="mx-auto h-40 w-40 rounded-xl object-cover"
         />
 
