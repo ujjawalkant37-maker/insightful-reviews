@@ -1,97 +1,51 @@
 export type AIRequest = {
   prompt: string;
+  systemPrompt?: string;
 };
 
 export type AIResponse = {
-  response: string;
+  success?: boolean;
+  response?: string;
+  error?: string;
 };
 
 export async function askAI(
-  prompt: string
+  prompt: string,
+  systemPrompt?: string
 ): Promise<string> {
-  const res = await fetch("/api/ai", {
+  const res = await fetch("/api", {
     method: "POST",
-
     headers: {
       "Content-Type": "application/json",
     },
-
     body: JSON.stringify({
       prompt,
+      ...(systemPrompt ? { systemPrompt } : {}),
     } satisfies AIRequest),
   });
 
-  const data = (await res.json()) as
-    | AIResponse
-    | { error: string };
+  const contentType = res.headers.get("content-type") ?? "";
 
-  if (!res.ok) {
+  let data: AIResponse;
+
+  if (contentType.includes("application/json")) {
+    data = (await res.json()) as AIResponse;
+  } else {
+    const text = await res.text();
     throw new Error(
-      "error" in data
-        ? data.error
-        : "AI request failed."
+      `AI API returned a non-JSON response (${res.status}). ${
+        text.slice(0, 200) || "No response body."
+      }`
     );
   }
 
-  return (data as AIResponse).response;
+  if (!res.ok || data.success === false || data.error) {
+    throw new Error(data.error ?? "AI request failed.");
+  }
+
+  if (!data.response) {
+    throw new Error("AI API returned an empty response.");
+  }
+
+  return data.response;
 }
-
-/*
---------------------------------------------------------
-Website AI Functions
---------------------------------------------------------
-
-Every AI feature in the website should call askAI()
-
-Examples:
-
-AI Summary
-
-await askAI(
-`Summarize Samsung Galaxy S25 Ultra in 150 words.`
-);
-
---------------------------------------------------------
-
-Buy / Wait / Avoid
-
-await askAI(
-`Should I buy Samsung Galaxy S25 Ultra?
-Return BUY / WAIT / AVOID with reasons.`
-);
-
---------------------------------------------------------
-
-Product Comparison
-
-await askAI(
-`Compare iPhone 16 Pro and Galaxy S25 Ultra.`
-);
-
---------------------------------------------------------
-
-Review Writer
-
-await askAI(
-`Improve this review:
-Excellent phone but expensive.`
-);
-
---------------------------------------------------------
-
-Fake Review Detection
-
-await askAI(
-`Determine whether this review looks fake:
-"${review}"
-`
-);
-
---------------------------------------------------------
-
-Chat Assistant
-
-await askAI(userQuestion);
-
---------------------------------------------------------
-*/

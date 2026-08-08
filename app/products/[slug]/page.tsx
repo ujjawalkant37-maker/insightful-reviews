@@ -25,15 +25,15 @@ import {
 export async function generateMetadata({
   params,
 }: {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }): Promise<Metadata> {
 
+  const { slug } = await params;
+
   const product =
-    await getProductBySlug(
-      params.slug
-    );
+    await getProductBySlug(slug);
 
   if (!product) {
     return {
@@ -51,15 +51,15 @@ export async function generateMetadata({
 export default async function ProductPage({
   params,
 }: {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }) {
 
+  const { slug } = await params;
+
   const product =
-    await getProductBySlug(
-      params.slug
-    );
+    await getProductBySlug(slug);
 
   if (!product) {
     return (
