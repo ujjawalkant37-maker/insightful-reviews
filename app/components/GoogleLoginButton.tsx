@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "@/components/SafeImage";
 
 import { useCallback, useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";

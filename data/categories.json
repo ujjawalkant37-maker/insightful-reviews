@@ -3,24 +3,848 @@
     "id": "smartphones",
     "name": "Smartphones",
     "slug": "smartphones",
-    "description": "Handheld devices: cameras, performance and battery comparisons."
+    "description": "Phones, cameras, performance, battery and value comparisons.",
+    "icon": "📱",
+    "type": "product"
   },
   {
     "id": "laptops",
     "name": "Laptops",
     "slug": "laptops",
-    "description": "Portable computers: productivity and battery life analysis."
+    "description": "Work, study, gaming and creator laptops compared by real-world value.",
+    "icon": "💻",
+    "type": "product"
+  },
+  {
+    "id": "tablets",
+    "name": "Tablets",
+    "slug": "tablets",
+    "description": "Tablets for study, work, entertainment and creative use.",
+    "icon": "📱",
+    "type": "product"
   },
   {
     "id": "tvs",
-    "name": "TVs",
+    "name": "Smart TVs",
     "slug": "tvs",
-    "description": "Televisions: picture quality, HDR and smart features."
+    "description": "OLED, QLED, Mini LED and smart TV comparisons.",
+    "icon": "📺",
+    "type": "product"
   },
   {
     "id": "appliances",
-    "name": "Appliances",
+    "name": "Home Appliances",
     "slug": "appliances",
-    "description": "Home appliances: efficiency, durability and performance."
+    "description": "Refrigerators, washing machines, air conditioners and home appliances.",
+    "icon": "🏠",
+    "type": "product"
+  },
+  {
+    "id": "audio",
+    "name": "Headphones & Audio",
+    "slug": "audio",
+    "description": "Earbuds, headphones, soundbars and speakers.",
+    "icon": "🎧",
+    "type": "product"
+  },
+  {
+    "id": "wearables",
+    "name": "Smart Watches",
+    "slug": "wearables",
+    "description": "Smartwatches, fitness trackers and wearable technology.",
+    "icon": "⌚",
+    "type": "product"
+  },
+  {
+    "id": "cameras",
+    "name": "Cameras",
+    "slug": "cameras",
+    "description": "Mirrorless, DSLR, action and creator cameras.",
+    "icon": "📷",
+    "type": "product"
+  },
+  {
+    "id": "gaming",
+    "name": "Gaming",
+    "slug": "gaming",
+    "description": "Gaming consoles, accessories, monitors and gaming hardware.",
+    "icon": "🎮",
+    "type": "product"
+  },
+  {
+    "id": "kitchen",
+    "name": "Kitchen",
+    "slug": "kitchen",
+    "description": "Kitchen appliances, cookware and smart kitchen products.",
+    "icon": "🍳",
+    "type": "product"
+  },
+  {
+    "id": "beauty",
+    "name": "Beauty & Personal Care",
+    "slug": "beauty",
+    "description": "Personal-care devices and beauty products.",
+    "icon": "✨",
+    "type": "product"
+  },
+  {
+    "id": "cars",
+    "name": "Cars",
+    "slug": "cars",
+    "description": "Cars compared on price, safety, mileage, ownership and value.",
+    "icon": "🚗",
+    "type": "product"
+  },
+  {
+    "id": "hospitals",
+    "name": "Hospitals",
+    "slug": "hospitals",
+    "description": "Hospitals, health systems and specialist institutions",
+    "icon": "🏥",
+    "type": "directory",
+    "entity_type": "healthcare",
+    "sort_order": 1
+  },
+  {
+    "id": "clinics",
+    "name": "Clinics",
+    "slug": "clinics",
+    "description": "Clinics, doctors and outpatient providers",
+    "icon": "🩺",
+    "type": "directory",
+    "entity_type": "healthcare",
+    "sort_order": 2
+  },
+  {
+    "id": "diagnostic-centres",
+    "name": "Diagnostic Centres",
+    "slug": "diagnostic-centres",
+    "description": "Pathology, imaging and diagnostic laboratories",
+    "icon": "🔬",
+    "type": "directory",
+    "entity_type": "healthcare",
+    "sort_order": 3
+  },
+  {
+    "id": "pharmacies",
+    "name": "Pharmacies",
+    "slug": "pharmacies",
+    "description": "Pharmacies and medicine services",
+    "icon": "💊",
+    "type": "directory",
+    "entity_type": "healthcare",
+    "sort_order": 4
+  },
+  {
+    "id": "dental-clinics",
+    "name": "Dental Clinics",
+    "slug": "dental-clinics",
+    "description": "Dental hospitals, clinics and oral-care providers",
+    "icon": "🦷",
+    "type": "directory",
+    "entity_type": "healthcare",
+    "sort_order": 5
+  },
+  {
+    "id": "eye-care",
+    "name": "Eye Care",
+    "slug": "eye-care",
+    "description": "Ophthalmology hospitals, clinics and optical services",
+    "icon": "👁️",
+    "type": "directory",
+    "entity_type": "healthcare",
+    "sort_order": 6
+  },
+  {
+    "id": "physiotherapy",
+    "name": "Physiotherapy",
+    "slug": "physiotherapy",
+    "description": "Physiotherapy and rehabilitation centres",
+    "icon": "🧑‍🦽",
+    "type": "directory",
+    "entity_type": "healthcare",
+    "sort_order": 7
+  },
+  {
+    "id": "mental-wellness",
+    "name": "Mental Wellness",
+    "slug": "mental-wellness",
+    "description": "Counselling and mental-wellness providers",
+    "icon": "🧠",
+    "type": "directory",
+    "entity_type": "healthcare",
+    "sort_order": 8
+  },
+  {
+    "id": "home-healthcare",
+    "name": "Home Healthcare",
+    "slug": "home-healthcare",
+    "description": "Home nursing, elder care and home health services",
+    "icon": "🏠",
+    "type": "directory",
+    "entity_type": "healthcare",
+    "sort_order": 9
+  },
+  {
+    "id": "veterinary",
+    "name": "Veterinary",
+    "slug": "veterinary",
+    "description": "Veterinary hospitals, clinics and pet-care providers",
+    "icon": "🐾",
+    "type": "directory",
+    "entity_type": "healthcare",
+    "sort_order": 10
+  },
+  {
+    "id": "schools",
+    "name": "Schools",
+    "slug": "schools",
+    "description": "Schools and K-12 educational institutions",
+    "icon": "🏫",
+    "type": "directory",
+    "entity_type": "education",
+    "sort_order": 11
+  },
+  {
+    "id": "colleges",
+    "name": "Colleges",
+    "slug": "colleges",
+    "description": "Colleges and higher-education institutions",
+    "icon": "🎓",
+    "type": "directory",
+    "entity_type": "education",
+    "sort_order": 12
+  },
+  {
+    "id": "universities",
+    "name": "Universities",
+    "slug": "universities",
+    "description": "Universities and degree-granting institutions",
+    "icon": "🏛️",
+    "type": "directory",
+    "entity_type": "education",
+    "sort_order": 13
+  },
+  {
+    "id": "coaching-institutes",
+    "name": "Coaching Institutes",
+    "slug": "coaching-institutes",
+    "description": "Academic and competitive-exam coaching",
+    "icon": "📚",
+    "type": "directory",
+    "entity_type": "education",
+    "sort_order": 14
+  },
+  {
+    "id": "preschools-daycare",
+    "name": "Preschools & Daycare",
+    "slug": "preschools-daycare",
+    "description": "Preschools, playschools and daycare",
+    "icon": "🧸",
+    "type": "directory",
+    "entity_type": "education",
+    "sort_order": 15
+  },
+  {
+    "id": "skill-training",
+    "name": "Skill & Vocational Training",
+    "slug": "skill-training",
+    "description": "Vocational, skill and professional training institutes",
+    "icon": "🛠️",
+    "type": "directory",
+    "entity_type": "education",
+    "sort_order": 16
+  },
+  {
+    "id": "study-abroad",
+    "name": "Study Abroad",
+    "slug": "study-abroad",
+    "description": "Study-abroad counsellors and education services",
+    "icon": "🌍",
+    "type": "directory",
+    "entity_type": "education",
+    "sort_order": 17
+  },
+  {
+    "id": "hostels-pg",
+    "name": "Hostels & PG",
+    "slug": "hostels-pg",
+    "description": "Student hostels, PGs and accommodation",
+    "icon": "🛏️",
+    "type": "directory",
+    "entity_type": "education",
+    "sort_order": 18
+  },
+  {
+    "id": "hotels",
+    "name": "Hotels",
+    "slug": "hotels",
+    "description": "Hotels, resorts and stays",
+    "icon": "🏨",
+    "type": "directory",
+    "entity_type": "hospitality",
+    "sort_order": 19
+  },
+  {
+    "id": "resorts",
+    "name": "Resorts",
+    "slug": "resorts",
+    "description": "Resorts and destination stays",
+    "icon": "🌴",
+    "type": "directory",
+    "entity_type": "hospitality",
+    "sort_order": 20
+  },
+  {
+    "id": "restaurants",
+    "name": "Restaurants",
+    "slug": "restaurants",
+    "description": "Restaurants and dining venues",
+    "icon": "🍽️",
+    "type": "directory",
+    "entity_type": "food",
+    "sort_order": 21
+  },
+  {
+    "id": "cafes",
+    "name": "Cafes",
+    "slug": "cafes",
+    "description": "Cafes, coffee shops and casual dining",
+    "icon": "☕",
+    "type": "directory",
+    "entity_type": "food",
+    "sort_order": 22
+  },
+  {
+    "id": "cloud-kitchens",
+    "name": "Cloud Kitchens",
+    "slug": "cloud-kitchens",
+    "description": "Delivery kitchens and food-only brands",
+    "icon": "🥡",
+    "type": "directory",
+    "entity_type": "food",
+    "sort_order": 23
+  },
+  {
+    "id": "travel-services",
+    "name": "Travel Services",
+    "slug": "travel-services",
+    "description": "Travel agencies, tour operators and services",
+    "icon": "✈️",
+    "type": "directory",
+    "entity_type": "travel",
+    "sort_order": 24
+  },
+  {
+    "id": "tourist-attractions",
+    "name": "Tourist Attractions",
+    "slug": "tourist-attractions",
+    "description": "Tourist places and attractions",
+    "icon": "🗺️",
+    "type": "directory",
+    "entity_type": "travel",
+    "sort_order": 25
+  },
+  {
+    "id": "travel-destinations",
+    "name": "Travel Destinations",
+    "slug": "travel-destinations",
+    "description": "Destination guides and travel experiences",
+    "icon": "🌍",
+    "type": "directory",
+    "entity_type": "travel",
+    "sort_order": 26
+  },
+  {
+    "id": "gyms-fitness",
+    "name": "Gyms & Fitness",
+    "slug": "gyms-fitness",
+    "description": "Gyms, fitness centres and trainers",
+    "icon": "🏋️",
+    "type": "directory",
+    "entity_type": "fitness",
+    "sort_order": 27
+  },
+  {
+    "id": "yoga-wellness",
+    "name": "Yoga & Wellness",
+    "slug": "yoga-wellness",
+    "description": "Yoga, wellness and holistic centres",
+    "icon": "🧘",
+    "type": "directory",
+    "entity_type": "wellness",
+    "sort_order": 28
+  },
+  {
+    "id": "salons",
+    "name": "Salons",
+    "slug": "salons",
+    "description": "Hair salons and grooming services",
+    "icon": "💇",
+    "type": "directory",
+    "entity_type": "beauty",
+    "sort_order": 29
+  },
+  {
+    "id": "spas",
+    "name": "Spas",
+    "slug": "spas",
+    "description": "Spas and wellness centres",
+    "icon": "🧖",
+    "type": "directory",
+    "entity_type": "wellness",
+    "sort_order": 30
+  },
+  {
+    "id": "banks",
+    "name": "Banks",
+    "slug": "banks",
+    "description": "Banks and banking branches",
+    "icon": "🏦",
+    "type": "directory",
+    "entity_type": "finance",
+    "sort_order": 31
+  },
+  {
+    "id": "atms",
+    "name": "ATMs",
+    "slug": "atms",
+    "description": "ATM and cash-access locations",
+    "icon": "💳",
+    "type": "directory",
+    "entity_type": "finance",
+    "sort_order": 32
+  },
+  {
+    "id": "insurance",
+    "name": "Insurance",
+    "slug": "insurance",
+    "description": "Insurance providers, offices and advisors",
+    "icon": "🛡️",
+    "type": "directory",
+    "entity_type": "finance",
+    "sort_order": 33
+  },
+  {
+    "id": "loan-finance",
+    "name": "Loan & Finance Services",
+    "slug": "loan-finance",
+    "description": "Loans, NBFCs and financial services",
+    "icon": "💰",
+    "type": "directory",
+    "entity_type": "finance",
+    "sort_order": 34
+  },
+  {
+    "id": "automobile-dealers",
+    "name": "Automobile Dealers",
+    "slug": "automobile-dealers",
+    "description": "Car and automobile dealerships",
+    "icon": "🚗",
+    "type": "directory",
+    "entity_type": "automotive",
+    "sort_order": 35
+  },
+  {
+    "id": "automobile-services",
+    "name": "Automobile Services",
+    "slug": "automobile-services",
+    "description": "Service centres and workshops",
+    "icon": "🔧",
+    "type": "directory",
+    "entity_type": "automotive",
+    "sort_order": 36
+  },
+  {
+    "id": "petrol-pumps",
+    "name": "Petrol Pumps",
+    "slug": "petrol-pumps",
+    "description": "Fuel stations",
+    "icon": "⛽",
+    "type": "directory",
+    "entity_type": "automotive",
+    "sort_order": 37
+  },
+  {
+    "id": "ev-charging",
+    "name": "EV Charging",
+    "slug": "ev-charging",
+    "description": "Electric vehicle charging locations",
+    "icon": "⚡",
+    "type": "directory",
+    "entity_type": "automotive",
+    "sort_order": 38
+  },
+  {
+    "id": "tyre-battery",
+    "name": "Tyre & Battery",
+    "slug": "tyre-battery",
+    "description": "Tyre, battery and vehicle consumables services",
+    "icon": "🛞",
+    "type": "directory",
+    "entity_type": "automotive",
+    "sort_order": 39
+  },
+  {
+    "id": "real-estate",
+    "name": "Real Estate",
+    "slug": "real-estate",
+    "description": "Real estate agencies and property services",
+    "icon": "🏠",
+    "type": "directory",
+    "entity_type": "property",
+    "sort_order": 40
+  },
+  {
+    "id": "builders-developers",
+    "name": "Builders & Developers",
+    "slug": "builders-developers",
+    "description": "Builders, developers and housing projects",
+    "icon": "🏗️",
+    "type": "directory",
+    "entity_type": "property",
+    "sort_order": 41
+  },
+  {
+    "id": "coworking-spaces",
+    "name": "Coworking Spaces",
+    "slug": "coworking-spaces",
+    "description": "Coworking and flexible office spaces",
+    "icon": "💼",
+    "type": "directory",
+    "entity_type": "business",
+    "sort_order": 42
+  },
+  {
+    "id": "business-centres",
+    "name": "Business Centres",
+    "slug": "business-centres",
+    "description": "Business centres and serviced offices",
+    "icon": "🏢",
+    "type": "directory",
+    "entity_type": "business",
+    "sort_order": 43
+  },
+  {
+    "id": "cinemas",
+    "name": "Cinemas",
+    "slug": "cinemas",
+    "description": "Movie theatres and cinema chains",
+    "icon": "🎬",
+    "type": "directory",
+    "entity_type": "entertainment",
+    "sort_order": 44
+  },
+  {
+    "id": "event-venues",
+    "name": "Event Venues",
+    "slug": "event-venues",
+    "description": "Event halls, banquet halls and venues",
+    "icon": "🎉",
+    "type": "directory",
+    "entity_type": "events",
+    "sort_order": 45
+  },
+  {
+    "id": "shopping-malls",
+    "name": "Shopping Malls",
+    "slug": "shopping-malls",
+    "description": "Shopping centres and malls",
+    "icon": "🛍️",
+    "type": "directory",
+    "entity_type": "shopping",
+    "sort_order": 46
+  },
+  {
+    "id": "supermarkets",
+    "name": "Supermarkets",
+    "slug": "supermarkets",
+    "description": "Supermarkets and grocery stores",
+    "icon": "🛒",
+    "type": "directory",
+    "entity_type": "shopping",
+    "sort_order": 47
+  },
+  {
+    "id": "electronics-stores",
+    "name": "Electronics Stores",
+    "slug": "electronics-stores",
+    "description": "Electronics and appliance stores",
+    "icon": "📦",
+    "type": "directory",
+    "entity_type": "shopping",
+    "sort_order": 48
+  },
+  {
+    "id": "home-services",
+    "name": "Home Services",
+    "slug": "home-services",
+    "description": "Plumbing, electrical, cleaning and repair services",
+    "icon": "🔨",
+    "type": "directory",
+    "entity_type": "home-services",
+    "sort_order": 49
+  },
+  {
+    "id": "packers-movers",
+    "name": "Packers & Movers",
+    "slug": "packers-movers",
+    "description": "Moving, relocation and logistics services",
+    "icon": "🚚",
+    "type": "directory",
+    "entity_type": "logistics",
+    "sort_order": 50
+  },
+  {
+    "id": "courier-logistics",
+    "name": "Courier & Logistics",
+    "slug": "courier-logistics",
+    "description": "Courier, delivery and logistics providers",
+    "icon": "📦",
+    "type": "directory",
+    "entity_type": "logistics",
+    "sort_order": 51
+  },
+  {
+    "id": "legal-services",
+    "name": "Legal Services",
+    "slug": "legal-services",
+    "description": "Law firms, advocates and legal services",
+    "icon": "⚖️",
+    "type": "directory",
+    "entity_type": "professional",
+    "sort_order": 52
+  },
+  {
+    "id": "professional-services",
+    "name": "Professional Services",
+    "slug": "professional-services",
+    "description": "Accountants, consultants and professional providers",
+    "icon": "🏢",
+    "type": "directory",
+    "entity_type": "professional",
+    "sort_order": 53
+  },
+  {
+    "id": "ca-tax-services",
+    "name": "CA & Tax Services",
+    "slug": "ca-tax-services",
+    "description": "Chartered accountants and tax professionals",
+    "icon": "🧾",
+    "type": "directory",
+    "entity_type": "professional",
+    "sort_order": 54
+  },
+  {
+    "id": "local-amenities",
+    "name": "Local Amenities",
+    "slug": "local-amenities",
+    "description": "Everyday local services and amenities",
+    "icon": "📍",
+    "type": "directory",
+    "entity_type": "local",
+    "sort_order": 55
+  },
+  {
+    "id": "government-services",
+    "name": "Government & Civic Services",
+    "slug": "government-services",
+    "description": "Public offices and citizen services",
+    "icon": "🏛️",
+    "type": "directory",
+    "entity_type": "government",
+    "sort_order": 56
+  },
+  {
+    "id": "places-of-worship",
+    "name": "Places of Worship",
+    "slug": "places-of-worship",
+    "description": "Temples, mosques, churches, gurudwaras and other worship places",
+    "icon": "🛕",
+    "type": "directory",
+    "entity_type": "community",
+    "sort_order": 57
+  },
+  {
+    "id": "pet-care",
+    "name": "Pet Care",
+    "slug": "pet-care",
+    "description": "Pet boarding, grooming and services",
+    "icon": "🐶",
+    "type": "directory",
+    "entity_type": "pets",
+    "sort_order": 58
+  },
+  {
+    "id": "photography",
+    "name": "Photography",
+    "slug": "photography",
+    "description": "Photographers and studios",
+    "icon": "📸",
+    "type": "directory",
+    "entity_type": "creative",
+    "sort_order": 59
+  },
+  {
+    "id": "wedding-services",
+    "name": "Wedding Services",
+    "slug": "wedding-services",
+    "description": "Wedding planners, decorators and vendors",
+    "icon": "💍",
+    "type": "directory",
+    "entity_type": "events",
+    "sort_order": 60
+  },
+  {
+    "id": "monitors",
+    "name": "Monitors",
+    "slug": "monitors",
+    "description": "Computer monitors and displays",
+    "icon": "🖥️",
+    "type": "product"
+  },
+  {
+    "id": "printers",
+    "name": "Printers",
+    "slug": "printers",
+    "description": "Home and office printers",
+    "icon": "🖨️",
+    "type": "product"
+  },
+  {
+    "id": "projectors",
+    "name": "Projectors",
+    "slug": "projectors",
+    "description": "Projectors for home, office and education",
+    "icon": "📽️",
+    "type": "product"
+  },
+  {
+    "id": "storage",
+    "name": "Storage",
+    "slug": "storage",
+    "description": "SSDs, hard drives and storage devices",
+    "icon": "💾",
+    "type": "product"
+  },
+  {
+    "id": "networking",
+    "name": "Networking",
+    "slug": "networking",
+    "description": "Routers, mesh systems and networking equipment",
+    "icon": "📡",
+    "type": "product"
+  },
+  {
+    "id": "power",
+    "name": "Power Banks & Chargers",
+    "slug": "power",
+    "description": "Power banks, chargers and charging accessories",
+    "icon": "🔋",
+    "type": "product"
+  },
+  {
+    "id": "smart-home",
+    "name": "Smart Home",
+    "slug": "smart-home",
+    "description": "Smart home devices and automation",
+    "icon": "🏠",
+    "type": "product"
+  },
+  {
+    "id": "security-cameras",
+    "name": "Security Cameras",
+    "slug": "security-cameras",
+    "description": "Home and business security cameras",
+    "icon": "📹",
+    "type": "product"
+  },
+  {
+    "id": "streaming",
+    "name": "Streaming & Media",
+    "slug": "streaming",
+    "description": "Streaming devices and media hardware",
+    "icon": "📺",
+    "type": "product"
+  },
+  {
+    "id": "gaming-accessories",
+    "name": "Gaming Accessories",
+    "slug": "gaming-accessories",
+    "description": "Controllers, keyboards, mice and gaming accessories",
+    "icon": "🎮",
+    "type": "product"
+  },
+  {
+    "id": "drones",
+    "name": "Drones",
+    "slug": "drones",
+    "description": "Consumer and creator drones",
+    "icon": "🚁",
+    "type": "product"
+  },
+  {
+    "id": "3d-printers",
+    "name": "3D Printers",
+    "slug": "3d-printers",
+    "description": "3D printers and accessories",
+    "icon": "🖨️",
+    "type": "product"
+  },
+  {
+    "id": "air-purifiers",
+    "name": "Air Purifiers",
+    "slug": "air-purifiers",
+    "description": "Air purification products",
+    "icon": "🌬️",
+    "type": "product"
+  },
+  {
+    "id": "water-purifiers",
+    "name": "Water Purifiers",
+    "slug": "water-purifiers",
+    "description": "Water purification systems",
+    "icon": "💧",
+    "type": "product"
+  },
+  {
+    "id": "cookware",
+    "name": "Cookware",
+    "slug": "cookware",
+    "description": "Cookware and kitchen tools",
+    "icon": "🍳",
+    "type": "product"
+  },
+  {
+    "id": "vacuum-cleaners",
+    "name": "Vacuum Cleaners",
+    "slug": "vacuum-cleaners",
+    "description": "Vacuum and floor-cleaning devices",
+    "icon": "🧹",
+    "type": "product"
+  },
+  {
+    "id": "furniture",
+    "name": "Furniture",
+    "slug": "furniture",
+    "description": "Furniture and home-office products",
+    "icon": "🛋️",
+    "type": "product"
+  },
+  {
+    "id": "baby-products",
+    "name": "Baby Products",
+    "slug": "baby-products",
+    "description": "Baby and parenting products",
+    "icon": "🍼",
+    "type": "product"
+  },
+  {
+    "id": "pet-products",
+    "name": "Pet Products",
+    "slug": "pet-products",
+    "description": "Pet products and accessories",
+    "icon": "🐾",
+    "type": "product"
   }
 ]

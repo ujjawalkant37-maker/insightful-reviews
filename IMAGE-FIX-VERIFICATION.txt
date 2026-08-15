@@ -1,0 +1,13 @@
+IMAGE FIX REPLACEMENT
+======================
+
+After replacing the project files:
+
+npm install
+npm run lint
+npm run build
+npm run dev
+
+The product-image API and SafeImage now deliberately render API/SVG fallback
+images unoptimized, so Next/Image does not emit the dangerouslyAllowSVG warning.
+Remote SVG responses are not proxied as primary product images.

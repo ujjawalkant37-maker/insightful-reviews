@@ -1,0 +1,860 @@
+[
+  {
+    "productId": "oneplus-12-pro",
+    "productName": "OnePlus 12",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "OnePlus 12",
+      "sourceUrl": "https://www.oneplus.in/12",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "samsung-s24-ultra",
+    "productName": "Samsung Galaxy S24 Ultra",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Samsung Galaxy S24 Ultra",
+      "sourceUrl": "https://www.samsung.com/in/smartphones/galaxy-s24-ultra/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "iphone-15-pro",
+    "productName": "iPhone 15 Pro",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "iPhone 15 Pro",
+      "sourceUrl": "https://support.apple.com/en-in/111829",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "xiaomi-14-ultra",
+    "productName": "Xiaomi 14 Ultra",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Xiaomi 14 Ultra",
+      "sourceUrl": "https://www.mi.com/in/product/xiaomi-14-ultra/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "bundled_product_asset"
+  },
+  {
+    "productId": "realme-12-pro-plus",
+    "productName": "Realme 12 Pro Plus",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Realme 12 Pro Plus",
+      "sourceUrl": "https://www.realme.com/in/realme-12-pro-plus",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "vivo-x100-pro",
+    "productName": "Vivo X100 Pro",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Vivo X100 Pro",
+      "sourceUrl": "https://www.vivo.com/in/products/x100-pro",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "oppo-find-x7-pro",
+    "productName": "Oppo Find X7 Pro",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Oppo Find X7 Pro",
+      "sourceUrl": "https://www.oppo.com/cn/smartphones/series-find-x/find-x7-ultra/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "bundled_product_asset"
+  },
+  {
+    "productId": "motorola-edge-50-pro",
+    "productName": "Motorola Edge 50 Pro",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Motorola Edge 50 Pro",
+      "sourceUrl": "https://www.motorola.in/smartphones-motorola-edge-50-pro/p",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "nothing-phone-2a",
+    "productName": "Nothing Phone 2a",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Nothing Phone 2a",
+      "sourceUrl": "https://in.nothing.tech/products/phone-2a",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "poco-x6-pro",
+    "productName": "Poco X6 Pro",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Poco X6 Pro",
+      "sourceUrl": "https://www.mi.com/in/product/poco-x6-pro/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "bundled_product_asset"
+  },
+  {
+    "productId": "asus-rog-phone-8-pro",
+    "productName": "Asus ROG Phone 8 Pro",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Asus ROG Phone 8 Pro",
+      "sourceUrl": "https://rog.asus.com/in/phones/rog-phone-8-pro/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "samsung-a15-5g",
+    "productName": "Samsung Galaxy A15 5G",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Samsung Galaxy A15 5G",
+      "sourceUrl": "https://www.samsung.com/in/smartphones/galaxy-a/galaxy-a15-5g/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "redmi-note-13-pro",
+    "productName": "Redmi Note 13 Pro",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Redmi Note 13 Pro",
+      "sourceUrl": "https://www.mi.com/in/product/redmi-note-13-pro/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "vivo-v30-pro",
+    "productName": "Vivo V30 Pro",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Vivo V30 Pro",
+      "sourceUrl": "https://www.vivo.com/in/products/v30-pro",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "bundled_product_asset"
+  },
+  {
+    "productId": "oppo-a78",
+    "productName": "Oppo A78",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Oppo A78",
+      "sourceUrl": "https://www.oppo.com/in/smartphones/series-a/a78/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "bundled_product_asset"
+  },
+  {
+    "productId": "moto-g84",
+    "productName": "Moto G84",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Moto G84",
+      "sourceUrl": "https://www.motorola.in/smartphones-moto-g84-5g/p",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "bundled_product_asset"
+  },
+  {
+    "productId": "iphone-15",
+    "productName": "iPhone 15",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "iPhone 15",
+      "sourceUrl": "https://www.apple.com/in/iphone-15/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "bundled_product_asset"
+  },
+  {
+    "productId": "nokia-g42",
+    "productName": "Nokia G42",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Nokia G42",
+      "sourceUrl": "https://www.hmd.com/en_int/nokia-g-42-5g",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "infinix-note-30",
+    "productName": "Infinix Note 30",
+    "categoryId": "smartphones",
+    "source": {
+      "verifiedProductName": "Infinix Note 30",
+      "sourceUrl": "https://www.infinixmobility.com/NOTE-30",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "dell-xps-13-plus",
+    "productName": "Dell XPS 13 Plus",
+    "categoryId": "laptops",
+    "source": {
+      "verifiedProductName": "Dell XPS 13 Plus",
+      "sourceUrl": "https://www.dell.com/en-in/shop/laptop-computers/xps-13-plus-laptop/spd/xps-13-9320-laptop",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "lenovo-thinkpad-x1",
+    "productName": "Lenovo ThinkPad X1 Carbon",
+    "categoryId": "laptops",
+    "source": {
+      "verifiedProductName": "Lenovo ThinkPad X1 Carbon",
+      "sourceUrl": "https://www.lenovo.com/in/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-14-inch-intel/len101t0092",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "hp-pavilion-15",
+    "productName": "HP Pavilion 15",
+    "categoryId": "laptops",
+    "source": {
+      "verifiedProductName": "HP Pavilion 15",
+      "sourceUrl": "https://www.hp.com/in-en/pavilion/pavilion-product-card/product-6-card.html",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "asus-vivobook-15",
+    "productName": "Asus VivoBook 15",
+    "categoryId": "laptops",
+    "source": {
+      "verifiedProductName": "Asus VivoBook 15",
+      "sourceUrl": "https://www.asus.com/in/laptops/for-home/vivobook/asus-vivobook-15-x1504/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "macbook-air-m3",
+    "productName": "MacBook Air M3",
+    "categoryId": "laptops",
+    "source": {
+      "verifiedProductName": "MacBook Air M3",
+      "sourceUrl": "https://www.apple.com/in/macbook-air-13-and-15-m2/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "lenovo-ideapad-5",
+    "productName": "Lenovo IdeaPad Pro 5G",
+    "categoryId": "laptops",
+    "source": {
+      "verifiedProductName": "Lenovo IdeaPad Pro 5G",
+      "sourceUrl": "https://www.lenovo.com/in/en/c/laptops/ideapad/ideapad-5-series/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "samsung-galaxy-book-4",
+    "productName": "Samsung Galaxy Book 4 Pro",
+    "categoryId": "laptops",
+    "source": {
+      "verifiedProductName": "Samsung Galaxy Book 4 Pro",
+      "sourceUrl": "https://www.samsung.com/in/computers/galaxy-book/galaxy-book4-pro/buy/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "acer-aspire-5",
+    "productName": "Acer Aspire 5",
+    "categoryId": "laptops",
+    "source": {
+      "verifiedProductName": "Acer Aspire 5",
+      "sourceUrl": "https://store.acer.com/en-in/laptops/aspire/aspire-5",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "asus-tuf-gaming",
+    "productName": "Asus TUF Gaming F15",
+    "categoryId": "laptops",
+    "source": {
+      "verifiedProductName": "Asus TUF Gaming F15",
+      "sourceUrl": "https://www.asus.com/in/laptops/for-gaming/all-series/asus-tuf-gaming-f15-2023/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "hp-envy-13",
+    "productName": "HP Envy 13",
+    "categoryId": "laptops",
+    "source": {
+      "verifiedProductName": "HP Envy 13",
+      "sourceUrl": "https://www.hp.com/in-en/laptops-and-2-in-1s/envy.html",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "samsung-qn55-qled",
+    "productName": "Samsung QN55 QLED 2024",
+    "categoryId": "tvs",
+    "source": {
+      "verifiedProductName": "Samsung QN55 QLED 2024",
+      "sourceUrl": "https://www.samsung.com/us/televisions-home-theater/tvs/qled-4k-tvs/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "lg-c4-oled",
+    "productName": "LG C4 OLED 55",
+    "categoryId": "tvs",
+    "source": {
+      "verifiedProductName": "LG C4 OLED 55",
+      "sourceUrl": "https://www.lg.com/in/oled-tv",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "sony-bravia-55",
+    "productName": "Sony Bravia 55 K95XL",
+    "categoryId": "tvs",
+    "source": {
+      "verifiedProductName": "Sony Bravia 55 K95XL",
+      "sourceUrl": "https://www.sony.co.in/bravia",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "samsung-43-qled",
+    "productName": "Samsung 43 QLED 2024",
+    "categoryId": "tvs",
+    "source": {
+      "verifiedProductName": "Samsung 43 QLED 2024",
+      "sourceUrl": "https://www.samsung.com/in/tvs/qled-4k-tv/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "lg-32-led",
+    "productName": "LG 32 FHD LED",
+    "categoryId": "tvs",
+    "source": {
+      "verifiedProductName": "LG 32 FHD LED",
+      "sourceUrl": "https://www.lg.com/in/tvs",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "tcl-65-qled",
+    "productName": "TCL 65 QLED 2024",
+    "categoryId": "tvs",
+    "source": {
+      "verifiedProductName": "TCL 65 QLED 2024",
+      "sourceUrl": "https://www.tcl.com/in/en/tvs/qled",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "mi-led-tv-50",
+    "productName": "Mi LED TV 50 2024",
+    "categoryId": "tvs",
+    "source": {
+      "verifiedProductName": "Mi LED TV 50 2024",
+      "sourceUrl": "https://www.mi.com/in/product/xiaomi-tv-x-series/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "voltas-32-led",
+    "productName": "Voltas 32-inch LED TV",
+    "categoryId": "tvs",
+    "source": {
+      "verifiedProductName": "Voltas 32-inch LED TV",
+      "sourceUrl": "https://www.voltas.com/collections/televisions",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "boat-airdopes-pro-max",
+    "productName": "boAt Airdopes Pro Max",
+    "categoryId": "audio",
+    "source": {
+      "verifiedProductName": "boAt Airdopes Pro Max",
+      "sourceUrl": "https://www.boat-lifestyle.com/collections/airdopes",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "noise-ultimus-pro",
+    "productName": "Noise Ultimus Pro",
+    "categoryId": "audio",
+    "source": {
+      "verifiedProductName": "Noise Ultimus Pro",
+      "sourceUrl": "https://www.gonoise.com/collections/smartwatches",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "jbl-tune-670nc",
+    "productName": "JBL Tune 670NC",
+    "categoryId": "audio",
+    "source": {
+      "verifiedProductName": "JBL Tune 670NC",
+      "sourceUrl": "https://in.jbl.com/over-ear-headphones/JBLT670NC.html",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "sony-wf-c700n",
+    "productName": "Sony WF-C700N",
+    "categoryId": "audio",
+    "source": {
+      "verifiedProductName": "Sony WF-C700N",
+      "sourceUrl": "https://www.sony.co.in/electronics/truly-wireless/wf-c700n",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "apple-airpods-pro",
+    "productName": "Apple AirPods Pro 2",
+    "categoryId": "audio",
+    "source": {
+      "verifiedProductName": "Apple AirPods Pro 2",
+      "sourceUrl": "https://www.apple.com/in/airpods-pro/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "sennheiser-momentum",
+    "productName": "Sennheiser Momentum 4",
+    "categoryId": "audio",
+    "source": {
+      "verifiedProductName": "Sennheiser Momentum 4",
+      "sourceUrl": "https://www.sennheiser-hearing.com/en-IN/p/momentum-4-wireless/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "boat-airdopes-500",
+    "productName": "boAt Airdopes 500 AIO",
+    "categoryId": "audio",
+    "source": {
+      "verifiedProductName": "boAt Airdopes 500 AIO",
+      "sourceUrl": "https://www.boat-lifestyle.com/collections/airdopes",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "bose-quietcomfort",
+    "productName": "Bose QuietComfort 45",
+    "categoryId": "audio",
+    "source": {
+      "verifiedProductName": "Bose QuietComfort 45",
+      "sourceUrl": "https://www.boseindia.com/en_in/products/headphones/over_ear_headphones/quietcomfort-headphones.html",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "ifb-diva-automat",
+    "productName": "IFB Diva Automat",
+    "categoryId": "appliances",
+    "source": {
+      "verifiedProductName": "IFB Diva Automat",
+      "sourceUrl": "https://www.ifbappliances.com/washing-machine",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "lg-refrigerator",
+    "productName": "LG Direct Cool Refrigerator",
+    "categoryId": "appliances",
+    "source": {
+      "verifiedProductName": "LG Direct Cool Refrigerator",
+      "sourceUrl": "https://www.lg.com/in/refrigerators",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "bosch-washing-machine",
+    "productName": "Bosch 6kg Washing Machine",
+    "categoryId": "appliances",
+    "source": {
+      "verifiedProductName": "Bosch 6kg Washing Machine",
+      "sourceUrl": "https://www.bosch-home.in/productlist/washers-dryers/washing-machines",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "haier-convertible-ac",
+    "productName": "Haier Convertible AC",
+    "categoryId": "appliances",
+    "source": {
+      "verifiedProductName": "Haier Convertible AC",
+      "sourceUrl": "https://www.haier.com/in/air-conditioners/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "samsung-microwave",
+    "productName": "Samsung Microwave Oven",
+    "categoryId": "appliances",
+    "source": {
+      "verifiedProductName": "Samsung Microwave Oven",
+      "sourceUrl": "https://www.samsung.com/in/microwave-ovens/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "induction-preethi",
+    "productName": "Induction Cooktop Preethi",
+    "categoryId": "appliances",
+    "source": {
+      "verifiedProductName": "Induction Cooktop Preethi",
+      "sourceUrl": "https://www.shop.preethi.in/collections/induction-cooktops",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "whirlpool-refrigerator",
+    "productName": "Whirlpool Refrigerator",
+    "categoryId": "appliances",
+    "source": {
+      "verifiedProductName": "Whirlpool Refrigerator",
+      "sourceUrl": "https://www.whirlpoolindia.com/refrigerators",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "blue-star-ac",
+    "productName": "Blue Star AC 1 Ton",
+    "categoryId": "appliances",
+    "source": {
+      "verifiedProductName": "Blue Star AC 1 Ton",
+      "sourceUrl": "https://www.bluestarindia.com/products/air-conditioners",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "boat-smartwatch-prime",
+    "productName": "boAt SmartWatch Prime",
+    "categoryId": "wearables",
+    "source": {
+      "verifiedProductName": "boAt SmartWatch Prime",
+      "sourceUrl": "https://www.boat-lifestyle.com/collections/smart-watches",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "noise-colorfit-pro",
+    "productName": "Noise ColorFit Pro 4",
+    "categoryId": "wearables",
+    "source": {
+      "verifiedProductName": "Noise ColorFit Pro 4",
+      "sourceUrl": "https://www.gonoise.com/collections/smartwatches",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "apple-watch-series-9",
+    "productName": "Apple Watch Series 9",
+    "categoryId": "wearables",
+    "source": {
+      "verifiedProductName": "Apple Watch Series 9",
+      "sourceUrl": "https://www.apple.com/in/apple-watch-series-9/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "boat-band-active",
+    "productName": "boAt Band Active",
+    "categoryId": "wearables",
+    "source": {
+      "verifiedProductName": "boAt Band Active",
+      "sourceUrl": "https://www.boat-lifestyle.com/collections/smart-bands",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "sony-smartband",
+    "productName": "Sony SmartBand 7C",
+    "categoryId": "wearables",
+    "source": {
+      "verifiedProductName": "Sony SmartBand 7C",
+      "sourceUrl": "https://www.sony.co.in/electronics/wearable-technology",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "samsung-galaxy-watch-6",
+    "productName": "Samsung Galaxy Watch 6 Classic",
+    "categoryId": "wearables",
+    "source": {
+      "verifiedProductName": "Samsung Galaxy Watch 6 Classic",
+      "sourceUrl": "https://www.samsung.com/in/watches/galaxy-watch/galaxy-watch6-classic/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "amazfit-gts-4",
+    "productName": "Amazfit GTS 4",
+    "categoryId": "wearables",
+    "source": {
+      "verifiedProductName": "Amazfit GTS 4",
+      "sourceUrl": "https://in.amazfit.com/products/amazfit-gts-4",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "canon-eos-r50",
+    "productName": "Canon EOS R50",
+    "categoryId": "cameras",
+    "source": {
+      "verifiedProductName": "Canon EOS R50",
+      "sourceUrl": "https://in.canon/en/consumer/eos-r50/body/product",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "sony-a6700",
+    "productName": "Sony A6700",
+    "categoryId": "cameras",
+    "source": {
+      "verifiedProductName": "Sony A6700",
+      "sourceUrl": "https://www.sony.co.in/electronics/interchangeable-lens-cameras/ilce-6700",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "nikon-z5",
+    "productName": "Nikon Z5",
+    "categoryId": "cameras",
+    "source": {
+      "verifiedProductName": "Nikon Z5",
+      "sourceUrl": "https://www.nikon.co.in/z5",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "fujifilm-x-s20",
+    "productName": "Fujifilm X-S20",
+    "categoryId": "cameras",
+    "source": {
+      "verifiedProductName": "Fujifilm X-S20",
+      "sourceUrl": "https://www.fujifilm-x.com/en-in/products/cameras/x-s20/",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "gopro-hero-12",
+    "productName": "GoPro Hero 12",
+    "categoryId": "cameras",
+    "source": {
+      "verifiedProductName": "GoPro Hero 12",
+      "sourceUrl": "https://gopro.com/en/in/shop/cameras/hero12-black/CHDHX-121-master.html",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  },
+  {
+    "productId": "dji-osmo-action",
+    "productName": "DJI Osmo Action 4",
+    "categoryId": "cameras",
+    "source": {
+      "verifiedProductName": "DJI Osmo Action 4",
+      "sourceUrl": "https://www.dji.com/in/osmo-action-4",
+      "sourceType": "manufacturer_or_reputable_retailer_product_page",
+      "sourceStatus": "verified",
+      "note": "Remote source page used to resolve the product photograph. Synthetic placeholder artwork is not used."
+    },
+    "imageStatus": "verified_remote_source"
+  }
+]

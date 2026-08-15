@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ProductImage from "@/components/ProductImage";
 import Link from "next/link";
 import type { Product } from "@/types/models";
 
@@ -41,15 +41,13 @@ export default function RelatedProducts({
           >
 
             <div className="relative h-40 w-full overflow-hidden rounded-lg">
-              <Image
-                src={product.images?.[0] ?? "/placeholder.svg"}
+              <ProductImage
+                src={product.images?.[0]}
                 alt={product.name}
-                fill
-
-                unoptimized
-
+                slug={product.slug}
+                imageSource={product.imageSource}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
 

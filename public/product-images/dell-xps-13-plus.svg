@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(42 30% 97%)"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+<rect width="1200" height="900" rx="34" fill="url(#bg)"/>
+<text x="600" y="68" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#4f46e5" letter-spacing="3">INSIGHTFUL REVIEWS</text>
+<text id="title" x="600" y="115" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#111827">Dell XPS 13 Plus</text>
+<desc id="desc">Product illustration for Dell XPS 13 Plus</desc>
+<g><rect x="285" y="150" width="630" height="390" rx="22" fill="#111827"/><rect x="305" y="170" width="590" height="350" rx="12" fill="hsl(42 72% 52%)"/><circle cx="600" cy="345" r="85" fill="#fff" opacity=".16"/><path d="M220 565h760l95 95H125z" fill="#475569"/><rect x="515" y="585" width="170" height="18" rx="9" fill="#1f2937"/></g>
+<rect x="335" y="825" width="530" height="4" rx="2" fill="hsl(42 72% 52%)" opacity=".35"/>
+<text x="600" y="865" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#64748b">Product catalogue illustration</text>
+</svg>

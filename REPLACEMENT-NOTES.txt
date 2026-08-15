@@ -1,0 +1,29 @@
+INSIGHTFUL REVIEWS — STEP 2 FINAL REPLACEMENT
+
+This package is a source-level replacement of the uploaded project after the Step 2 image-host/runtime issue.
+
+Key fix:
+- Added app/components/SafeImage.tsx.
+- All application components that previously imported next/image now use SafeImage.
+- SafeImage uses the browser's native image loader, so product/directory images are not blocked by Next.js remote-host allowlisting.
+- ProductImage retains automatic fallback to /placeholder.svg when an external image fails.
+- next.config.ts retains current common remote patterns for compatibility with any future next/image usage.
+
+Environment:
+- The local .env.local file is intentionally NOT included. Keep your existing .env.local with Supabase/OpenAI/Google credentials.
+- .next and node_modules are intentionally NOT included; run npm install if needed.
+
+Verification:
+- The uploaded project had already passed npm run lint and npm run build immediately before this image-host runtime error.
+- The changes in this replacement are limited to image rendering/configuration and were inspected for TypeScript compatibility.
+- A full npm ci could not be completed in this environment because the package registry returned a 404 for zod-validation-error; therefore this environment cannot truthfully claim a fresh local lint/build execution.
+
+After replacing:
+1. Stop dev server with Ctrl+C.
+2. Extract/replace the project source while preserving .env.local.
+3. Run: npm run lint
+4. Run: npm run build
+5. Run: npm run dev
+6. Open http://localhost:3000 and hard-refresh.
+
+Do not delete .env.local.

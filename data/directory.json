@@ -1,0 +1,4234 @@
+[
+  {
+    "id": "apollo-greams-road-chennai",
+    "slug": "apollo-greams-road-chennai",
+    "name": "Apollo Hospitals, Greams Road",
+    "category": "hospitals",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Apollo Hospitals, Greams Road in Chennai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "21 Greams Lane, Off Greams Road, Chennai 600006",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-teynampet-chennai",
+    "slug": "apollo-teynampet-chennai",
+    "name": "Apollo Speciality Hospitals, Teynampet",
+    "category": "hospitals",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Apollo Speciality Hospitals, Teynampet in Chennai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "No. 320, Anna Salai, Teynampet, Chennai 600035",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-firstmed-kilpauk",
+    "slug": "apollo-firstmed-kilpauk",
+    "name": "Apollo FirstMed Hospital",
+    "category": "hospitals",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Apollo FirstMed Hospital in Chennai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "154 Poonamallee High Road, Kilpauk, Chennai 600010",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-tondiarpet-chennai",
+    "slug": "apollo-tondiarpet-chennai",
+    "name": "Apollo Hospitals, Tondiarpet",
+    "category": "hospitals",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Apollo Hospitals, Tondiarpet in Chennai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "645 Thiruvottiyur High Road, Tondiarpet, Chennai 600081",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-vanagaram-chennai",
+    "slug": "apollo-vanagaram-chennai",
+    "name": "Apollo Speciality Hospitals, Vanagaram",
+    "category": "hospitals",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Apollo Speciality Hospitals, Vanagaram in Chennai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Vanagaram, Chennai",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-omr-chennai",
+    "slug": "apollo-omr-chennai",
+    "name": "Apollo Speciality Hospitals, OMR",
+    "category": "hospitals",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Apollo Speciality Hospitals, OMR in Chennai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "OMR, Chennai",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-nandanam-chennai",
+    "slug": "apollo-nandanam-chennai",
+    "name": "Apollo Speciality Hospitals, Nandanam",
+    "category": "hospitals",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Apollo Speciality Hospitals, Nandanam in Chennai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Nandanam, Chennai",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-jayanagar-bengaluru",
+    "slug": "apollo-jayanagar-bengaluru",
+    "name": "Apollo Speciality Hospital, Jayanagar",
+    "category": "hospitals",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Apollo Speciality Hospital, Jayanagar in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "212, Dr Parvathamma Rajkumar Road, Jayanagar, Bengaluru 560011",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-bannerghatta-bengaluru",
+    "slug": "apollo-bannerghatta-bengaluru",
+    "name": "Apollo Hospitals, Bannerghatta Road",
+    "category": "hospitals",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Apollo Hospitals, Bannerghatta Road in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "154/11 Bannerghatta Road, Bengaluru 560076",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-seshadripuram-bengaluru",
+    "slug": "apollo-seshadripuram-bengaluru",
+    "name": "Apollo Hospitals, Seshadripuram",
+    "category": "hospitals",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Apollo Hospitals, Seshadripuram in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Platform Road, Seshadripuram, Bengaluru",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-sarjapur-bengaluru",
+    "slug": "apollo-sarjapur-bengaluru",
+    "name": "Apollo Hospitals, Sarjapur Road",
+    "category": "hospitals",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Apollo Hospitals, Sarjapur Road in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Sarjapur Road, Bengaluru 560035",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-electronic-city-bengaluru",
+    "slug": "apollo-electronic-city-bengaluru",
+    "name": "Apollo Cancer Centres, Electronic City",
+    "category": "hospitals",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Apollo Cancer Centres, Electronic City in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Electronic City Phase I, Bengaluru 560100",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-hsr-bengaluru",
+    "slug": "apollo-hsr-bengaluru",
+    "name": "Apollo Cancer Centres, HSR Layout",
+    "category": "hospitals",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Apollo Cancer Centres, HSR Layout in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "HSR Layout, Bengaluru",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-jubilee-hills-hyderabad",
+    "slug": "apollo-jubilee-hills-hyderabad",
+    "name": "Apollo Health City, Jubilee Hills",
+    "category": "hospitals",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "description": "Apollo Health City, Jubilee Hills in Hyderabad, Telangana. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Road No. 72, Jubilee Hills, Hyderabad 500033",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-drdo-hyderabad",
+    "slug": "apollo-drdo-hyderabad",
+    "name": "Apollo Hospitals, DRDO",
+    "category": "hospitals",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "description": "Apollo Hospitals, DRDO in Hyderabad, Telangana. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Hyderabad, Telangana",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-hyderguda-hyderabad",
+    "slug": "apollo-hyderguda-hyderabad",
+    "name": "Apollo Hospitals, Hyderguda",
+    "category": "hospitals",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "description": "Apollo Hospitals, Hyderguda in Hyderabad, Telangana. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Hyderguda, Hyderabad",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-kolkata-em-bypass",
+    "slug": "apollo-kolkata-em-bypass",
+    "name": "Apollo Multispeciality Hospitals, EM Bypass",
+    "category": "hospitals",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "description": "Apollo Multispeciality Hospitals, EM Bypass in Kolkata, West Bengal. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "58 Canal Circular Road, Kolkata 700054",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-narendrapur-kolkata",
+    "slug": "apollo-narendrapur-kolkata",
+    "name": "Apollo Hospitals, Narendrapur",
+    "category": "hospitals",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "description": "Apollo Hospitals, Narendrapur in Kolkata, West Bengal. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "366 Paikpara Road, Narendrapur, Kolkata 700103",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-navi-mumbai",
+    "slug": "apollo-navi-mumbai",
+    "name": "Apollo Hospitals, Mumbai / Navi Mumbai",
+    "category": "hospitals",
+    "city": "Navi Mumbai",
+    "state": "Maharashtra",
+    "description": "Apollo Hospitals, Mumbai / Navi Mumbai in Navi Mumbai, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Parsik Hill Road, Sector 23, CBD Belapur, Navi Mumbai 400614",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-dadar-mumbai",
+    "slug": "apollo-dadar-mumbai",
+    "name": "Apollo Superspeciality Centre, Dadar",
+    "category": "hospitals",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "Apollo Superspeciality Centre, Dadar in Mumbai, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Kohinoor Square, Dadar, Mumbai 400028",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-delhi",
+    "slug": "apollo-delhi",
+    "name": "Indraprastha Apollo Hospitals",
+    "category": "hospitals",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Indraprastha Apollo Hospitals in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Delhi Mathura Road, New Delhi 110076",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-noida",
+    "slug": "apollo-noida",
+    "name": "Apollo Hospitals, Noida",
+    "category": "hospitals",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "description": "Apollo Hospitals, Noida in Noida, Uttar Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Noida, Uttar Pradesh",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-guwahati",
+    "slug": "apollo-guwahati",
+    "name": "Apollo Hospitals, Guwahati",
+    "category": "hospitals",
+    "city": "Guwahati",
+    "state": "Assam",
+    "description": "Apollo Hospitals, Guwahati in Guwahati, Assam. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Lotus Tower, Christian Basti, G S Road, Guwahati 781005",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-excelcare-guwahati",
+    "slug": "apollo-excelcare-guwahati",
+    "name": "Apollo Excelcare, Guwahati",
+    "category": "hospitals",
+    "city": "Guwahati",
+    "state": "Assam",
+    "description": "Apollo Excelcare, Guwahati in Guwahati, Assam. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "NH-37 Highway, Paschim Boragaon, Guwahati 781033",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-ahmedabad",
+    "slug": "apollo-ahmedabad",
+    "name": "Apollo Hospitals, Ahmedabad",
+    "category": "hospitals",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "description": "Apollo Hospitals, Ahmedabad in Ahmedabad, Gujarat. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Bhat GIDC Estate, Dist. Airport Gandhinagar Road, Gujarat 382428",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-bhubaneswar",
+    "slug": "apollo-bhubaneswar",
+    "name": "Apollo Hospitals, Bhubaneswar",
+    "category": "hospitals",
+    "city": "Bhubaneswar",
+    "state": "Odisha",
+    "description": "Apollo Hospitals, Bhubaneswar in Bhubaneswar, Odisha. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Sainik School Road, Bhubaneswar 751005",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-bilaspur",
+    "slug": "apollo-bilaspur",
+    "name": "Apollo Hospitals, Bilaspur",
+    "category": "hospitals",
+    "city": "Bilaspur",
+    "state": "Chhattisgarh",
+    "description": "Apollo Hospitals, Bilaspur in Bilaspur, Chhattisgarh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Bilaspur, Chhattisgarh",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-jabalpur",
+    "slug": "apollo-jabalpur",
+    "name": "Apollo JBP Hospitals",
+    "category": "hospitals",
+    "city": "Jabalpur",
+    "state": "Madhya Pradesh",
+    "description": "Apollo JBP Hospitals in Jabalpur, Madhya Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Patan Road, Karmeta, Jabalpur 482002",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-bhopal",
+    "slug": "apollo-bhopal",
+    "name": "Apollo Hospitals, Bhopal",
+    "category": "hospitals",
+    "city": "Bhopal",
+    "state": "Madhya Pradesh",
+    "description": "Apollo Hospitals, Bhopal in Bhopal, Madhya Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Bhopal, Madhya Pradesh",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-indore",
+    "slug": "apollo-indore",
+    "name": "Apollo Hospitals, Indore",
+    "category": "hospitals",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "description": "Apollo Hospitals, Indore in Indore, Madhya Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Indore, Madhya Pradesh",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-kakinada",
+    "slug": "apollo-kakinada",
+    "name": "Apollo Hospitals, Kakinada",
+    "category": "hospitals",
+    "city": "Kakinada",
+    "state": "Andhra Pradesh",
+    "description": "Apollo Hospitals, Kakinada in Kakinada, Andhra Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Kakinada, Andhra Pradesh",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-vizag-ramnagar",
+    "slug": "apollo-vizag-ramnagar",
+    "name": "Apollo Hospitals, Ramnagar",
+    "category": "hospitals",
+    "city": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "description": "Apollo Hospitals, Ramnagar in Visakhapatnam, Andhra Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Ramnagar, Visakhapatnam 530002",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-vizag-health-city",
+    "slug": "apollo-vizag-health-city",
+    "name": "Apollo Hospitals Health City, Arilova",
+    "category": "hospitals",
+    "city": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "description": "Apollo Hospitals Health City, Arilova in Visakhapatnam, Andhra Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Arilova, Visakhapatnam 530040",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-nellore",
+    "slug": "apollo-nellore",
+    "name": "Apollo Speciality Hospitals, Nellore",
+    "category": "hospitals",
+    "city": "Nellore",
+    "state": "Andhra Pradesh",
+    "description": "Apollo Speciality Hospitals, Nellore in Nellore, Andhra Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Nellore, Andhra Pradesh",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-kochi-adlux",
+    "slug": "apollo-kochi-adlux",
+    "name": "Apollo Adlux Hospitals",
+    "category": "hospitals",
+    "city": "Kochi",
+    "state": "Kerala",
+    "description": "Apollo Adlux Hospitals in Kochi, Kerala. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Karukutty, Ernakulam District, Kerala 683576",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-lucknow",
+    "slug": "apollo-lucknow",
+    "name": "Apollomedics Super Speciality Hospital",
+    "category": "hospitals",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "description": "Apollomedics Super Speciality Hospital in Lucknow, Uttar Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Bargawan, LDA Colony, Lucknow 226012",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-mysore",
+    "slug": "apollo-mysore",
+    "name": "Apollo BGS Hospitals",
+    "category": "hospitals",
+    "city": "Mysuru",
+    "state": "Karnataka",
+    "description": "Apollo BGS Hospitals in Mysuru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Kuvempunagar, Mysuru",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-nashik",
+    "slug": "apollo-nashik",
+    "name": "Apollo Hospitals, Nashik",
+    "category": "hospitals",
+    "city": "Nashik",
+    "state": "Maharashtra",
+    "description": "Apollo Hospitals, Nashik in Nashik, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Nashik, Maharashtra",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-madurai",
+    "slug": "apollo-madurai",
+    "name": "Apollo Speciality Hospitals, Madurai",
+    "category": "hospitals",
+    "city": "Madurai",
+    "state": "Tamil Nadu",
+    "description": "Apollo Speciality Hospitals, Madurai in Madurai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Madurai, Tamil Nadu",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-trichy",
+    "slug": "apollo-trichy",
+    "name": "Apollo Speciality Hospitals, Trichy",
+    "category": "hospitals",
+    "city": "Tiruchirappalli",
+    "state": "Tamil Nadu",
+    "description": "Apollo Speciality Hospitals, Trichy in Tiruchirappalli, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Madurai Bypass Road, Trichy, Tamil Nadu",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-karur",
+    "slug": "apollo-karur",
+    "name": "Apollo Loga Hospitals",
+    "category": "hospitals",
+    "city": "Karur",
+    "state": "Tamil Nadu",
+    "description": "Apollo Loga Hospitals in Karur, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Kovai Road, Karur, Tamil Nadu",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-karaikudi",
+    "slug": "apollo-karaikudi",
+    "name": "Apollo Hospitals, Karaikudi",
+    "category": "hospitals",
+    "city": "Karaikudi",
+    "state": "Tamil Nadu",
+    "description": "Apollo Hospitals, Karaikudi in Karaikudi, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Karaikudi, Tamil Nadu",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-karimnagar",
+    "slug": "apollo-karimnagar",
+    "name": "Apollo Reach Hospitals",
+    "category": "hospitals",
+    "city": "Karimnagar",
+    "state": "Telangana",
+    "description": "Apollo Reach Hospitals in Karimnagar, Telangana. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Karimnagar, Telangana",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "apollo-kakinada-2",
+    "slug": "apollo-kakinada-2",
+    "name": "Apollo Hospitals, Surya Rao Peta",
+    "category": "hospitals",
+    "city": "Kakinada",
+    "state": "Andhra Pradesh",
+    "description": "Apollo Hospitals, Surya Rao Peta in Kakinada, Andhra Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.apollohospitals.com/",
+    "group_name": "Apollo Hospitals",
+    "address": "Surya Rao Peta, Kakinada, Andhra Pradesh",
+    "tags": [
+      "apollo",
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.apollohospitals.com/facilities/hospitals",
+    "verified": true
+  },
+  {
+    "id": "aiims-new-delhi",
+    "slug": "aiims-new-delhi",
+    "name": "AIIMS New Delhi",
+    "category": "hospitals",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "AIIMS New Delhi in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.aiims.edu/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.aiims.edu/",
+    "verified": true
+  },
+  {
+    "id": "aiims-patna",
+    "slug": "aiims-patna",
+    "name": "AIIMS Patna",
+    "category": "hospitals",
+    "city": "Patna",
+    "state": "Bihar",
+    "description": "AIIMS Patna in Patna, Bihar. Verify current information directly with the provider.",
+    "website": "https://aiimspatna.edu.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://aiimspatna.edu.in/",
+    "verified": true
+  },
+  {
+    "id": "aiims-guwahati",
+    "slug": "aiims-guwahati",
+    "name": "AIIMS Guwahati",
+    "category": "hospitals",
+    "city": "Guwahati",
+    "state": "Assam",
+    "description": "AIIMS Guwahati in Guwahati, Assam. Verify current information directly with the provider.",
+    "website": "https://aiimsguwahati.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://aiimsguwahati.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "aiims-jodhpur",
+    "slug": "aiims-jodhpur",
+    "name": "AIIMS Jodhpur",
+    "category": "hospitals",
+    "city": "Jodhpur",
+    "state": "Rajasthan",
+    "description": "AIIMS Jodhpur in Jodhpur, Rajasthan. Verify current information directly with the provider.",
+    "website": "https://www.aiimsjodhpur.edu.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.aiimsjodhpur.edu.in/",
+    "verified": true
+  },
+  {
+    "id": "aiims-rishikesh",
+    "slug": "aiims-rishikesh",
+    "name": "AIIMS Rishikesh",
+    "category": "hospitals",
+    "city": "Rishikesh",
+    "state": "Uttarakhand",
+    "description": "AIIMS Rishikesh in Rishikesh, Uttarakhand. Verify current information directly with the provider.",
+    "website": "https://aiimsrishikesh.edu.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://aiimsrishikesh.edu.in/",
+    "verified": true
+  },
+  {
+    "id": "aiims-bhubaneswar",
+    "slug": "aiims-bhubaneswar",
+    "name": "AIIMS Bhubaneswar",
+    "category": "hospitals",
+    "city": "Bhubaneswar",
+    "state": "Odisha",
+    "description": "AIIMS Bhubaneswar in Bhubaneswar, Odisha. Verify current information directly with the provider.",
+    "website": "https://aiimsbhubaneswar.nic.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://aiimsbhubaneswar.nic.in/",
+    "verified": true
+  },
+  {
+    "id": "aiims-bhopal",
+    "slug": "aiims-bhopal",
+    "name": "AIIMS Bhopal",
+    "category": "hospitals",
+    "city": "Bhopal",
+    "state": "Madhya Pradesh",
+    "description": "AIIMS Bhopal in Bhopal, Madhya Pradesh. Verify current information directly with the provider.",
+    "website": "https://aiimsbhopal.edu.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://aiimsbhopal.edu.in/",
+    "verified": true
+  },
+  {
+    "id": "aiims-raipur",
+    "slug": "aiims-raipur",
+    "name": "AIIMS Raipur",
+    "category": "hospitals",
+    "city": "Raipur",
+    "state": "Chhattisgarh",
+    "description": "AIIMS Raipur in Raipur, Chhattisgarh. Verify current information directly with the provider.",
+    "website": "https://www.aiimsraipur.edu.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.aiimsraipur.edu.in/",
+    "verified": true
+  },
+  {
+    "id": "fortis-gurugram",
+    "slug": "fortis-gurugram",
+    "name": "Fortis Memorial Research Institute",
+    "category": "hospitals",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "description": "Fortis Memorial Research Institute in Gurugram, Haryana. Verify current information directly with the provider.",
+    "website": "https://www.fortishealthcare.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.fortishealthcare.com/",
+    "verified": true
+  },
+  {
+    "id": "medanta-gurugram",
+    "slug": "medanta-gurugram",
+    "name": "Medanta - The Medicity",
+    "category": "hospitals",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "description": "Medanta - The Medicity in Gurugram, Haryana. Verify current information directly with the provider.",
+    "website": "https://www.medanta.org/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.medanta.org/",
+    "verified": true
+  },
+  {
+    "id": "narayana-bengaluru",
+    "slug": "narayana-bengaluru",
+    "name": "Narayana Health City",
+    "category": "hospitals",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Narayana Health City in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.narayanahealth.org/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.narayanahealth.org/",
+    "verified": true
+  },
+  {
+    "id": "kokilaben-mumbai",
+    "slug": "kokilaben-mumbai",
+    "name": "Kokilaben Dhirubhai Ambani Hospital",
+    "category": "hospitals",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "Kokilaben Dhirubhai Ambani Hospital in Mumbai, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://www.kokilabenhospital.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.kokilabenhospital.com/",
+    "verified": true
+  },
+  {
+    "id": "manipal-old-airport",
+    "slug": "manipal-old-airport",
+    "name": "Manipal Hospital Old Airport Road",
+    "category": "hospitals",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Manipal Hospital Old Airport Road in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.manipalhospitals.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.manipalhospitals.com/",
+    "verified": true
+  },
+  {
+    "id": "ruby-hall-pune",
+    "slug": "ruby-hall-pune",
+    "name": "Ruby Hall Clinic",
+    "category": "hospitals",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "description": "Ruby Hall Clinic in Pune, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://rubyhall.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://rubyhall.com/",
+    "verified": true
+  },
+  {
+    "id": "cmc-vellore",
+    "slug": "cmc-vellore",
+    "name": "Christian Medical College Vellore",
+    "category": "hospitals",
+    "city": "Vellore",
+    "state": "Tamil Nadu",
+    "description": "Christian Medical College Vellore in Vellore, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.cmch-vellore.edu/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.cmch-vellore.edu/",
+    "verified": true
+  },
+  {
+    "id": "sankara-netralaya",
+    "slug": "sankara-netralaya",
+    "name": "Sankara Nethralaya",
+    "category": "hospitals",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Sankara Nethralaya in Chennai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.sankaranethralaya.org/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://www.sankaranethralaya.org/",
+    "verified": true
+  },
+  {
+    "id": "pgimer-chandigarh",
+    "slug": "pgimer-chandigarh",
+    "name": "PGIMER",
+    "category": "hospitals",
+    "city": "Chandigarh",
+    "state": "Chandigarh",
+    "description": "PGIMER in Chandigarh, Chandigarh. Verify current information directly with the provider.",
+    "website": "https://pgimer.edu.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://pgimer.edu.in/",
+    "verified": true
+  },
+  {
+    "id": "sgpgi-lucknow",
+    "slug": "sgpgi-lucknow",
+    "name": "SGPGI Lucknow",
+    "category": "hospitals",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "description": "SGPGI Lucknow in Lucknow, Uttar Pradesh. Verify current information directly with the provider.",
+    "website": "https://sgpgims.org.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://sgpgims.org.in/",
+    "verified": true
+  },
+  {
+    "id": "nimhans-bengaluru",
+    "slug": "nimhans-bengaluru",
+    "name": "NIMHANS",
+    "category": "hospitals",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "NIMHANS in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://nimhans.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hospital",
+      "healthcare"
+    ],
+    "source_url": "https://nimhans.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "dps-rk-puram",
+    "slug": "dps-rk-puram",
+    "name": "Delhi Public School R.K. Puram",
+    "category": "schools",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Delhi Public School R.K. Puram in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://dpsrkp.net/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://dpsrkp.net/",
+    "verified": true
+  },
+  {
+    "id": "dps-patna",
+    "slug": "dps-patna",
+    "name": "Delhi Public School Patna",
+    "category": "schools",
+    "city": "Patna",
+    "state": "Bihar",
+    "description": "Delhi Public School Patna in Patna, Bihar. Verify current information directly with the provider.",
+    "website": "https://dpspatna.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://dpspatna.com/",
+    "verified": true
+  },
+  {
+    "id": "dps-bangalore-north",
+    "slug": "dps-bangalore-north",
+    "name": "Delhi Public School Bangalore North",
+    "category": "schools",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Delhi Public School Bangalore North in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://dpsnorth.org/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://dpsnorth.org/",
+    "verified": true
+  },
+  {
+    "id": "dps-guwahati",
+    "slug": "dps-guwahati",
+    "name": "Delhi Public School Guwahati",
+    "category": "schools",
+    "city": "Guwahati",
+    "state": "Assam",
+    "description": "Delhi Public School Guwahati in Guwahati, Assam. Verify current information directly with the provider.",
+    "website": "https://dpsguwahati.org/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://dpsguwahati.org/",
+    "verified": true
+  },
+  {
+    "id": "dps-kolkata",
+    "slug": "dps-kolkata",
+    "name": "Delhi Public School Ruby Park",
+    "category": "schools",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "description": "Delhi Public School Ruby Park in Kolkata, West Bengal. Verify current information directly with the provider.",
+    "website": "https://www.dpsrubypark.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://www.dpsrubypark.com/",
+    "verified": true
+  },
+  {
+    "id": "dps-mumbai",
+    "slug": "dps-mumbai",
+    "name": "Delhi Public School Mumbai",
+    "category": "schools",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "Delhi Public School Mumbai in Mumbai, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://www.dpsmumbai.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://www.dpsmumbai.com/",
+    "verified": true
+  },
+  {
+    "id": "dps-bhopal",
+    "slug": "dps-bhopal",
+    "name": "Delhi Public School Bhopal",
+    "category": "schools",
+    "city": "Bhopal",
+    "state": "Madhya Pradesh",
+    "description": "Delhi Public School Bhopal in Bhopal, Madhya Pradesh. Verify current information directly with the provider.",
+    "website": "https://dpsbhopal.org/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://dpsbhopal.org/",
+    "verified": true
+  },
+  {
+    "id": "dps-bhubaneswar",
+    "slug": "dps-bhubaneswar",
+    "name": "Delhi Public School Kalinga",
+    "category": "schools",
+    "city": "Bhubaneswar",
+    "state": "Odisha",
+    "description": "Delhi Public School Kalinga in Bhubaneswar, Odisha. Verify current information directly with the provider.",
+    "website": "https://www.dpskalinga.edu.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://www.dpskalinga.edu.in/",
+    "verified": true
+  },
+  {
+    "id": "st-columbas-delhi",
+    "slug": "st-columbas-delhi",
+    "name": "St. Columba’s School",
+    "category": "schools",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "St. Columba’s School in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.stcolumbas.edu.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://www.stcolumbas.edu.in/",
+    "verified": true
+  },
+  {
+    "id": "sainik-school-goalpara",
+    "slug": "sainik-school-goalpara",
+    "name": "Sainik School Goalpara",
+    "category": "schools",
+    "city": "Goalpara",
+    "state": "Assam",
+    "description": "Sainik School Goalpara in Goalpara, Assam. Verify current information directly with the provider.",
+    "website": "https://sainikschoolgoalpara.org/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://sainikschoolgoalpara.org/",
+    "verified": true
+  },
+  {
+    "id": "sainik-school-nalanda",
+    "slug": "sainik-school-nalanda",
+    "name": "Sainik School Nalanda",
+    "category": "schools",
+    "city": "Nalanda",
+    "state": "Bihar",
+    "description": "Sainik School Nalanda in Nalanda, Bihar. Verify current information directly with the provider.",
+    "website": "https://ssnalanda.bih.nic.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://ssnalanda.bih.nic.in/",
+    "verified": true
+  },
+  {
+    "id": "kendriya-vidyalaya-noida",
+    "slug": "kendriya-vidyalaya-noida",
+    "name": "Kendriya Vidyalaya No. 1 Noida",
+    "category": "schools",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "description": "Kendriya Vidyalaya No. 1 Noida in Noida, Uttar Pradesh. Verify current information directly with the provider.",
+    "website": "https://no1noida.kvs.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://no1noida.kvs.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "modern-school-delhi",
+    "slug": "modern-school-delhi",
+    "name": "Modern School Barakhamba Road",
+    "category": "schools",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Modern School Barakhamba Road in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://modernschool.net/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://modernschool.net/",
+    "verified": true
+  },
+  {
+    "id": "bishop-cotton-boys",
+    "slug": "bishop-cotton-boys",
+    "name": "Bishop Cotton Boys School",
+    "category": "schools",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Bishop Cotton Boys School in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.bishopcottonboysschool.edu.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://www.bishopcottonboysschool.edu.in/",
+    "verified": true
+  },
+  {
+    "id": "la-martiniere-kolkata",
+    "slug": "la-martiniere-kolkata",
+    "name": "La Martiniere for Boys",
+    "category": "schools",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "description": "La Martiniere for Boys in Kolkata, West Bengal. Verify current information directly with the provider.",
+    "website": "https://www.lamartiniereforboys.co/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "school",
+      "education"
+    ],
+    "source_url": "https://www.lamartiniereforboys.co/",
+    "verified": true
+  },
+  {
+    "id": "iit-delhi",
+    "slug": "iit-delhi",
+    "name": "Indian Institute of Technology Delhi",
+    "category": "colleges",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Indian Institute of Technology Delhi in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://home.iitd.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://home.iitd.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iit-bombay",
+    "slug": "iit-bombay",
+    "name": "Indian Institute of Technology Bombay",
+    "category": "colleges",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "Indian Institute of Technology Bombay in Mumbai, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://www.iitb.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.iitb.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iit-madras",
+    "slug": "iit-madras",
+    "name": "Indian Institute of Technology Madras",
+    "category": "colleges",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Indian Institute of Technology Madras in Chennai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.iitm.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.iitm.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iit-kanpur",
+    "slug": "iit-kanpur",
+    "name": "Indian Institute of Technology Kanpur",
+    "category": "colleges",
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "description": "Indian Institute of Technology Kanpur in Kanpur, Uttar Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.iitk.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.iitk.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iit-kharagpur",
+    "slug": "iit-kharagpur",
+    "name": "Indian Institute of Technology Kharagpur",
+    "category": "colleges",
+    "city": "Kharagpur",
+    "state": "West Bengal",
+    "description": "Indian Institute of Technology Kharagpur in Kharagpur, West Bengal. Verify current information directly with the provider.",
+    "website": "https://www.iitkgp.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.iitkgp.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iit-guwahati",
+    "slug": "iit-guwahati",
+    "name": "Indian Institute of Technology Guwahati",
+    "category": "colleges",
+    "city": "Guwahati",
+    "state": "Assam",
+    "description": "Indian Institute of Technology Guwahati in Guwahati, Assam. Verify current information directly with the provider.",
+    "website": "https://www.iitg.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.iitg.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iit-hyderabad",
+    "slug": "iit-hyderabad",
+    "name": "Indian Institute of Technology Hyderabad",
+    "category": "colleges",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "description": "Indian Institute of Technology Hyderabad in Hyderabad, Telangana. Verify current information directly with the provider.",
+    "website": "https://iith.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://iith.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iit-patna",
+    "slug": "iit-patna",
+    "name": "Indian Institute of Technology Patna",
+    "category": "colleges",
+    "city": "Patna",
+    "state": "Bihar",
+    "description": "Indian Institute of Technology Patna in Patna, Bihar. Verify current information directly with the provider.",
+    "website": "https://www.iitp.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.iitp.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "nit-trichy",
+    "slug": "nit-trichy",
+    "name": "National Institute of Technology Tiruchirappalli",
+    "category": "colleges",
+    "city": "Tiruchirappalli",
+    "state": "Tamil Nadu",
+    "description": "National Institute of Technology Tiruchirappalli in Tiruchirappalli, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.nitt.edu/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.nitt.edu/",
+    "verified": true
+  },
+  {
+    "id": "nit-silchar",
+    "slug": "nit-silchar",
+    "name": "National Institute of Technology Silchar",
+    "category": "colleges",
+    "city": "Silchar",
+    "state": "Assam",
+    "description": "National Institute of Technology Silchar in Silchar, Assam. Verify current information directly with the provider.",
+    "website": "https://www.nits.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.nits.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "nit-patna",
+    "slug": "nit-patna",
+    "name": "National Institute of Technology Patna",
+    "category": "colleges",
+    "city": "Patna",
+    "state": "Bihar",
+    "description": "National Institute of Technology Patna in Patna, Bihar. Verify current information directly with the provider.",
+    "website": "https://www.nitp.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.nitp.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "du",
+    "slug": "du",
+    "name": "University of Delhi",
+    "category": "colleges",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "University of Delhi in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.du.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.du.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "jnu",
+    "slug": "jnu",
+    "name": "Jawaharlal Nehru University",
+    "category": "colleges",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Jawaharlal Nehru University in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.jnu.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.jnu.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "bhu",
+    "slug": "bhu",
+    "name": "Banaras Hindu University",
+    "category": "colleges",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "description": "Banaras Hindu University in Varanasi, Uttar Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.bhu.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.bhu.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "jadavpur",
+    "slug": "jadavpur",
+    "name": "Jadavpur University",
+    "category": "colleges",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "description": "Jadavpur University in Kolkata, West Bengal. Verify current information directly with the provider.",
+    "website": "https://jadavpuruniversity.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://jadavpuruniversity.in/",
+    "verified": true
+  },
+  {
+    "id": "calcutta-university",
+    "slug": "calcutta-university",
+    "name": "University of Calcutta",
+    "category": "colleges",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "description": "University of Calcutta in Kolkata, West Bengal. Verify current information directly with the provider.",
+    "website": "https://www.caluniv.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.caluniv.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "patna-university",
+    "slug": "patna-university",
+    "name": "Patna University",
+    "category": "colleges",
+    "city": "Patna",
+    "state": "Bihar",
+    "description": "Patna University in Patna, Bihar. Verify current information directly with the provider.",
+    "website": "https://pup.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://pup.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "gauhati-university",
+    "slug": "gauhati-university",
+    "name": "Gauhati University",
+    "category": "colleges",
+    "city": "Guwahati",
+    "state": "Assam",
+    "description": "Gauhati University in Guwahati, Assam. Verify current information directly with the provider.",
+    "website": "https://gauhati.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://gauhati.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "christ-university",
+    "slug": "christ-university",
+    "name": "CHRIST (Deemed to be University)",
+    "category": "colleges",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "CHRIST (Deemed to be University) in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://christuniversity.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://christuniversity.in/",
+    "verified": true
+  },
+  {
+    "id": "manipal",
+    "slug": "manipal",
+    "name": "Manipal Academy of Higher Education",
+    "category": "colleges",
+    "city": "Manipal",
+    "state": "Karnataka",
+    "description": "Manipal Academy of Higher Education in Manipal, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.manipal.edu/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.manipal.edu/",
+    "verified": true
+  },
+  {
+    "id": "bits-pilani",
+    "slug": "bits-pilani",
+    "name": "Birla Institute of Technology and Science, Pilani",
+    "category": "colleges",
+    "city": "Pilani",
+    "state": "Rajasthan",
+    "description": "Birla Institute of Technology and Science, Pilani in Pilani, Rajasthan. Verify current information directly with the provider.",
+    "website": "https://www.bits-pilani.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.bits-pilani.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iim-ahmedabad",
+    "slug": "iim-ahmedabad",
+    "name": "Indian Institute of Management Ahmedabad",
+    "category": "colleges",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "description": "Indian Institute of Management Ahmedabad in Ahmedabad, Gujarat. Verify current information directly with the provider.",
+    "website": "https://www.iima.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.iima.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iim-bangalore",
+    "slug": "iim-bangalore",
+    "name": "Indian Institute of Management Bangalore",
+    "category": "colleges",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Indian Institute of Management Bangalore in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.iimb.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.iimb.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iim-calcutta",
+    "slug": "iim-calcutta",
+    "name": "Indian Institute of Management Calcutta",
+    "category": "colleges",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "description": "Indian Institute of Management Calcutta in Kolkata, West Bengal. Verify current information directly with the provider.",
+    "website": "https://www.iimcal.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.iimcal.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "iim-lucknow",
+    "slug": "iim-lucknow",
+    "name": "Indian Institute of Management Lucknow",
+    "category": "colleges",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "description": "Indian Institute of Management Lucknow in Lucknow, Uttar Pradesh. Verify current information directly with the provider.",
+    "website": "https://www.iiml.ac.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://www.iiml.ac.in/",
+    "verified": true
+  },
+  {
+    "id": "aiims-patna-college",
+    "slug": "aiims-patna-college",
+    "name": "AIIMS Patna",
+    "category": "colleges",
+    "city": "Patna",
+    "state": "Bihar",
+    "description": "AIIMS Patna in Patna, Bihar. Verify current information directly with the provider.",
+    "website": "https://aiimspatna.edu.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "college",
+      "university",
+      "higher education"
+    ],
+    "source_url": "https://aiimspatna.edu.in/",
+    "verified": true
+  },
+  {
+    "id": "taj-mahal-palace-mumbai",
+    "slug": "taj-mahal-palace-mumbai",
+    "name": "The Taj Mahal Palace",
+    "category": "hotels",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "The Taj Mahal Palace in Mumbai, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://www.tajhotels.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hotels"
+    ],
+    "source_url": "https://www.tajhotels.com/",
+    "verified": true
+  },
+  {
+    "id": "itc-maurya-delhi",
+    "slug": "itc-maurya-delhi",
+    "name": "ITC Maurya",
+    "category": "hotels",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "ITC Maurya in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.itchotels.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hotels"
+    ],
+    "source_url": "https://www.itchotels.com/",
+    "verified": true
+  },
+  {
+    "id": "taj-kriya-chennai",
+    "slug": "taj-kriya-chennai",
+    "name": "Taj Coromandel",
+    "category": "hotels",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Taj Coromandel in Chennai, Tamil Nadu. Verify current information directly with the provider.",
+    "website": "https://www.tajhotels.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hotels"
+    ],
+    "source_url": "https://www.tajhotels.com/",
+    "verified": true
+  },
+  {
+    "id": "leela-palace-bengaluru",
+    "slug": "leela-palace-bengaluru",
+    "name": "The Leela Palace Bengaluru",
+    "category": "hotels",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "The Leela Palace Bengaluru in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.theleela.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hotels"
+    ],
+    "source_url": "https://www.theleela.com/",
+    "verified": true
+  },
+  {
+    "id": "oberoi-gurugram",
+    "slug": "oberoi-gurugram",
+    "name": "The Oberoi Gurgaon",
+    "category": "hotels",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "description": "The Oberoi Gurgaon in Gurugram, Haryana. Verify current information directly with the provider.",
+    "website": "https://www.oberoihotels.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hotels"
+    ],
+    "source_url": "https://www.oberoihotels.com/",
+    "verified": true
+  },
+  {
+    "id": "indian-accent-delhi",
+    "slug": "indian-accent-delhi",
+    "name": "Indian Accent",
+    "category": "restaurants",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Indian Accent in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.indianaccent.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "restaurants"
+    ],
+    "source_url": "https://www.indianaccent.com/",
+    "verified": true
+  },
+  {
+    "id": "bukhara-delhi",
+    "slug": "bukhara-delhi",
+    "name": "Bukhara",
+    "category": "restaurants",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Bukhara in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.itchotels.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "restaurants"
+    ],
+    "source_url": "https://www.itchotels.com/",
+    "verified": true
+  },
+  {
+    "id": "truffles-bengaluru",
+    "slug": "truffles-bengaluru",
+    "name": "Truffles",
+    "category": "restaurants",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Truffles in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.truffles.co.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "restaurants"
+    ],
+    "source_url": "https://www.truffles.co.in/",
+    "verified": true
+  },
+  {
+    "id": "peter-cat-kolkata",
+    "slug": "peter-cat-kolkata",
+    "name": "Peter Cat",
+    "category": "restaurants",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "description": "Peter Cat in Kolkata, West Bengal. Verify current information directly with the provider.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "restaurants"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "paragon-kozhikode",
+    "slug": "paragon-kozhikode",
+    "name": "Paragon Restaurant",
+    "category": "restaurants",
+    "city": "Kozhikode",
+    "state": "Kerala",
+    "description": "Paragon Restaurant in Kozhikode, Kerala. Verify current information directly with the provider.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "restaurants"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "social-koramangala",
+    "slug": "social-koramangala",
+    "name": "Social Koramangala",
+    "category": "cafes",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Social Koramangala in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://socialoffline.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "cafes"
+    ],
+    "source_url": "https://socialoffline.in/",
+    "verified": true
+  },
+  {
+    "id": "third-wave-coffee",
+    "slug": "third-wave-coffee",
+    "name": "Third Wave Coffee",
+    "category": "cafes",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Third Wave Coffee in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.thirdwavecoffeeroasters.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "cafes"
+    ],
+    "source_url": "https://www.thirdwavecoffeeroasters.com/",
+    "verified": true
+  },
+  {
+    "id": "cult-fit-bengaluru",
+    "slug": "cult-fit-bengaluru",
+    "name": "Cult.fit",
+    "category": "gyms",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Cult.fit in Bengaluru, Karnataka. Verify current information directly with the provider.",
+    "website": "https://www.cult.fit/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "gyms"
+    ],
+    "source_url": "https://www.cult.fit/",
+    "verified": true
+  },
+  {
+    "id": "gold-gym-delhi",
+    "slug": "gold-gym-delhi",
+    "name": "Gold’s Gym Delhi",
+    "category": "gyms",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Gold’s Gym Delhi in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.goldsgym.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "gyms"
+    ],
+    "source_url": "https://www.goldsgym.in/",
+    "verified": true
+  },
+  {
+    "id": "lakme-salon-delhi",
+    "slug": "lakme-salon-delhi",
+    "name": "Lakmé Salon",
+    "category": "salons",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Lakmé Salon in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.lakmesalon.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "salons"
+    ],
+    "source_url": "https://www.lakmesalon.in/",
+    "verified": true
+  },
+  {
+    "id": "croma-delhi",
+    "slug": "croma-delhi",
+    "name": "Croma",
+    "category": "hotspots",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Croma in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.croma.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "hotspots"
+    ],
+    "source_url": "https://www.croma.com/",
+    "verified": true
+  },
+  {
+    "id": "phoenix-marketcity-mumbai",
+    "slug": "phoenix-marketcity-mumbai",
+    "name": "Phoenix Marketcity",
+    "category": "malls",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "Phoenix Marketcity in Mumbai, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://www.phoenixmarketcity.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "malls"
+    ],
+    "source_url": "https://www.phoenixmarketcity.com/",
+    "verified": true
+  },
+  {
+    "id": "select-citywalk-delhi",
+    "slug": "select-citywalk-delhi",
+    "name": "Select CITYWALK",
+    "category": "malls",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Select CITYWALK in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "https://www.selectcitywalk.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "malls"
+    ],
+    "source_url": "https://www.selectcitywalk.com/",
+    "verified": true
+  },
+  {
+    "id": "iitf-delhi",
+    "slug": "iitf-delhi",
+    "name": "India International Trade Fair",
+    "category": "attractions",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "India International Trade Fair in New Delhi, Delhi. Verify current information directly with the provider.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "attractions"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "gateway-of-india",
+    "slug": "gateway-of-india",
+    "name": "Gateway of India",
+    "category": "attractions",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "Gateway of India in Mumbai, Maharashtra. Verify current information directly with the provider.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "attractions"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "kaziranga",
+    "slug": "kaziranga",
+    "name": "Kaziranga National Park",
+    "category": "attractions",
+    "city": "Kohora",
+    "state": "Assam",
+    "description": "Kaziranga National Park in Kohora, Assam. Verify current information directly with the provider.",
+    "website": "https://assamtourism.gov.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "attractions"
+    ],
+    "source_url": "https://assamtourism.gov.in/",
+    "verified": true
+  },
+  {
+    "id": "goa",
+    "slug": "goa",
+    "name": "Goa",
+    "category": "travel",
+    "city": "Panaji",
+    "state": "Goa",
+    "description": "Goa in Panaji, Goa. Verify current information directly with the provider.",
+    "website": "https://www.goa.gov.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "travel"
+    ],
+    "source_url": "https://www.goa.gov.in/",
+    "verified": true
+  },
+  {
+    "id": "kerala",
+    "slug": "kerala",
+    "name": "Kerala",
+    "category": "travel",
+    "city": "Thiruvananthapuram",
+    "state": "Kerala",
+    "description": "Kerala in Thiruvananthapuram, Kerala. Verify current information directly with the provider.",
+    "website": "https://www.keralatourism.org/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "travel"
+    ],
+    "source_url": "https://www.keralatourism.org/",
+    "verified": true
+  },
+  {
+    "id": "jaipur",
+    "slug": "jaipur",
+    "name": "Jaipur",
+    "category": "travel",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "description": "Jaipur in Jaipur, Rajasthan. Verify current information directly with the provider.",
+    "website": "https://www.tourism.rajasthan.gov.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "travel"
+    ],
+    "source_url": "https://www.tourism.rajasthan.gov.in/",
+    "verified": true
+  },
+  {
+    "id": "tata-service-patna",
+    "slug": "tata-service-patna",
+    "name": "Tata Motors Service",
+    "category": "automobile-service",
+    "city": "Patna",
+    "state": "Bihar",
+    "description": "Tata Motors Service in Patna, Bihar. Verify current information directly with the provider.",
+    "website": "https://www.tatamotors.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "automobile-service"
+    ],
+    "source_url": "https://www.tatamotors.com/",
+    "verified": true
+  },
+  {
+    "id": "hyundai-dealer-guwahati",
+    "slug": "hyundai-dealer-guwahati",
+    "name": "Hyundai Dealership",
+    "category": "car-dealers",
+    "city": "Guwahati",
+    "state": "Assam",
+    "description": "Hyundai Dealership in Guwahati, Assam. Verify current information directly with the provider.",
+    "website": "https://www.hyundai.com/in/en",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "car-dealers"
+    ],
+    "source_url": "https://www.hyundai.com/in/en",
+    "verified": true
+  },
+  {
+    "id": "reliance-ev-guwahati",
+    "slug": "reliance-ev-guwahati",
+    "name": "EV Charging Point",
+    "category": "ev-charging",
+    "city": "Guwahati",
+    "state": "Assam",
+    "description": "EV Charging Point in Guwahati, Assam. Verify current information directly with the provider.",
+    "website": "https://www.reliancebp.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "ev-charging"
+    ],
+    "source_url": "https://www.reliancebp.com/",
+    "verified": true
+  },
+  {
+    "id": "sbi-main-branch-patna",
+    "slug": "sbi-main-branch-patna",
+    "name": "State Bank of India Main Branch",
+    "category": "banks",
+    "city": "Patna",
+    "state": "Bihar",
+    "description": "State Bank of India Main Branch in Patna, Bihar. Verify current information directly with the provider.",
+    "website": "https://sbi.co.in/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "banks"
+    ],
+    "source_url": "https://sbi.co.in/",
+    "verified": true
+  },
+  {
+    "id": "hdfc-main-branch-mumbai",
+    "slug": "hdfc-main-branch-mumbai",
+    "name": "HDFC Bank",
+    "category": "banks",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "HDFC Bank in Mumbai, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://www.hdfcbank.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "banks"
+    ],
+    "source_url": "https://www.hdfcbank.com/",
+    "verified": true
+  },
+  {
+    "id": "indian-oil-patna",
+    "slug": "indian-oil-patna",
+    "name": "IndianOil Fuel Station",
+    "category": "petrol-pumps",
+    "city": "Patna",
+    "state": "Bihar",
+    "description": "IndianOil Fuel Station in Patna, Bihar. Verify current information directly with the provider.",
+    "website": "https://iocl.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "petrol-pumps"
+    ],
+    "source_url": "https://iocl.com/",
+    "verified": true
+  },
+  {
+    "id": "wework-bkc",
+    "slug": "wework-bkc",
+    "name": "WeWork BKC",
+    "category": "coworking",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "WeWork BKC in Mumbai, Maharashtra. Verify current information directly with the provider.",
+    "website": "https://www.wework.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "coworking"
+    ],
+    "source_url": "https://www.wework.com/",
+    "verified": true
+  },
+  {
+    "id": "awfis-gurugram",
+    "slug": "awfis-gurugram",
+    "name": "Awfis",
+    "category": "coworking",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "description": "Awfis in Gurugram, Haryana. Verify current information directly with the provider.",
+    "website": "https://www.awfis.com/",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "coworking"
+    ],
+    "source_url": "https://www.awfis.com/",
+    "verified": true
+  },
+  {
+    "id": "location-visakhapatnam-andhra-pradesh",
+    "slug": "location-visakhapatnam-andhra-pradesh",
+    "name": "Visakhapatnam — Directory Coverage",
+    "category": "hotspots",
+    "city": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Visakhapatnam, Andhra Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-vijayawada-andhra-pradesh",
+    "slug": "location-vijayawada-andhra-pradesh",
+    "name": "Vijayawada — Directory Coverage",
+    "category": "hotspots",
+    "city": "Vijayawada",
+    "state": "Andhra Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Vijayawada, Andhra Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-tirupati-andhra-pradesh",
+    "slug": "location-tirupati-andhra-pradesh",
+    "name": "Tirupati — Directory Coverage",
+    "category": "hotspots",
+    "city": "Tirupati",
+    "state": "Andhra Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Tirupati, Andhra Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-itanagar-arunachal-pradesh",
+    "slug": "location-itanagar-arunachal-pradesh",
+    "name": "Itanagar — Directory Coverage",
+    "category": "hotspots",
+    "city": "Itanagar",
+    "state": "Arunachal Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Itanagar, Arunachal Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-naharlagun-arunachal-pradesh",
+    "slug": "location-naharlagun-arunachal-pradesh",
+    "name": "Naharlagun — Directory Coverage",
+    "category": "hotspots",
+    "city": "Naharlagun",
+    "state": "Arunachal Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Naharlagun, Arunachal Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-guwahati-assam",
+    "slug": "location-guwahati-assam",
+    "name": "Guwahati — Directory Coverage",
+    "category": "hotspots",
+    "city": "Guwahati",
+    "state": "Assam",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Guwahati, Assam. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-dibrugarh-assam",
+    "slug": "location-dibrugarh-assam",
+    "name": "Dibrugarh — Directory Coverage",
+    "category": "hotspots",
+    "city": "Dibrugarh",
+    "state": "Assam",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Dibrugarh, Assam. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-silchar-assam",
+    "slug": "location-silchar-assam",
+    "name": "Silchar — Directory Coverage",
+    "category": "hotspots",
+    "city": "Silchar",
+    "state": "Assam",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Silchar, Assam. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-patna-bihar",
+    "slug": "location-patna-bihar",
+    "name": "Patna — Directory Coverage",
+    "category": "hotspots",
+    "city": "Patna",
+    "state": "Bihar",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Patna, Bihar. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-gaya-bihar",
+    "slug": "location-gaya-bihar",
+    "name": "Gaya — Directory Coverage",
+    "category": "hotspots",
+    "city": "Gaya",
+    "state": "Bihar",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Gaya, Bihar. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-muzaffarpur-bihar",
+    "slug": "location-muzaffarpur-bihar",
+    "name": "Muzaffarpur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Muzaffarpur",
+    "state": "Bihar",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Muzaffarpur, Bihar. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-bhagalpur-bihar",
+    "slug": "location-bhagalpur-bihar",
+    "name": "Bhagalpur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Bhagalpur",
+    "state": "Bihar",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Bhagalpur, Bihar. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-raipur-chhattisgarh",
+    "slug": "location-raipur-chhattisgarh",
+    "name": "Raipur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Raipur",
+    "state": "Chhattisgarh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Raipur, Chhattisgarh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-bhilai-chhattisgarh",
+    "slug": "location-bhilai-chhattisgarh",
+    "name": "Bhilai — Directory Coverage",
+    "category": "hotspots",
+    "city": "Bhilai",
+    "state": "Chhattisgarh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Bhilai, Chhattisgarh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-bilaspur-chhattisgarh",
+    "slug": "location-bilaspur-chhattisgarh",
+    "name": "Bilaspur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Bilaspur",
+    "state": "Chhattisgarh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Bilaspur, Chhattisgarh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-panaji-goa",
+    "slug": "location-panaji-goa",
+    "name": "Panaji — Directory Coverage",
+    "category": "hotspots",
+    "city": "Panaji",
+    "state": "Goa",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Panaji, Goa. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-margao-goa",
+    "slug": "location-margao-goa",
+    "name": "Margao — Directory Coverage",
+    "category": "hotspots",
+    "city": "Margao",
+    "state": "Goa",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Margao, Goa. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-ahmedabad-gujarat",
+    "slug": "location-ahmedabad-gujarat",
+    "name": "Ahmedabad — Directory Coverage",
+    "category": "hotspots",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Ahmedabad, Gujarat. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-surat-gujarat",
+    "slug": "location-surat-gujarat",
+    "name": "Surat — Directory Coverage",
+    "category": "hotspots",
+    "city": "Surat",
+    "state": "Gujarat",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Surat, Gujarat. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-vadodara-gujarat",
+    "slug": "location-vadodara-gujarat",
+    "name": "Vadodara — Directory Coverage",
+    "category": "hotspots",
+    "city": "Vadodara",
+    "state": "Gujarat",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Vadodara, Gujarat. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-rajkot-gujarat",
+    "slug": "location-rajkot-gujarat",
+    "name": "Rajkot — Directory Coverage",
+    "category": "hotspots",
+    "city": "Rajkot",
+    "state": "Gujarat",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Rajkot, Gujarat. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-gurugram-haryana",
+    "slug": "location-gurugram-haryana",
+    "name": "Gurugram — Directory Coverage",
+    "category": "hotspots",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Gurugram, Haryana. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-faridabad-haryana",
+    "slug": "location-faridabad-haryana",
+    "name": "Faridabad — Directory Coverage",
+    "category": "hotspots",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Faridabad, Haryana. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-panipat-haryana",
+    "slug": "location-panipat-haryana",
+    "name": "Panipat — Directory Coverage",
+    "category": "hotspots",
+    "city": "Panipat",
+    "state": "Haryana",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Panipat, Haryana. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-hisar-haryana",
+    "slug": "location-hisar-haryana",
+    "name": "Hisar — Directory Coverage",
+    "category": "hotspots",
+    "city": "Hisar",
+    "state": "Haryana",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Hisar, Haryana. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-shimla-himachal-pradesh",
+    "slug": "location-shimla-himachal-pradesh",
+    "name": "Shimla — Directory Coverage",
+    "category": "hotspots",
+    "city": "Shimla",
+    "state": "Himachal Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Shimla, Himachal Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-dharamshala-himachal-pradesh",
+    "slug": "location-dharamshala-himachal-pradesh",
+    "name": "Dharamshala — Directory Coverage",
+    "category": "hotspots",
+    "city": "Dharamshala",
+    "state": "Himachal Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Dharamshala, Himachal Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-solan-himachal-pradesh",
+    "slug": "location-solan-himachal-pradesh",
+    "name": "Solan — Directory Coverage",
+    "category": "hotspots",
+    "city": "Solan",
+    "state": "Himachal Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Solan, Himachal Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-ranchi-jharkhand",
+    "slug": "location-ranchi-jharkhand",
+    "name": "Ranchi — Directory Coverage",
+    "category": "hotspots",
+    "city": "Ranchi",
+    "state": "Jharkhand",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Ranchi, Jharkhand. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-jamshedpur-jharkhand",
+    "slug": "location-jamshedpur-jharkhand",
+    "name": "Jamshedpur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Jamshedpur",
+    "state": "Jharkhand",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Jamshedpur, Jharkhand. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-dhanbad-jharkhand",
+    "slug": "location-dhanbad-jharkhand",
+    "name": "Dhanbad — Directory Coverage",
+    "category": "hotspots",
+    "city": "Dhanbad",
+    "state": "Jharkhand",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Dhanbad, Jharkhand. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-bengaluru-karnataka",
+    "slug": "location-bengaluru-karnataka",
+    "name": "Bengaluru — Directory Coverage",
+    "category": "hotspots",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Bengaluru, Karnataka. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-mysuru-karnataka",
+    "slug": "location-mysuru-karnataka",
+    "name": "Mysuru — Directory Coverage",
+    "category": "hotspots",
+    "city": "Mysuru",
+    "state": "Karnataka",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Mysuru, Karnataka. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-mangaluru-karnataka",
+    "slug": "location-mangaluru-karnataka",
+    "name": "Mangaluru — Directory Coverage",
+    "category": "hotspots",
+    "city": "Mangaluru",
+    "state": "Karnataka",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Mangaluru, Karnataka. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-hubballi-karnataka",
+    "slug": "location-hubballi-karnataka",
+    "name": "Hubballi — Directory Coverage",
+    "category": "hotspots",
+    "city": "Hubballi",
+    "state": "Karnataka",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Hubballi, Karnataka. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-kochi-kerala",
+    "slug": "location-kochi-kerala",
+    "name": "Kochi — Directory Coverage",
+    "category": "hotspots",
+    "city": "Kochi",
+    "state": "Kerala",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Kochi, Kerala. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-thiruvananthapuram-kerala",
+    "slug": "location-thiruvananthapuram-kerala",
+    "name": "Thiruvananthapuram — Directory Coverage",
+    "category": "hotspots",
+    "city": "Thiruvananthapuram",
+    "state": "Kerala",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Thiruvananthapuram, Kerala. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-kozhikode-kerala",
+    "slug": "location-kozhikode-kerala",
+    "name": "Kozhikode — Directory Coverage",
+    "category": "hotspots",
+    "city": "Kozhikode",
+    "state": "Kerala",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Kozhikode, Kerala. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-thrissur-kerala",
+    "slug": "location-thrissur-kerala",
+    "name": "Thrissur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Thrissur",
+    "state": "Kerala",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Thrissur, Kerala. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-bhopal-madhya-pradesh",
+    "slug": "location-bhopal-madhya-pradesh",
+    "name": "Bhopal — Directory Coverage",
+    "category": "hotspots",
+    "city": "Bhopal",
+    "state": "Madhya Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Bhopal, Madhya Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-indore-madhya-pradesh",
+    "slug": "location-indore-madhya-pradesh",
+    "name": "Indore — Directory Coverage",
+    "category": "hotspots",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Indore, Madhya Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-jabalpur-madhya-pradesh",
+    "slug": "location-jabalpur-madhya-pradesh",
+    "name": "Jabalpur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Jabalpur",
+    "state": "Madhya Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Jabalpur, Madhya Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-gwalior-madhya-pradesh",
+    "slug": "location-gwalior-madhya-pradesh",
+    "name": "Gwalior — Directory Coverage",
+    "category": "hotspots",
+    "city": "Gwalior",
+    "state": "Madhya Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Gwalior, Madhya Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-mumbai-maharashtra",
+    "slug": "location-mumbai-maharashtra",
+    "name": "Mumbai — Directory Coverage",
+    "category": "hotspots",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Mumbai, Maharashtra. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-pune-maharashtra",
+    "slug": "location-pune-maharashtra",
+    "name": "Pune — Directory Coverage",
+    "category": "hotspots",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Pune, Maharashtra. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-nagpur-maharashtra",
+    "slug": "location-nagpur-maharashtra",
+    "name": "Nagpur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Nagpur, Maharashtra. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-nashik-maharashtra",
+    "slug": "location-nashik-maharashtra",
+    "name": "Nashik — Directory Coverage",
+    "category": "hotspots",
+    "city": "Nashik",
+    "state": "Maharashtra",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Nashik, Maharashtra. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-navi-mumbai-maharashtra",
+    "slug": "location-navi-mumbai-maharashtra",
+    "name": "Navi Mumbai — Directory Coverage",
+    "category": "hotspots",
+    "city": "Navi Mumbai",
+    "state": "Maharashtra",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Navi Mumbai, Maharashtra. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-imphal-manipur",
+    "slug": "location-imphal-manipur",
+    "name": "Imphal — Directory Coverage",
+    "category": "hotspots",
+    "city": "Imphal",
+    "state": "Manipur",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Imphal, Manipur. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-shillong-meghalaya",
+    "slug": "location-shillong-meghalaya",
+    "name": "Shillong — Directory Coverage",
+    "category": "hotspots",
+    "city": "Shillong",
+    "state": "Meghalaya",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Shillong, Meghalaya. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-aizawl-mizoram",
+    "slug": "location-aizawl-mizoram",
+    "name": "Aizawl — Directory Coverage",
+    "category": "hotspots",
+    "city": "Aizawl",
+    "state": "Mizoram",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Aizawl, Mizoram. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-kohima-nagaland",
+    "slug": "location-kohima-nagaland",
+    "name": "Kohima — Directory Coverage",
+    "category": "hotspots",
+    "city": "Kohima",
+    "state": "Nagaland",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Kohima, Nagaland. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-dimapur-nagaland",
+    "slug": "location-dimapur-nagaland",
+    "name": "Dimapur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Dimapur",
+    "state": "Nagaland",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Dimapur, Nagaland. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-bhubaneswar-odisha",
+    "slug": "location-bhubaneswar-odisha",
+    "name": "Bhubaneswar — Directory Coverage",
+    "category": "hotspots",
+    "city": "Bhubaneswar",
+    "state": "Odisha",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Bhubaneswar, Odisha. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-cuttack-odisha",
+    "slug": "location-cuttack-odisha",
+    "name": "Cuttack — Directory Coverage",
+    "category": "hotspots",
+    "city": "Cuttack",
+    "state": "Odisha",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Cuttack, Odisha. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-rourkela-odisha",
+    "slug": "location-rourkela-odisha",
+    "name": "Rourkela — Directory Coverage",
+    "category": "hotspots",
+    "city": "Rourkela",
+    "state": "Odisha",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Rourkela, Odisha. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-chandigarh-punjab",
+    "slug": "location-chandigarh-punjab",
+    "name": "Chandigarh — Directory Coverage",
+    "category": "hotspots",
+    "city": "Chandigarh",
+    "state": "Punjab",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Chandigarh, Punjab. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-ludhiana-punjab",
+    "slug": "location-ludhiana-punjab",
+    "name": "Ludhiana — Directory Coverage",
+    "category": "hotspots",
+    "city": "Ludhiana",
+    "state": "Punjab",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Ludhiana, Punjab. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-amritsar-punjab",
+    "slug": "location-amritsar-punjab",
+    "name": "Amritsar — Directory Coverage",
+    "category": "hotspots",
+    "city": "Amritsar",
+    "state": "Punjab",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Amritsar, Punjab. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-jalandhar-punjab",
+    "slug": "location-jalandhar-punjab",
+    "name": "Jalandhar — Directory Coverage",
+    "category": "hotspots",
+    "city": "Jalandhar",
+    "state": "Punjab",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Jalandhar, Punjab. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-jaipur-rajasthan",
+    "slug": "location-jaipur-rajasthan",
+    "name": "Jaipur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Jaipur, Rajasthan. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-jodhpur-rajasthan",
+    "slug": "location-jodhpur-rajasthan",
+    "name": "Jodhpur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Jodhpur",
+    "state": "Rajasthan",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Jodhpur, Rajasthan. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-udaipur-rajasthan",
+    "slug": "location-udaipur-rajasthan",
+    "name": "Udaipur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Udaipur",
+    "state": "Rajasthan",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Udaipur, Rajasthan. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-kota-rajasthan",
+    "slug": "location-kota-rajasthan",
+    "name": "Kota — Directory Coverage",
+    "category": "hotspots",
+    "city": "Kota",
+    "state": "Rajasthan",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Kota, Rajasthan. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-gangtok-sikkim",
+    "slug": "location-gangtok-sikkim",
+    "name": "Gangtok — Directory Coverage",
+    "category": "hotspots",
+    "city": "Gangtok",
+    "state": "Sikkim",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Gangtok, Sikkim. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-chennai-tamil-nadu",
+    "slug": "location-chennai-tamil-nadu",
+    "name": "Chennai — Directory Coverage",
+    "category": "hotspots",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Chennai, Tamil Nadu. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-coimbatore-tamil-nadu",
+    "slug": "location-coimbatore-tamil-nadu",
+    "name": "Coimbatore — Directory Coverage",
+    "category": "hotspots",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Coimbatore, Tamil Nadu. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-madurai-tamil-nadu",
+    "slug": "location-madurai-tamil-nadu",
+    "name": "Madurai — Directory Coverage",
+    "category": "hotspots",
+    "city": "Madurai",
+    "state": "Tamil Nadu",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Madurai, Tamil Nadu. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-tiruchirappalli-tamil-nadu",
+    "slug": "location-tiruchirappalli-tamil-nadu",
+    "name": "Tiruchirappalli — Directory Coverage",
+    "category": "hotspots",
+    "city": "Tiruchirappalli",
+    "state": "Tamil Nadu",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Tiruchirappalli, Tamil Nadu. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-salem-tamil-nadu",
+    "slug": "location-salem-tamil-nadu",
+    "name": "Salem — Directory Coverage",
+    "category": "hotspots",
+    "city": "Salem",
+    "state": "Tamil Nadu",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Salem, Tamil Nadu. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-hyderabad-telangana",
+    "slug": "location-hyderabad-telangana",
+    "name": "Hyderabad — Directory Coverage",
+    "category": "hotspots",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Hyderabad, Telangana. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-warangal-telangana",
+    "slug": "location-warangal-telangana",
+    "name": "Warangal — Directory Coverage",
+    "category": "hotspots",
+    "city": "Warangal",
+    "state": "Telangana",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Warangal, Telangana. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-nizamabad-telangana",
+    "slug": "location-nizamabad-telangana",
+    "name": "Nizamabad — Directory Coverage",
+    "category": "hotspots",
+    "city": "Nizamabad",
+    "state": "Telangana",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Nizamabad, Telangana. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-agartala-tripura",
+    "slug": "location-agartala-tripura",
+    "name": "Agartala — Directory Coverage",
+    "category": "hotspots",
+    "city": "Agartala",
+    "state": "Tripura",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Agartala, Tripura. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-lucknow-uttar-pradesh",
+    "slug": "location-lucknow-uttar-pradesh",
+    "name": "Lucknow — Directory Coverage",
+    "category": "hotspots",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Lucknow, Uttar Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-noida-uttar-pradesh",
+    "slug": "location-noida-uttar-pradesh",
+    "name": "Noida — Directory Coverage",
+    "category": "hotspots",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Noida, Uttar Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-kanpur-uttar-pradesh",
+    "slug": "location-kanpur-uttar-pradesh",
+    "name": "Kanpur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Kanpur, Uttar Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-varanasi-uttar-pradesh",
+    "slug": "location-varanasi-uttar-pradesh",
+    "name": "Varanasi — Directory Coverage",
+    "category": "hotspots",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Varanasi, Uttar Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-prayagraj-uttar-pradesh",
+    "slug": "location-prayagraj-uttar-pradesh",
+    "name": "Prayagraj — Directory Coverage",
+    "category": "hotspots",
+    "city": "Prayagraj",
+    "state": "Uttar Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Prayagraj, Uttar Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-agra-uttar-pradesh",
+    "slug": "location-agra-uttar-pradesh",
+    "name": "Agra — Directory Coverage",
+    "category": "hotspots",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Agra, Uttar Pradesh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-dehradun-uttarakhand",
+    "slug": "location-dehradun-uttarakhand",
+    "name": "Dehradun — Directory Coverage",
+    "category": "hotspots",
+    "city": "Dehradun",
+    "state": "Uttarakhand",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Dehradun, Uttarakhand. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-haridwar-uttarakhand",
+    "slug": "location-haridwar-uttarakhand",
+    "name": "Haridwar — Directory Coverage",
+    "category": "hotspots",
+    "city": "Haridwar",
+    "state": "Uttarakhand",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Haridwar, Uttarakhand. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-rishikesh-uttarakhand",
+    "slug": "location-rishikesh-uttarakhand",
+    "name": "Rishikesh — Directory Coverage",
+    "category": "hotspots",
+    "city": "Rishikesh",
+    "state": "Uttarakhand",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Rishikesh, Uttarakhand. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-kolkata-west-bengal",
+    "slug": "location-kolkata-west-bengal",
+    "name": "Kolkata — Directory Coverage",
+    "category": "hotspots",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Kolkata, West Bengal. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-siliguri-west-bengal",
+    "slug": "location-siliguri-west-bengal",
+    "name": "Siliguri — Directory Coverage",
+    "category": "hotspots",
+    "city": "Siliguri",
+    "state": "West Bengal",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Siliguri, West Bengal. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-durgapur-west-bengal",
+    "slug": "location-durgapur-west-bengal",
+    "name": "Durgapur — Directory Coverage",
+    "category": "hotspots",
+    "city": "Durgapur",
+    "state": "West Bengal",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Durgapur, West Bengal. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-port-blair-andaman-and-nicobar-islands",
+    "slug": "location-port-blair-andaman-and-nicobar-islands",
+    "name": "Port Blair — Directory Coverage",
+    "category": "hotspots",
+    "city": "Port Blair",
+    "state": "Andaman and Nicobar Islands",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Port Blair, Andaman and Nicobar Islands. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-chandigarh-chandigarh",
+    "slug": "location-chandigarh-chandigarh",
+    "name": "Chandigarh — Directory Coverage",
+    "category": "hotspots",
+    "city": "Chandigarh",
+    "state": "Chandigarh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Chandigarh, Chandigarh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-daman-dadra-and-nagar-haveli-and-daman-and-diu",
+    "slug": "location-daman-dadra-and-nagar-haveli-and-daman-and-diu",
+    "name": "Daman — Directory Coverage",
+    "category": "hotspots",
+    "city": "Daman",
+    "state": "Dadra and Nagar Haveli and Daman and Diu",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Daman, Dadra and Nagar Haveli and Daman and Diu. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-silvassa-dadra-and-nagar-haveli-and-daman-and-diu",
+    "slug": "location-silvassa-dadra-and-nagar-haveli-and-daman-and-diu",
+    "name": "Silvassa — Directory Coverage",
+    "category": "hotspots",
+    "city": "Silvassa",
+    "state": "Dadra and Nagar Haveli and Daman and Diu",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Silvassa, Dadra and Nagar Haveli and Daman and Diu. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-new-delhi-delhi",
+    "slug": "location-new-delhi-delhi",
+    "name": "New Delhi — Directory Coverage",
+    "category": "hotspots",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in New Delhi, Delhi. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-delhi-delhi",
+    "slug": "location-delhi-delhi",
+    "name": "Delhi — Directory Coverage",
+    "category": "hotspots",
+    "city": "Delhi",
+    "state": "Delhi",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Delhi, Delhi. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-srinagar-jammu-and-kashmir",
+    "slug": "location-srinagar-jammu-and-kashmir",
+    "name": "Srinagar — Directory Coverage",
+    "category": "hotspots",
+    "city": "Srinagar",
+    "state": "Jammu and Kashmir",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Srinagar, Jammu and Kashmir. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-jammu-jammu-and-kashmir",
+    "slug": "location-jammu-jammu-and-kashmir",
+    "name": "Jammu — Directory Coverage",
+    "category": "hotspots",
+    "city": "Jammu",
+    "state": "Jammu and Kashmir",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Jammu, Jammu and Kashmir. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-leh-ladakh",
+    "slug": "location-leh-ladakh",
+    "name": "Leh — Directory Coverage",
+    "category": "hotspots",
+    "city": "Leh",
+    "state": "Ladakh",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Leh, Ladakh. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-kavaratti-lakshadweep",
+    "slug": "location-kavaratti-lakshadweep",
+    "name": "Kavaratti — Directory Coverage",
+    "category": "hotspots",
+    "city": "Kavaratti",
+    "state": "Lakshadweep",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Kavaratti, Lakshadweep. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  },
+  {
+    "id": "location-puducherry-puducherry",
+    "slug": "location-puducherry-puducherry",
+    "name": "Puducherry — Directory Coverage",
+    "category": "hotspots",
+    "city": "Puducherry",
+    "state": "Puducherry",
+    "description": "Discovery hub for hospitals, schools, colleges, hotels, restaurants and local services in Puducherry, Puducherry. If an exact entity is not listed, use Suggest a Place to add it for community discovery.",
+    "website": "",
+    "group_name": null,
+    "address": "",
+    "tags": [
+      "location hub",
+      "india"
+    ],
+    "source_url": "",
+    "verified": false
+  }
+]

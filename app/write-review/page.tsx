@@ -1,10 +1,7 @@
 "use client";
 
 import { Suspense, useState } from "react";
-import {
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import { createReview } from "@/lib/reviews";
 import StarRating from "@/components/StarRating";
@@ -23,12 +20,17 @@ function WriteReviewContent() {
   const [review, setReview] = useState("");
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(
-    e: React.FormEvent<HTMLFormElement>
-  ) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     if (!productId) {
+      alert("Invalid product.");
+      return;
+    }
+
+    const numericProductId = Number(productId);
+
+    if (!Number.isInteger(numericProductId) || numericProductId <= 0) {
       alert("Invalid product.");
       return;
     }
@@ -38,16 +40,21 @@ function WriteReviewContent() {
       return;
     }
 
+    if (rating < 1 || rating > 5) {
+      alert("Please select a rating between 1 and 5.");
+      return;
+    }
+
     try {
       setLoading(true);
 
       await createReview({
-        product_id: Number(productId),
+        product_id: numericProductId,
         rating,
-        title,
-        review,
-        pros,
-        cons,
+        title: title.trim(),
+        review: review.trim(),
+        pros: pros.trim(),
+        cons: cons.trim(),
       });
 
       alert("Review submitted successfully.");
@@ -55,8 +62,14 @@ function WriteReviewContent() {
       router.back();
       router.refresh();
     } catch (err) {
-      console.error(err);
-      alert("Unable to submit review.");
+      console.error("Review submission failed:", err);
+
+      const message =
+        err instanceof Error
+          ? err.message
+          : "Unable to submit review.";
+
+      alert(message);
     } finally {
       setLoading(false);
     }
@@ -64,21 +77,23 @@ function WriteReviewContent() {
 
   return (
     <ProtectedRoute>
-      <main className="mx-auto max-w-3xl px-6 py-10">
-        <h1 className="mb-2 text-4xl font-bold">
-          Write Review
-        </h1>
+      <main className="mx-auto max-w-3xl px-4 py-12">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold tracking-tight">
+            Write a Review
+          </h1>
 
-        <p className="mb-8 text-gray-500">
-          Share your genuine experience to help other buyers.
-        </p>
+          <p className="mt-2 text-gray-500">
+            Share your genuine experience to help other buyers.
+          </p>
+        </div>
 
         <form
           onSubmit={handleSubmit}
-          className="rounded-2xl border bg-white p-8 shadow dark:border-zinc-800 dark:bg-zinc-900"
+          className="rounded-2xl border bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
         >
           <div className="mb-8">
-            <label className="mb-2 block font-semibold">
+            <label className="mb-3 block font-semibold">
               Rating
             </label>
 
@@ -99,12 +114,11 @@ function WriteReviewContent() {
 
             <input
               id="review-title"
+              type="text"
               required
               value={title}
-              onChange={(e) =>
-                setTitle(e.target.value)
-              }
-              className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
+              onChange={(e) => setTitle(e.target.value)}
+              className="w-full rounded-lg border p-3 outline-none focus:border-indigo-500 dark:border-zinc-700 dark:bg-zinc-800"
               placeholder="Summarize your experience"
             />
           </div>
@@ -121,10 +135,8 @@ function WriteReviewContent() {
               id="review-pros"
               rows={3}
               value={pros}
-              onChange={(e) =>
-                setPros(e.target.value)
-              }
-              className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
+              onChange={(e) => setPros(e.target.value)}
+              className="w-full rounded-lg border p-3 outline-none focus:border-indigo-500 dark:border-zinc-700 dark:bg-zinc-800"
               placeholder="What did you like?"
             />
           </div>
@@ -141,10 +153,8 @@ function WriteReviewContent() {
               id="review-cons"
               rows={3}
               value={cons}
-              onChange={(e) =>
-                setCons(e.target.value)
-              }
-              className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
+              onChange={(e) => setCons(e.target.value)}
+              className="w-full rounded-lg border p-3 outline-none focus:border-indigo-500 dark:border-zinc-700 dark:bg-zinc-800"
               placeholder="What could be improved?"
             />
           </div>
@@ -162,10 +172,8 @@ function WriteReviewContent() {
               required
               rows={8}
               value={review}
-              onChange={(e) =>
-                setReview(e.target.value)
-              }
-              className="w-full rounded-lg border p-3 dark:border-zinc-700 dark:bg-zinc-800"
+              onChange={(e) => setReview(e.target.value)}
+              className="w-full rounded-lg border p-3 outline-none focus:border-indigo-500 dark:border-zinc-700 dark:bg-zinc-800"
               placeholder="Write your complete experience..."
             />
           </div>
@@ -173,11 +181,9 @@ function WriteReviewContent() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-xl bg-indigo-600 py-4 text-lg font-semibold text-white hover:bg-indigo-700 disabled:opacity-50"
+            className="w-full rounded-xl bg-indigo-600 py-4 text-lg font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {loading
-              ? "Submitting..."
-              : "Submit Review"}
+            {loading ? "Submitting..." : "Submit Review"}
           </button>
         </form>
       </main>
@@ -189,8 +195,8 @@ export default function WriteReviewPage() {
   return (
     <Suspense
       fallback={
-        <main className="mx-auto max-w-3xl px-6 py-10">
-          <div className="rounded-2xl border bg-white p-8 text-gray-500 shadow dark:border-zinc-800 dark:bg-zinc-900">
+        <main className="mx-auto max-w-3xl px-4 py-12">
+          <div className="rounded-2xl border bg-white p-8 text-center shadow-sm">
             Loading Review...
           </div>
         </main>

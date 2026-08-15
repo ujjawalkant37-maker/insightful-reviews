@@ -97,7 +97,9 @@ export default async function ProductsPage({
 
       buyUrl: product.buy_url ?? "",
 
-      images: product.images ?? [],
+      images: product.images ?? (product.image_url ? [product.image_url] : []),
+
+      imageSource: product.image_source,
     })
   );
 

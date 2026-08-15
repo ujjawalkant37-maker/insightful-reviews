@@ -79,9 +79,9 @@ export default function Reviews({ productId }: { productId: string }) {
           <span className="rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700">
             ⭐ Community Reviews
           </span>
-          <h2 className="mt-5 text-3xl font-bold">Verified User Reviews</h2>
+          <h2 className="mt-5 text-3xl font-bold">Community Reviews</h2>
           <p className="mt-3 text-gray-600 dark:text-gray-400">
-            Real experiences from verified users.
+            Experiences submitted by community members. Verification is shown only when independently supported.
           </p>
         </div>
 

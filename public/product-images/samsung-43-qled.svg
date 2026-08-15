@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(204 30% 97%)"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+<rect width="1200" height="900" rx="34" fill="url(#bg)"/>
+<text x="600" y="68" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#4f46e5" letter-spacing="3">INSIGHTFUL REVIEWS</text>
+<text id="title" x="600" y="115" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#111827">Samsung 43 QLED 2024</text>
+<desc id="desc">Product illustration for Samsung 43 QLED 2024</desc>
+<g><rect x="150" y="150" width="900" height="520" rx="22" fill="#111827"/><rect x="175" y="175" width="850" height="470" rx="12" fill="hsl(204 72% 52%)"/><path d="M220 220h760v300H220z" fill="hsl(239 78% 62%)" opacity=".65"/><circle cx="600" cy="370" r="105" fill="#fff" opacity=".14"/><rect x="560" y="670" width="80" height="55" fill="#334155"/><path d="M450 725h300" stroke="#334155" stroke-width="18"/></g>
+<rect x="335" y="825" width="530" height="4" rx="2" fill="hsl(204 72% 52%)" opacity=".35"/>
+<text x="600" y="865" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#64748b">Product catalogue illustration</text>
+</svg>

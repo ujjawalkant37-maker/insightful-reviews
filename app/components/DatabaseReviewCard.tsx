@@ -78,11 +78,11 @@ export default function DatabaseReviewCard({
             <div className="flex items-center gap-2">
 
               <h3 className="font-semibold">
-                Verified User
+                Community member
               </h3>
 
-              <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-700">
-                ✓ Verified
+              <span className="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">
+                Submitted review
               </span>
 
             </div>

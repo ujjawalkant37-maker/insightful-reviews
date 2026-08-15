@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
 
 type Props = {
@@ -7,276 +7,50 @@ type Props = {
   onSearch?: (q: string) => void;
 };
 
-export default function HeroSection({
-  value,
-  onChange,
-  onSearch,
-}: Props) {
+export default function HeroSection({ value, onChange, onSearch }: Props) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-600 text-white">
-
-      {/* Background Blur */}
-      <div className="absolute inset-0">
-        <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
-        <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-cyan-400/20 blur-3xl"></div>
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-blue-900 text-white">
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-indigo-500 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500 blur-3xl" />
       </div>
 
-      <div className="container relative py-24">
+      <div className="container relative py-20 sm:py-24">
+        <div className="max-w-4xl">
+          <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur">🛡️ A trust-first decision platform for India</span>
+          <h1 className="mt-6 text-4xl font-extrabold leading-tight sm:text-6xl">
+            Before you decide,
+            <span className="block text-cyan-300">know what people experienced.</span>
+          </h1>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200 sm:text-xl">
+            Research hospitals, schools, colleges, hotels, restaurants, services and products. Read branch-specific community opinions, source-attributed reviews and AI-assisted insights — then decide with more confidence and less regret.
+          </p>
 
-        <div className="grid gap-14 lg:grid-cols-2 items-center">
-
-          {/* Left */}
-
-          <div>
-
-            <span className="inline-flex rounded-full bg-white/15 px-4 py-2 text-sm font-medium backdrop-blur">
-              🤖 AI Powered Product Research Platform
-            </span>
-
-            <h1 className="mt-6 text-5xl font-extrabold leading-tight lg:text-6xl">
-
-              Buy Smarter.<br />
-
-              <span className="text-yellow-300">
-                Trust AI.
-              </span>
-
-            </h1>
-
-            <p className="mt-8 max-w-2xl text-xl text-blue-100 leading-8">
-
-              Compare products, read expert reviews,
-              discover genuine user experiences,
-              analyse AI trust scores,
-              and decide whether you should
-
-              <span className="font-bold text-yellow-300">
-                {" "}Buy, Wait or Avoid.
-              </span>
-
-            </p>
-
-            <div className="mt-10 max-w-2xl">
-              <SearchBar
-                value={value}
-                onChange={onChange}
-                onSearch={onSearch}
-              />
-            </div>
-
-            {/* Popular Searches */}
-
-            <div className="mt-8">
-
-              <p className="mb-3 text-sm uppercase tracking-widest text-blue-200">
-
-                Popular Searches
-
-              </p>
-
-              <div className="flex flex-wrap gap-3">
-
-                {[
-                  "iPhone 16 Pro",
-                  "Samsung S25 Ultra",
-                  "OnePlus 13",
-                  "MacBook Air M4",
-                  "Sony Bravia",
-                  "LG OLED TV",
-                ].map((item) => (
-                  <button
-                    key={item}
-                    onClick={() => onSearch?.(item)}
-                    className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm transition hover:bg-white hover:text-indigo-700"
-                  >
-                    {item}
-                  </button>
-                ))}
-
-              </div>
-
-            </div>
-
-            {/* Buttons */}
-
-            <div className="mt-10 flex flex-wrap gap-4">
-
-              <button
-                onClick={() => onSearch?.("")}
-                className="rounded-lg bg-yellow-400 px-7 py-3 font-semibold text-black transition hover:bg-yellow-300"
-              >
-                Explore Products
-              </button>
-
-              <a
-                href="/compare"
-                className="rounded-lg border border-white/30 px-7 py-3 font-semibold transition hover:bg-white hover:text-indigo-700"
-              >
-                Compare Products
-              </a>
-
-            </div>
-
+          <div className="mt-8 max-w-3xl">
+            <SearchBar value={value} onChange={onChange} onSearch={onSearch} placeholder="Search a hospital, school, hotel, service or product…" />
+            <p className="mt-3 text-sm text-slate-300">Try: Apollo Hospitals, AIIMS, Delhi Public School, Taj, OnePlus 12</p>
           </div>
 
-          {/* Right */}
-
-          <div>
-
-            <div className="rounded-3xl bg-white p-8 text-gray-900 shadow-2xl">
-
-              <div className="flex items-center justify-between">
-
-                <h3 className="text-2xl font-bold">
-
-                  AI Decision Engine
-
-                </h3>
-
-                <span className="rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-700">
-
-                  LIVE
-
-                </span>
-
-              </div>
-
-              <div className="mt-8 space-y-6">
-
-                <div className="rounded-xl bg-green-50 p-5">
-
-                  <div className="text-sm font-semibold text-green-700">
-
-                    ✅ BUY
-
-                  </div>
-
-                  <div className="mt-2 text-xl font-bold">
-
-                    Samsung Galaxy S25 Ultra
-
-                  </div>
-
-                  <p className="mt-2 text-sm text-gray-600">
-
-                    Best overall flagship with excellent camera,
-                    battery and long software support.
-
-                  </p>
-
-                </div>
-
-                <div className="rounded-xl bg-yellow-50 p-5">
-
-                  <div className="text-sm font-semibold text-yellow-700">
-
-                    ⏳ WAIT
-
-                  </div>
-
-                  <div className="mt-2 text-xl font-bold">
-
-                    iPhone 16 Pro
-
-                  </div>
-
-                  <p className="mt-2 text-sm text-gray-600">
-
-                    Excellent phone but expected price drop
-                    during upcoming festive sales.
-
-                  </p>
-
-                </div>
-
-                <div className="rounded-xl bg-red-50 p-5">
-
-                  <div className="text-sm font-semibold text-red-700">
-
-                    ❌ AVOID
-
-                  </div>
-
-                  <div className="mt-2 text-xl font-bold">
-
-                    Generic Budget Phone
-
-                  </div>
-
-                  <p className="mt-2 text-sm text-gray-600">
-
-                    Weak software support,
-                    average camera,
-                    poor long-term value.
-
-                  </p>
-
-                </div>
-
-              </div>
-
-              {/* Stats */}
-
-              <div className="mt-10 grid grid-cols-3 gap-5 border-t pt-8">
-
-                <div className="text-center">
-
-                  <div className="text-3xl font-bold text-indigo-600">
-
-                    10K+
-
-                  </div>
-
-                  <div className="mt-1 text-sm text-gray-500">
-
-                    Reviews
-
-                  </div>
-
-                </div>
-
-                <div className="text-center">
-
-                  <div className="text-3xl font-bold text-indigo-600">
-
-                    500+
-
-                  </div>
-
-                  <div className="mt-1 text-sm text-gray-500">
-
-                    Products
-
-                  </div>
-
-                </div>
-
-                <div className="text-center">
-
-                  <div className="text-3xl font-bold text-indigo-600">
-
-                    AI
-
-                  </div>
-
-                  <div className="mt-1 text-sm text-gray-500">
-
-                    Powered
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href="/directory" className="rounded-xl bg-white px-6 py-3 font-bold text-slate-900 hover:bg-slate-100">Explore Places & Services</Link>
+            <Link href="/products" className="rounded-xl border border-white/25 bg-white/10 px-6 py-3 font-bold text-white hover:bg-white hover:text-slate-900">Research Products</Link>
           </div>
-
         </div>
 
+        <div className="mt-14 grid max-w-5xl gap-4 sm:grid-cols-3">
+          {[
+            ["01", "Exact branch", "Keep a hospital, school or service location separate from its other branches."],
+            ["02", "Source-aware", "External reviews remain attributed to the source instead of becoming one misleading number."],
+            ["03", "Community first", "Real experiences can be submitted, moderated and attached to the exact entity."],
+          ].map(([number, title, text]) => (
+            <div key={number} className="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur">
+              <div className="text-sm font-bold text-cyan-300">{number}</div>
+              <h3 className="mt-2 font-bold">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">{text}</p>
+            </div>
+          ))}
+        </div>
       </div>
-
     </section>
   );
 }

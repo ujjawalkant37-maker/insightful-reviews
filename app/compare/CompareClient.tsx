@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ProductImage from "@/components/ProductImage";
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
@@ -161,13 +161,11 @@ export default function CompareClient() {
 
                       {product.images?.length ? (
 
-                        <Image
+                        <ProductImage
                           src={product.images[0]}
                           alt={product.name}
-                          fill
-
-                          unoptimized
-
+                          slug={product.slug}
+                          imageSource={product.image_source}
                           sizes="160px"
                           className="object-cover"
                         />

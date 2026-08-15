@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "hospitals",
+    "name": "Hospitals",
+    "source": "National Hospital Directory",
+    "publisher": "National Institute of Health and Family Welfare / National Health Portal",
+    "url": "https://www.data.gov.in/resource/national-hospital-directory-geo-code-and-additional-parameters-updated-till-last-month",
+    "status": "imported",
+    "notes": "The project has already imported the NHP directory. Do not re-import unless the source snapshot is intentionally refreshed."
+  },
+  {
+    "slug": "schools",
+    "name": "Schools",
+    "source": "UDISE Plus",
+    "publisher": "Ministry of Education, Department of School Education and Literacy",
+    "url": "https://www.data.gov.in/catalog/unified-district-information-system-education-plus-udise-plus",
+    "status": "source_ready",
+    "notes": "Use institution-level UDISE data where available; do not derive individual school ratings from aggregate statistics."
+  },
+  {
+    "slug": "colleges",
+    "name": "Colleges",
+    "source": "AISHE",
+    "publisher": "Ministry of Education, Department of Higher Education",
+    "url": "https://www.data.gov.in/catalog/list-colleges-aishe-survey",
+    "status": "source_ready",
+    "notes": "Use institution records and retain source/year metadata."
+  },
+  {
+    "slug": "universities",
+    "name": "Universities",
+    "source": "AISHE Institutions",
+    "publisher": "Ministry of Education, Department of Higher Education",
+    "url": "https://www.data.gov.in/catalog/institutions-aishe-survey",
+    "status": "source_ready",
+    "notes": "Use institution-level records and retain survey year."
+  },
+  {
+    "slug": "hotels",
+    "name": "Hotels",
+    "source": "Authorised/partner listings",
+    "publisher": "To be selected",
+    "url": null,
+    "status": "requires_authorised_source",
+    "notes": "Do not fabricate hotel listings or scrape photographs/reviews without permission."
+  },
+  {
+    "slug": "clinics",
+    "name": "Clinics",
+    "source": "Authorised health directory / official state sources",
+    "publisher": "To be selected",
+    "url": null,
+    "status": "requires_authorised_source",
+    "notes": "NHP hospital data should not be silently relabelled as clinics."
+  },
+  {
+    "slug": "diagnostic-centres",
+    "name": "Diagnostic Centres",
+    "source": "Authorised/official source",
+    "publisher": "To be selected",
+    "url": null,
+    "status": "requires_authorised_source",
+    "notes": "Keep source attribution and verification date."
+  },
+  {
+    "slug": "pharmacies",
+    "name": "Pharmacies",
+    "source": "Authorised/official source",
+    "publisher": "To be selected",
+    "url": null,
+    "status": "requires_authorised_source",
+    "notes": "Do not create listings from inferred business names."
+  },
+  {
+    "slug": "restaurants",
+    "name": "Restaurants",
+    "source": "Authorised/partner listings",
+    "publisher": "To be selected",
+    "url": null,
+    "status": "requires_authorised_source",
+    "notes": "Business listings, photos and reviews require an appropriate source/permission."
+  }
+]

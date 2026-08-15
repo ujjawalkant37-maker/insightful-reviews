@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(254 30% 97%)"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+<rect width="1200" height="900" rx="34" fill="url(#bg)"/>
+<text x="600" y="68" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#4f46e5" letter-spacing="3">INSIGHTFUL REVIEWS</text>
+<text id="title" x="600" y="115" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#111827">Apple Watch Series 9</text>
+<desc id="desc">Product illustration for Apple Watch Series 9</desc>
+<g><rect x="500" y="90" width="200" height="210" rx="80" fill="#334155"/><rect x="440" y="245" width="320" height="410" rx="70" fill="#111827"/><rect x="460" y="265" width="280" height="370" rx="55" fill="hsl(254 72% 52%)"/><circle cx="600" cy="450" r="90" fill="#fff" opacity=".17"/><rect x="500" y="650" width="200" height="150" rx="60" fill="#334155"/></g>
+<rect x="335" y="825" width="530" height="4" rx="2" fill="hsl(254 72% 52%)" opacity=".35"/>
+<text x="600" y="865" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#64748b">Product catalogue illustration</text>
+</svg>

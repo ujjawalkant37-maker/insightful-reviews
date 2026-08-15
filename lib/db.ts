@@ -1,4 +1,5 @@
 import type { Category, Product } from "@/types/models";
+import { mapDatabaseProduct } from "@/lib/product-utils";
 import {
   getCategories as getDatabaseCategories,
 } from "@/lib/getCategories";
@@ -14,24 +15,7 @@ import {
  * This file intentionally does not read data/*.json.
  */
 
-function mapProduct(product: Awaited<ReturnType<typeof getDatabaseProducts>>[number]): Product {
-  return {
-    id: String(product.id),
-    slug: product.slug,
-    name: product.name,
-    categoryId: String(product.category_id),
-    price: `₹${product.price.toLocaleString("en-IN")}`,
-    rating: product.rating,
-    aiScore: product.ai_score,
-    summary: product.summary,
-    specs: product.specifications ?? {},
-    pros: product.pros ?? [],
-    cons: product.cons ?? [],
-    expertSummary: product.description,
-    buyUrl: product.buy_url ?? "",
-    images: product.images ?? [],
-  };
-}
+const mapProduct = mapDatabaseProduct;
 
 export async function getCategories(): Promise<Category[]> {
   const categories = await getDatabaseCategories();

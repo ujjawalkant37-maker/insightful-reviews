@@ -11,7 +11,7 @@ export type Product = {
   name: string;
   categoryId: string;
   price: string;
-  rating: number; // 0-5
+  rating: number;
   aiScore: number;
   summary: string;
   specs?: Record<string, string>;
@@ -20,14 +20,15 @@ export type Product = {
   expertSummary?: string;
   buyUrl?: string;
   images?: string[];
+  imageSource?: string | null;
 };
 
 export type Review = {
   id: string;
   productId: string;
   name: string;
-  rating: number; // 1-5
+  rating: number;
   title: string;
   text: string;
-  date: string; // ISO
+  date: string;
 };

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(6 30% 97%)"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+<rect width="1200" height="900" rx="34" fill="url(#bg)"/>
+<text x="600" y="68" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#4f46e5" letter-spacing="3">INSIGHTFUL REVIEWS</text>
+<text id="title" x="600" y="115" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#111827">Fujifilm X-S20</text>
+<desc id="desc">Product illustration for Fujifilm X-S20</desc>
+<g><rect x="245" y="250" width="710" height="400" rx="45" fill="#1f2937"/><rect x="300" y="205" width="220" height="70" rx="20" fill="#374151"/><circle cx="600" cy="450" r="175" fill="#0f172a" stroke="hsl(6 72% 52%)" stroke-width="22"/><circle cx="600" cy="450" r="105" fill="#334155"/><circle cx="570" cy="415" r="35" fill="#fff" opacity=".22"/><rect x="770" y="330" width="110" height="60" rx="15" fill="hsl(41 78% 62%)"/></g>
+<rect x="335" y="825" width="530" height="4" rx="2" fill="hsl(6 72% 52%)" opacity=".35"/>
+<text x="600" y="865" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#64748b">Product catalogue illustration</text>
+</svg>

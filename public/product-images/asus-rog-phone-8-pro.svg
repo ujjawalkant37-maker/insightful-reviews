@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(168 30% 97%)"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+<rect width="1200" height="900" rx="34" fill="url(#bg)"/>
+<text x="600" y="68" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#4f46e5" letter-spacing="3">INSIGHTFUL REVIEWS</text>
+<text id="title" x="600" y="115" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#111827">Asus ROG Phone 8 Pro</text>
+<desc id="desc">Product illustration for Asus ROG Phone 8 Pro</desc>
+<g transform="translate(480 105) rotate(-8)"><rect x="0" y="0" width="240" height="690" rx="34" fill="#111827"/><rect x="10" y="12" width="220" height="666" rx="27" fill="hsl(168 72% 52%)"/><rect x="22" y="32" width="196" height="626" rx="22" fill="#0f172a"/><circle cx="120" cy="58" r="8" fill="#334155"/><rect x="42" y="130" width="156" height="330" rx="14" fill="hsl(203 78% 62%)" opacity=".72"/><circle cx="120" cy="525" r="42" fill="#fff" opacity=".18"/></g>
+<rect x="335" y="825" width="530" height="4" rx="2" fill="hsl(168 72% 52%)" opacity=".35"/>
+<text x="600" y="865" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#64748b">Product catalogue illustration</text>
+</svg>

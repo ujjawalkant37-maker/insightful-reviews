@@ -26,7 +26,8 @@ function mapProduct(product: DatabaseProduct): Product {
     cons: product.cons ?? [],
     expertSummary: product.description,
     buyUrl: product.buy_url ?? "",
-    images: product.images ?? [],
+    images: product.images ?? (product.image_url ? [product.image_url] : []),
+    imageSource: product.image_source,
   };
 }
 
@@ -101,12 +102,11 @@ export default function HomeCatalog({
           </span>
 
           <h2 className="mt-5 text-4xl font-bold text-gray-900 dark:text-white">
-            Most Popular Products
+            Product Catalogue
           </h2>
 
           <p className="mt-3 max-w-2xl text-gray-600 dark:text-gray-400">
-            Explore the highest-rated products based on AI analysis,
-            expert opinions and genuine user reviews.
+            Browse products with catalogue data, community ratings and AI analysis where available.
           </p>
         </div>
 
@@ -133,38 +133,8 @@ export default function HomeCatalog({
         />
       )}
 
-      <div className="mt-16 grid gap-6 md:grid-cols-4">
-        <div className="rounded-2xl bg-white p-6 shadow-sm dark:bg-zinc-900">
-          <div className="text-4xl">⭐</div>
-          <div className="mt-4 text-3xl font-bold">4.8+</div>
-          <div className="mt-2 text-gray-600 dark:text-gray-400">
-            Average Product Rating
-          </div>
-        </div>
-
-        <div className="rounded-2xl bg-white p-6 shadow-sm dark:bg-zinc-900">
-          <div className="text-4xl">🤖</div>
-          <div className="mt-4 text-3xl font-bold">AI</div>
-          <div className="mt-2 text-gray-600 dark:text-gray-400">
-            AI Decision Engine
-          </div>
-        </div>
-
-        <div className="rounded-2xl bg-white p-6 shadow-sm dark:bg-zinc-900">
-          <div className="text-4xl">🛡️</div>
-          <div className="mt-4 text-3xl font-bold">100%</div>
-          <div className="mt-2 text-gray-600 dark:text-gray-400">
-            Trust Score Analysis
-          </div>
-        </div>
-
-        <div className="rounded-2xl bg-white p-6 shadow-sm dark:bg-zinc-900">
-          <div className="text-4xl">📈</div>
-          <div className="mt-4 text-3xl font-bold">Live</div>
-          <div className="mt-2 text-gray-600 dark:text-gray-400">
-            Price Tracking
-          </div>
-        </div>
+      <div className="mt-12 rounded-2xl border border-dashed border-gray-300 bg-white p-6 text-sm text-gray-600 dark:border-zinc-700 dark:bg-zinc-900 dark:text-gray-400">
+        Ratings, AI scores and review counts are shown from the current catalogue and community data available to Insightful Reviews.
       </div>
     </section>
   );

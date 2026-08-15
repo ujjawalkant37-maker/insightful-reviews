@@ -1,27 +1,59 @@
-import React from "react";
+import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
-import type { Product } from '@/types/models';
+import { getProducts } from "@/lib/getProducts";
+import { getCategories } from "@/lib/getCategories";
+import { mapDatabaseProduct } from "@/lib/product-utils";
 
-const trending: Product[] = [
-  { id: 'aurora-x2-pro', slug: 'aurora-x2-pro', name: 'Aurora X2 Pro', categoryId: 'smartphones', price: '$999', rating: 5, aiScore: 94, summary: 'Flagship smartphone — excellent camera', specs: {}, images: [] },
-  { id: 'breeze-14', slug: 'breeze-14', name: 'Breeze 14', categoryId: 'laptops', price: '$799', rating: 4, aiScore: 89, summary: 'Lightweight laptop with long battery', specs: {}, images: [] },
-  { id: 'vista-qled-55', slug: 'vista-qled-55', name: 'Vista QLED 55"', categoryId: 'tvs', price: '$1199', rating: 4, aiScore: 92, summary: 'Outstanding HDR and color', specs: {}, images: [] },
-  { id: 'homecool-3000', slug: 'homecool-3000', name: 'HomeCool 3000', categoryId: 'appliances', price: '$499', rating: 4, aiScore: 88, summary: 'Quiet and efficient dishwasher', specs: {}, images: [] },
-];
+export default async function Trending() {
+  const [databaseProducts, categories] = await Promise.all([
+    getProducts(),
+    getCategories(),
+  ]);
 
-export default function Trending() {
+  const categoryMap = new Map(
+    categories.map((category) => [String(category.id), category.name]),
+  );
+
+  const products = [...databaseProducts]
+    .sort((a, b) => {
+      const score = b.ai_score - a.ai_score;
+      return score || b.rating - a.rating;
+    })
+    .slice(0, 4)
+    .map(mapDatabaseProduct);
+
   return (
     <section id="trending" className="container py-12">
-      <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-zinc-50">Trending Products</h2>
-        <a href="#trending" className="text-sm text-indigo-600">See all</a>
+      <div className="flex items-center justify-between gap-4">
+        <div>
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-zinc-50">
+            Featured Products
+          </h2>
+          <p className="mt-1 text-sm text-gray-600 dark:text-zinc-300">
+            Highest-scoring products currently available in the catalogue.
+          </p>
+        </div>
+        <Link href="/products" className="text-sm font-semibold text-indigo-600">
+          See all
+        </Link>
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {trending.map((p) => (
-          <ProductCard key={p.id} product={p} />
-        ))}
-      </div>
+      {products.length === 0 ? (
+        <div className="mt-6 rounded-2xl border border-dashed p-10 text-center text-gray-500">
+          Product catalogue is temporarily unavailable.
+        </div>
+      ) : (
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {products.map((product) => (
+            <div key={product.id}>
+              <ProductCard product={product} />
+              <p className="mt-2 text-center text-xs text-gray-500">
+                {categoryMap.get(product.categoryId) ?? "Product"}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

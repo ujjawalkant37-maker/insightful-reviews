@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+ import ProductImage from "@/components/ProductImage";
 import type { Metadata } from "next";
 
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -12,6 +12,9 @@ import TopAlternatives from "@/components/TopAlternatives";
 import WishlistButton from "@/components/WishlistButton";
 import ReviewStats from "@/components/ReviewStats";
 import AIVerdict from "@/components/AIVerdict";
+import AffiliateButtons from "@/components/AffiliateButtons";
+import ReviewIntelligence from "@/components/ReviewIntelligence";
+import ExternalReviewFeed from "@/components/ExternalReviewFeed";
 
 import {
   getProductBySlug,
@@ -21,6 +24,7 @@ import {
 import {
   getCategories,
 } from "@/lib/getCategories";
+import { getExternalReviews, summarizeExternalReviews } from "@/lib/review-intelligence";
 
 export async function generateMetadata({
   params,
@@ -77,6 +81,9 @@ export default async function ProductPage({
   const allProducts =
     await getProducts();
 
+  const externalReviews = await getExternalReviews("product", String(product.id));
+  const reviewIntelligence = summarizeExternalReviews(externalReviews);
+
   const category =
     categories.find(
       (c) =>
@@ -110,6 +117,7 @@ export default async function ProductPage({
         p.buy_url ?? "",
       images:
         p.images ?? [],
+      imageSource: p.image_source,
     }));
       const mappedProduct = {
     id: String(product.id),
@@ -138,6 +146,7 @@ export default async function ProductPage({
       product.buy_url ?? "",
     images:
       product.images ?? [],
+    imageSource: product.image_source,
   };
 
   return (
@@ -179,16 +188,15 @@ export default async function ProductPage({
 
             <div className="relative mt-4 h-96 w-full overflow-hidden rounded-lg">
 
-              <Image
-                src={mappedProduct.images[0]}
-                alt={mappedProduct.name}
-                fill
+               <ProductImage
+      src={mappedProduct.images?.[0]}
+      alt={mappedProduct.name}
+      slug={mappedProduct.slug}
+      imageSource={mappedProduct.imageSource}
+      sizes="(max-width: 768px) 100vw, 66vw"
+      className="h-full w-full object-cover"
+   />
 
-                unoptimized
-
-                sizes="(max-width: 768px) 100vw, 66vw"
-                className="object-cover"
-              />
 
             </div>
 
@@ -366,6 +374,10 @@ export default async function ProductPage({
 
           </section>
 
+          <ReviewIntelligence intelligence={reviewIntelligence} title="Cross-platform product review intelligence" />
+
+          <ExternalReviewFeed reviews={externalReviews.slice(0, 24)} title="Product reviews from connected sources" />
+
           <section>
 
             <React.Suspense>
@@ -425,6 +437,8 @@ export default async function ProductPage({
             >
               Buy Now
             </a>
+
+            <AffiliateButtons product={mappedProduct} />
 
             <a
               href={`/write-review?productId=${product.id}`}
